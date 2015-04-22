@@ -14,11 +14,11 @@ public class Map {
 		this.cases = new Case[length][width];
 	}
 	
-	public int getLength(){
+	private int getLength(){
 		return this.cases.length;
 	}
 	
-	public int getWidth(){
+	private int getWidth(){
 		return this.cases[0].length;
 	}
 	
@@ -48,15 +48,16 @@ public class Map {
 		this.maritimesRemaining++;
 		
 		try {
-		
-		// adds the Maritime
+			
+	
+		// adds the Maritime -------------------------------------------
 		for(int i = 0; i < maritime.getLength(); i++)
 		{
 			for(int j = 0; j < maritime.getWidth(); j++) 
 				this.cases[x + i][y + j] = new MaritimeCase(this, maritime);
 		}
 		
-		// updates the Reachable map
+		// updates the Reachable map ---------------------------------------------
 	
 		
 		x -= maritime.getPower();
@@ -68,7 +69,7 @@ public class Map {
 			for(int j = 0; j < maritime.getWidth()+maritime.getPower()+1; j++)
 			{
 		
-			if(x+i>=this.getLength() || y+j >= this.getWidth() || x+i<0 || y+j<0)
+				if(x+i >= this.getLength() || y+j >= this.getWidth() || x+i < 0 || y+j < 0)
 					continue;
 
 			
@@ -80,11 +81,9 @@ public class Map {
 					c = new EmptyCase(this);
 					c.incReacheable();
 					this.cases[x + i][y + j] = c;
-				}
+				}				
 			}
-		}
-		
-		// TODO combine the two loops into one
+		} 
 		
 		} catch(ArrayIndexOutOfBoundsException e){}
 	}
@@ -95,22 +94,17 @@ public class Map {
 	 * @param y
 	 * @return
 	 */
-	public boolean canPlay(int x, int y){
+	public boolean reacheableShoot(int x, int y){
 		return this.cases[x][y].isReachable();
 	}
 	
-	/**
-	 * If the coordinates are already played (by the opponent)
-	 * @param x
-	 * @param y
-	 * @return
-	 */
+
 	public boolean isPlayed(int x, int y){
 		return !this.cases[x][y].getState().equals(State.NOTPLAYED);
 	}
 	
-	public void play(int x, int y) {
-		this.cases[x][y].play();
+	public void shoot(int x, int y) {
+		this.cases[x][y].shoot();
 	}
 	
 	/**

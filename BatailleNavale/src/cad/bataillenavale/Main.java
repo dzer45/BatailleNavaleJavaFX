@@ -2,14 +2,14 @@ package cad.bataillenavale;
 	
 import java.io.IOException;
 
-import cad.bataillenavale.model.BatailleNavale;
-import cad.bataillenavale.view.StartView;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import cad.bataillenavale.model.BatailleNavale;
+import cad.bataillenavale.view.ConfigView;
 
 
 public class Main extends Application {
@@ -22,10 +22,37 @@ public class Main extends Application {
 		this.modelBataille = new BatailleNavale();
 		modelBataille.setStage(primaryStage);
 		
-		StartView startView = new StartView(modelBataille);
-		startView.show(this.primaryStage);
+	//	StartView startView = new StartView(modelBataille);
+	//	startView.show(this.primaryStage);
 		//initRootLayout();
 		//showStart();
+		
+		
+		// TESTER LA CONFIGVIEW
+		
+		modelBataille.start(10, 10, "XVI");
+		ConfigView cView = new ConfigView(modelBataille);
+		cView.show(this.primaryStage); 
+		
+		// TESTER LA PLAYVIEW
+		/**
+		modelBataille.start(10, 10, "XVI");
+		
+		try {
+			Maritime m = (Maritime) EpoqueManager.getInstance().getEpoque("XVI").getMaritime("Galion");
+			modelBataille.addMaritime(modelBataille.getPlayer(), 0, 0, m);
+			modelBataille.addEmptyCases(modelBataille.getPlayer());
+			m = (Maritime) EpoqueManager.getInstance().getEpoque("XVI").getMaritime("Galion");
+			modelBataille.addMaritime(modelBataille.getIA(), 4, 4, m);
+			modelBataille.addEmptyCases(modelBataille.getIA());
+			
+		} catch (MapException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PlayView gameView = new PlayView(modelBataille);
+		gameView.show(this.primaryStage); **/
+		
 	}
 	
 	private void initRootLayout() {

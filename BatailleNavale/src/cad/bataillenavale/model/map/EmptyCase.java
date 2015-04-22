@@ -10,7 +10,7 @@ public class EmptyCase extends Case {
 	}
 
 	@Override
-	protected void play() {
+	protected void shoot() {
 		this.s = State.MISSED;
 		this.map.missed++;
 	}

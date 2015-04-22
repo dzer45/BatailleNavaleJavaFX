@@ -20,8 +20,13 @@ public class BatailleNavale extends Observable {
 	private java.util.Map<Player, Player> opponents = new HashMap<Player, Player>();
 	private Epoque currentEpoque;
 	private Stage primaryStage;
+	
+	private int length, width;
 
 	public void start(int length, int width, String epoque) {
+		this.length = length;
+		this.width = width;
+		
 		opponents.put(player, iA);
 		opponents.put(iA, player);
 		currentPlayer = player;
@@ -34,7 +39,7 @@ public class BatailleNavale extends Observable {
 		this.currentEpoque = EpoqueManager.getInstance().getEpoque(epoque);
 	}
 
-	public void addMaritime(Player p, final int x, final int y, final Maritime m)
+	public void addMaritime(Player p, int x, int y, Maritime m)
 			throws MapException {
 		maps.get(p).addMaritime(x, y, m);
 		setChanged();
@@ -45,13 +50,25 @@ public class BatailleNavale extends Observable {
 		EpoqueManager.getInstance().addEpoque(e);
 	}
 
-	public void play(Player p, int x, int y) {
-		if (isMyTurn(p) && canPlay(p, x, y)) {
-			if (maps.get(currentPlayer).canPlay(x, y)) {
-				maps.get(opponents.get(currentPlayer)).play(x, y);
-				currentPlayer = getOpponent(currentPlayer);
+	public void shoot(Player whoShooted, int x, int y) {
+		if (isMyTurn(whoShooted)) 
+		{
+		//	if (maps.get(whoShooted).reacheableShoot(x, y))
+			{
+				if (!maps.get(opponents.get(whoShooted)).isPlayed(x, y))
+				{
+					maps.get(opponents.get(whoShooted)).shoot(x, y);
+					//currentPlayer = getOpponent(currentPlayer);
+				}
+		//		else
+			//		System.out.println("case deja jouee");
 			}
+		//	else
+			//	System.out.println("pas atteingnable");
 		}
+	//	else
+	//		System.out.println("pas ton tour");
+			
 		setChanged();
 		notifyObservers();
 	}
@@ -62,10 +79,6 @@ public class BatailleNavale extends Observable {
 
 	public boolean isMyTurn(Player p) {
 		return currentPlayer.equals(p);
-	}
-
-	public boolean canPlay(Player p, int x, int y) {
-		return !(maps.get(getOpponent(p)).isPlayed(x, y));
 	}
 
 	public Player getPlayer() {
@@ -88,7 +101,7 @@ public class BatailleNavale extends Observable {
 		return currentEpoque;
 	}
 
-	public void addEmptyCases() {
+	public void addEmptyCases(Player player) {
 		maps.get(player).addEmptyCases();
 		setChanged();
 		notifyObservers();
@@ -96,11 +109,18 @@ public class BatailleNavale extends Observable {
 	}
 
 	public void setStage(Stage primaryStage) {
-		// TODO Auto-generated method stub
 		this.primaryStage = primaryStage;
 	}
 
 	public Stage getPrimaryStage() {
 		return this.primaryStage;
+	}
+	
+	public int getLength(){
+		return length;
+	}
+	
+	public int getWidth(){
+		return width;
 	}
 }

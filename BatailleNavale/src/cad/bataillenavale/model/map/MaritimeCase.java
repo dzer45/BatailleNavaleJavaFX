@@ -16,7 +16,7 @@ public class MaritimeCase extends Case {
 	}
 
 	@Override
-	protected void play() {
+	protected void shoot() {
 		this.s = State.TOUCHED;
 		this.map.touched++;
 		this.maritime.play();

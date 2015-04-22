@@ -37,5 +37,5 @@ public abstract class Case {
 		return nbMaritimeReach > 0;
 	}
 		
-	protected abstract void play();
+	protected abstract void shoot();
 }
