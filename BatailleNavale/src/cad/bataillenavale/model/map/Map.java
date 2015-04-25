@@ -64,12 +64,12 @@ public class Map {
 		y -= maritime.getPower();
 		
 		
-		for(int i = 0; i < maritime.getLength()+maritime.getPower()+1; i++)
+		for(int i = 0; i < maritime.getLength() + (maritime.getPower()*2); i++)
 		{
-			for(int j = 0; j < maritime.getWidth()+maritime.getPower()+1; j++)
+			for(int j = 0; j < maritime.getWidth() + (maritime.getPower()*2); j++)
 			{
 		
-				if(x+i >= this.getLength() || y+j >= this.getWidth() || x+i < 0 || y+j < 0)
+				if(x+i > this.getLength() || y+j > this.getWidth() || x+i < 0 || y+j < 0)
 					continue;
 
 			

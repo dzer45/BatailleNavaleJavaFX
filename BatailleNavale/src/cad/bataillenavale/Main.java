@@ -30,7 +30,7 @@ public class Main extends Application {
 		
 		// TESTER LA CONFIGVIEW
 		
-		modelBataille.start(10, 10, "XVI");
+		modelBataille.start(10, 10, "XX");
 		ConfigView cView = new ConfigView(modelBataille);
 		cView.show(this.primaryStage); 
 		

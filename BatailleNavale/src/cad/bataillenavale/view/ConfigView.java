@@ -3,8 +3,6 @@ package cad.bataillenavale.view;
 import java.util.Observable;
 import java.util.Observer;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -32,6 +30,7 @@ public class ConfigView implements Observer {
 	private ConfigController configController;
 	
 	private ListView<String> list = new ListView<String>();
+	private MaritimeList ml;
 	
 	private Button finish;
 	
@@ -58,9 +57,8 @@ public class ConfigView implements Observer {
 		
 		gpRoot.add(gpPlayer, 0, 0);
 		
-		ObservableList<String> items =FXCollections.observableArrayList (
-			    "Galion");
-		list.setItems(items);
+		ml = new MaritimeList(modelBataille);
+		list.setItems(ml);
 		
 		gpRoot.add(list, 1, 0);
 		
