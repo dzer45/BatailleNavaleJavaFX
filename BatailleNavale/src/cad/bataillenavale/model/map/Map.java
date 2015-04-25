@@ -69,7 +69,7 @@ public class Map {
 			for(int j = 0; j < maritime.getWidth() + (maritime.getPower()*2); j++)
 			{
 		
-				if(x+i > this.getLength() || y+j > this.getWidth() || x+i < 0 || y+j < 0)
+				if(x+i >= this.getLength() || y+j >= this.getWidth() || x+i < 0 || y+j < 0)
 					continue;
 
 			
