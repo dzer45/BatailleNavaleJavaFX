@@ -7,15 +7,25 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventTarget;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.image.Image;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.ConfigController;
 import cad.bataillenavale.model.BatailleNavale;
@@ -39,13 +49,28 @@ public class ConfigView implements Observer {
 	private MaritimeList ml;
 	
 	private Button finish;
+	private Stage stage;
 	
 	private GridPane gpPlayer; // drag n drop
 	
-	public ConfigView(BatailleNavale modelBataille){
+	public ConfigView(BatailleNavale modelBataille,Stage stage){
 		this.model = modelBataille;
+		this.stage = stage;
 		model.addObserver(this);
 		configController = new ConfigController(model);
+		
+		Screen screen = Screen.getPrimary();
+		Rectangle2D bounds = screen.getVisualBounds();
+		double screenWidth = bounds.getWidth();
+		double screenHeight = bounds.getHeight();
+		BorderPane borderPane = new BorderPane();
+		final Menu menu1 = new Menu("File");
+		final Menu menu2 = new Menu("Options");
+		final Menu menu3 = new Menu("Help");
+		MenuBar menuBar = new MenuBar();
+		menuBar.getMenus().addAll(menu1, menu2, menu3);
+		borderPane.setMinSize(screenWidth, screenHeight);
+		borderPane.setTop(menuBar);
 		
 		GridPane gpRoot = new GridPane(); 
 		gpRoot.setHgap(10);
@@ -81,9 +106,16 @@ public class ConfigView implements Observer {
 		finish.setText("Terminer");
 		
 		gpRoot.add(finish, 1, 1);
+		gpRoot.setAlignment(Pos.CENTER);
+		borderPane.setCenter(gpRoot);
+		Image img = new Image("file:resources/images/menu.jpg", screenWidth+30, screenHeight+30, false, true);
+		Background bgImg = new Background(new BackgroundImage(img, null, null,BackgroundPosition.CENTER, null));
+		borderPane.setBackground(bgImg);
 		
-		scene = new Scene(gpRoot,600,400);	
-		
+		scene = new Scene(borderPane);
+		stage.setTitle("Bataille Navale");
+		stage.setScene(scene);
+		stage.show();
 	}
 
 	@Override
@@ -108,7 +140,7 @@ public class ConfigView implements Observer {
 	}
 	
 	public void show(Stage stage){
-		stage.setTitle("TOOTOTOTO");
+		stage.setTitle("Bataille Navalle");
 		stage.setScene(scene);
 		stage.show();
 	}
@@ -139,7 +171,7 @@ public class ConfigView implements Observer {
 		
 		@Override
 		public void handle(ActionEvent event) {
-			configController.notifyFinish();
+			configController.notifyFinish(stage);
 		}
 		
 	}

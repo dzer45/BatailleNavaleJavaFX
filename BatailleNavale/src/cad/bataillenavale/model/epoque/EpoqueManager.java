@@ -15,7 +15,7 @@ public class EpoqueManager {
 	
 	private EpoqueManager(){
 		Epoque e = new Epoque("XX");
-		Maritime m = new Boat(2, 2, 4);
+		Maritime m = new Boat(2, 2, 2);
 		m.setName("Croiseur");
 		e.addMaritime(m);
 		addEpoque(e);
