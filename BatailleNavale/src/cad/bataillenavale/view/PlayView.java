@@ -6,6 +6,7 @@ import java.util.Observer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
@@ -23,19 +24,21 @@ public class PlayView implements Observer {
 	private Scene scene;
 	
 	private PlayController gameController;
+	private Stage stage;
 	
 	private Button[][] btnsIA = new Button[10][10];  // IA's map (where we shoot)
 	private Button[][] btnsPlayer = new Button[10][10]; // Player's map (where we see IA's shoots)
 	
-	public PlayView(BatailleNavale modelBataille) {
+	public PlayView(BatailleNavale modelBataille, Stage stage) {
 		this.model = modelBataille;
+		this.stage = stage ;
 		model.addObserver(this);
 		gameController = new PlayController(model);
 		
 		GridPane gpRoot = new GridPane(); 
 		gpRoot.setHgap(10);
 		gpRoot.setVgap(10);
-		gpRoot.setPadding(new Insets(25, 25, 25, 25));
+		gpRoot.setPadding(new Insets(30, 30, 30, 30));
 		
 		GridPane gpIA = new GridPane(); 
 		GridPane gpPlayer = new GridPane(); 
@@ -54,16 +57,12 @@ public class PlayView implements Observer {
 		}
 		gpRoot.add(gpPlayer, 0, 0);
 		gpRoot.add(gpIA, 1, 0);
-
-		scene = new Scene(gpRoot,600,400);	
-		
-		update(null, null); //
-	}
-	
-	public void show(Stage stage){
-		stage.setTitle("TOOTOTOTO");
+		gpRoot.setAlignment(Pos.CENTER);
+		scene = new Scene(gpRoot);	
+		stage.setTitle("Bataille Navale");
 		stage.setScene(scene);
 		stage.show();
+		update(null, null); 
 	}
 	
 	@Override

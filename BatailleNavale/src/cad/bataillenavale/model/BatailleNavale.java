@@ -53,22 +53,25 @@ public class BatailleNavale extends Observable {
 	public void shoot(Player whoShooted, int x, int y) {
 		if (isMyTurn(whoShooted)) 
 		{
-		//	if (maps.get(whoShooted).reacheableShoot(x, y))
+			if (maps.get(whoShooted).reacheableShoot(x, y))
 			{
 				if (!maps.get(opponents.get(whoShooted)).isPlayed(x, y))
 				{
 					maps.get(opponents.get(whoShooted)).shoot(x, y);
-					//currentPlayer = getOpponent(currentPlayer);
+					currentPlayer = getOpponent(currentPlayer);
 				}
-		//		else
-			//		System.out.println("case deja jouee");
+				else
+					System.out.println("case deja jouee");
 			}
-		//	else
-			//	System.out.println("pas atteingnable");
+			else
+				System.out.println("pas atteingnable");
 		}
-	//	else
-	//		System.out.println("pas ton tour");
+		else
+			System.out.println("pas ton tour");
+		
+		if( currentPlayer instanceof IA){
 			
+		}
 		setChanged();
 		notifyObservers();
 	}

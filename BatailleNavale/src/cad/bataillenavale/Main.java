@@ -10,6 +10,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import cad.bataillenavale.model.BatailleNavale;
 import cad.bataillenavale.view.ConfigView;
+import cad.bataillenavale.view.StartView;
 
 
 public class Main extends Application {
@@ -22,7 +23,7 @@ public class Main extends Application {
 		this.modelBataille = new BatailleNavale();
 		modelBataille.setStage(primaryStage);
 		
-	//	StartView startView = new StartView(modelBataille);
+		StartView startView = new StartView(modelBataille,primaryStage);
 	//	startView.show(this.primaryStage);
 		//initRootLayout();
 		//showStart();
@@ -30,10 +31,9 @@ public class Main extends Application {
 		
 		// TESTER LA CONFIGVIEW
 		
-		modelBataille.start(10, 10, "XVI");
-		ConfigView cView = new ConfigView(modelBataille);
-		cView.show(this.primaryStage); 
-		
+		//modelBataille.start(10, 10, "XVI");
+		//ConfigView cView = new ConfigView(modelBataille, primaryStage);
+		//cView.show(this.primaryStage); 		
 		// TESTER LA PLAYVIEW
 		/**
 		modelBataille.start(10, 10, "XVI");

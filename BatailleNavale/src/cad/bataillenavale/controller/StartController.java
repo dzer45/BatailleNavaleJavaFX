@@ -1,6 +1,8 @@
 package cad.bataillenavale.controller;
 
+import javafx.stage.Stage;
 import cad.bataillenavale.model.BatailleNavale;
+import cad.bataillenavale.view.NewGameStartView;
 
 public class StartController {
 
@@ -10,7 +12,7 @@ public class StartController {
 		this.model = model;
 	}
 
-	public void showPopUpGetParams(){
-		System.out.println("cc");
+	public void showPopUpGetParams(Stage stage){
+		NewGameStartView sv = new NewGameStartView(model,stage);
 	}
 }
