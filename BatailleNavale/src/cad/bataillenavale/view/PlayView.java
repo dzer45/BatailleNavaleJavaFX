@@ -26,14 +26,17 @@ public class PlayView implements Observer {
 	private PlayController gameController;
 	private Stage stage;
 	
-	private Button[][] btnsIA = new Button[10][10];  // IA's map (where we shoot)
-	private Button[][] btnsPlayer = new Button[10][10]; // Player's map (where we see IA's shoots)
+	private Button[][] btnsPlayer; // my Map (where i see my maritimes and IA's shoots)
+	private Button[][] btnsIA;  // IA's map (Where i see my reachable map and my shoots)
 	
 	public PlayView(BatailleNavale modelBataille, Stage stage) {
 		this.model = modelBataille;
 		this.stage = stage ;
 		model.addObserver(this);
 		gameController = new PlayController(model);
+		
+		btnsPlayer = new Button[model.getLength()][model.getWidth()];
+		btnsIA = new Button[model.getLength()][model.getWidth()];
 		
 		GridPane gpRoot = new GridPane(); 
 		gpRoot.setHgap(10);
@@ -67,7 +70,76 @@ public class PlayView implements Observer {
 	
 	@Override
 	public void update(Observable o, Object arg) {
+		//drawDevMaps(); // dev. only
+		drawMaps();
+	}
+	
+	private void drawMaps(){
 		
+		for (int i = 0; i < model.getLength(); i++) {
+			for (int j = 0; j < model.getWidth(); j++) {
+				Case c = model.getMapPlayer().getCase(i, j);
+				if(c != null)
+				{
+					
+					//  draw IA's shoots
+					if(c.getState().equals(State.TOUCHED))
+						btnsPlayer[i][j].setText("X");
+					else if(c.getState().equals(State.MISSED))
+						btnsPlayer[i][j].setText("O");
+					
+					// draw maritimes and reachable map
+					else if(c.getState().equals(State.NOTPLAYED))
+					{
+						if(c instanceof MaritimeCase)
+						{
+							btnsPlayer[i][j].setText("B"); // draw maritimes 
+							btnsIA[i][j].setText("R"); // draw reachable map
+						}
+						
+						// update reachable map
+						else if(c instanceof EmptyCase)
+						{ 
+							if(c.isReachable()) 
+								btnsIA[i][j].setText("R"); 
+							else
+							{
+								btnsIA[i][j].setText("_");
+								btnsIA[i][j].setDisable(true);
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		
+		for (int i = 0; i < model.getLength(); i++) {
+			for (int j = 0; j < model.getWidth(); j++) {
+				Case c = model.getMapIA().getCase(i, j);
+				if(c != null)
+				{
+					
+					if(c.getState().equals(State.TOUCHED))
+					{
+						btnsIA[i][j].setText("X");
+						btnsIA[i][j].setDisable(true);
+					}
+					else if(c.getState().equals(State.MISSED))
+					{
+						btnsIA[i][j].setText("O");
+						btnsIA[i][j].setDisable(true);
+					}
+					
+				}
+			}
+		}
+	}
+	
+	/**
+	 * See everything (IA's maritimes, ...) 
+	 */
+	private void drawDevMaps(){
 		for (int i = 0; i < model.getLength(); i++) {
 			for (int j = 0; j < model.getWidth(); j++) {
 				Case c = model.getMapPlayer().getCase(i, j);

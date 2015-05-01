@@ -26,11 +26,15 @@ public class Epoque {
 		this.maritimes.put(m.getName(), m);
 	}
 	
+	public void removeMaritime(String m) {
+		this.maritimes.remove(m);
+	}
+	
 	public Prototype getMaritime(String name){
 		return maritimes.get(name).doClone();
 	}
 	
-	public Set<String> getMaritimes(){
+	public Set<String> getMaritimesNames(){
 		return maritimes.keySet();
 	}
 }

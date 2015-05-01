@@ -41,11 +41,11 @@ public class ConfigView implements Observer {
 	private BatailleNavale model;
 	private Scene scene;
 	
-	private Button[][] btnsPlayer = new Button[10][10]; // Player's map (where we place maritimes and see IA's shoots)
+	private Button[][] btnsPlayer; // Player's map (where we place maritimes and see IA's shoots)
 	
 	private ConfigController configController;
 	
-	private ListView<String> list = new ListView<String>();
+	private ListView<String> list = new ListView<String>(); // list of maritimes names
 	private MaritimeList ml;
 	
 	private Button finish;
@@ -58,6 +58,8 @@ public class ConfigView implements Observer {
 		this.stage = stage;
 		model.addObserver(this);
 		configController = new ConfigController(model);
+		
+		btnsPlayer = new Button[model.getLength()][model.getWidth()];
 		
 		Screen screen = Screen.getPrimary();
 		Rectangle2D bounds = screen.getVisualBounds();
@@ -90,7 +92,7 @@ public class ConfigView implements Observer {
 		
 		gpRoot.add(gpPlayer, 0, 0);
 		
-		ml = new MaritimeList(modelBataille);
+		ml = new MaritimeList(modelBataille.getCurrentEpoque());
 		list.setItems(ml);
 		
 		// drag n drop 
@@ -158,7 +160,10 @@ public class ConfigView implements Observer {
 		@Override
 		public void handle(ActionEvent event) {
 			try {
-				configController.notifyAdd(x, y, (Maritime)EpoqueManager.getInstance().getEpoque(model.getCurrentEpoque().getName()).getMaritime(list.getSelectionModel().getSelectedItem()));
+				
+				String maritimeSelected = list.getSelectionModel().getSelectedItem();
+				configController.notifyAdd(x, y, maritimeSelected);
+			
 			} catch (MapException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -270,7 +275,7 @@ public class ConfigView implements Observer {
                     { 	
                     	int x = GridPane.getColumnIndex((Button)et);
                     	int y = GridPane.getRowIndex((Button)et);
-                    	configController.notifyAdd(x, y, (Maritime)EpoqueManager.getInstance().getEpoque(model.getCurrentEpoque().getName()).getMaritime(db.getString()));
+                    	configController.notifyAdd(x, y, db.getString());
                     }
 				} catch (MapException e) {
 					// TODO Auto-generated catch block

@@ -15,18 +15,20 @@ import cad.bataillenavale.model.player.Player;
 
 public class BatailleNavale extends Observable {
 
-	private Player player = new Human(), iA = new IA(), currentPlayer = null;
+	private Player currentPlayer = null;
+	private Human player = new Human();
+	private IA iA = new IA(this);
 	private java.util.Map<Player, Map> maps = new HashMap<Player, Map>();
 	private java.util.Map<Player, Player> opponents = new HashMap<Player, Player>();
 	private Epoque currentEpoque;
 	private Stage primaryStage;
-	
+
 	private int length, width;
 
 	public void start(int length, int width, String epoque) {
 		this.length = length;
 		this.width = width;
-		
+
 		opponents.put(player, iA);
 		opponents.put(iA, player);
 		currentPlayer = player;
@@ -39,9 +41,17 @@ public class BatailleNavale extends Observable {
 		this.currentEpoque = EpoqueManager.getInstance().getEpoque(epoque);
 	}
 
-	public void addMaritime(Player p, int x, int y, Maritime m)
-			throws MapException {
-		maps.get(p).addMaritime(x, y, m);
+	public void addMaritime(int x, int y, String maritimeName) throws MapException {
+		
+		EpoqueManager em = EpoqueManager.getInstance();
+		Maritime m = (Maritime)em.getEpoque(currentEpoque.getName()).getMaritime(maritimeName); // clone
+		
+		// player adds the maritime
+		maps.get(player).addMaritime(x, y, m); 
+
+		// IA adds the same maritime
+		iA.addMaritime(maritimeName);
+
 		setChanged();
 		notifyObservers();
 	}
@@ -51,27 +61,36 @@ public class BatailleNavale extends Observable {
 	}
 
 	public void shoot(Player whoShooted, int x, int y) {
-		if (isMyTurn(whoShooted)) 
-		{
-			if (maps.get(whoShooted).reacheableShoot(x, y))
-			{
-				if (!maps.get(opponents.get(whoShooted)).isPlayed(x, y))
-				{
-					maps.get(opponents.get(whoShooted)).shoot(x, y);
-					currentPlayer = getOpponent(currentPlayer);
-				}
-				else
-					System.out.println("case deja jouee");
-			}
-			else
-				System.out.println("pas atteingnable");
-		}
-		else
-			System.out.println("pas ton tour");
-		
-		if( currentPlayer instanceof IA){
+		if (isMyTurn(whoShooted)) {
 			
+			if (maps.get(whoShooted).reacheableShoot(x, y)) {
+				
+				if (!maps.get(opponents.get(whoShooted)).isPlayed(x, y)) {
+					maps.get(opponents.get(whoShooted)).shoot(x, y);
+				} else {
+					System.out.println(whoShooted+" case deja jouee");
+					return;
+				}
+				
+			} else {
+				
+				System.out.println(whoShooted+" pas atteingnable");
+				return;
+			}
+			
+		} else {
+
+			System.out.println(whoShooted+" pas ton tour");
+			return;
 		}
+
+		currentPlayer = getOpponent(currentPlayer);
+		
+		if (currentPlayer instanceof IA) {
+			// IA shoots
+			iA.shoot();
+		}
+
 		setChanged();
 		notifyObservers();
 	}
@@ -118,12 +137,12 @@ public class BatailleNavale extends Observable {
 	public Stage getPrimaryStage() {
 		return this.primaryStage;
 	}
-	
-	public int getLength(){
+
+	public int getLength() {
 		return length;
 	}
-	
-	public int getWidth(){
+
+	public int getWidth() {
 		return width;
 	}
 }

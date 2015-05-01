@@ -39,50 +39,56 @@ public class StartView implements Observer {
 		// TODO Auto-generated constructor stub
 		this.model = modelBataille;
 		this.stage = stage;
+		startController = new StartController(model);
 		buildFrame();
 		model.addObserver(this);
 	}
 
 	private void buildFrame() {
-		startController = new StartController(model);
 		Screen screen = Screen.getPrimary();
 		Rectangle2D bounds = screen.getVisualBounds();
 		double screenWidth = bounds.getWidth() ;
 		double screenHeight = bounds.getHeight() ;
 		BorderPane borderPane = new BorderPane();
-		final Menu menu1 = new Menu("File");
+		final Menu menu1 = new Menu("Fichier");
 		final Menu menu2 = new Menu("Options");
-		final Menu menu3 = new Menu("Help");
+		final Menu menu3 = new Menu("Aide");
 		MenuBar menuBar = new MenuBar();
 		menuBar.getMenus().addAll(menu1, menu2, menu3);
 		Button button = new Button();
-		button.setText("START");
+		button.setText("Nouvelle partie");
 		button.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
 				startController.showPopUpGetParams(stage);
 			}
 		});
 		Button button2 = new Button();
-		button2.setText("LOAD");
+		button2.setText("Reprendre une partie");
 		button2.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
-				startController.showPopUpGetParams(stage);
+				
 			}
 		});
 		Button button3 = new Button();
-		button3.setText("HELP");
+		button3.setText("Edition");
 		button3.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent event) {
-				// TODO Auto-generated method stub
-				startController.showPopUpGetParams(stage);
+				startController.showEdition(stage);
+			}
+		});
+		Button button4 = new Button();
+		button4.setText("Aide");
+		button4.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				
 			}
 		});
 		GridPane gridPane = new GridPane();
@@ -91,6 +97,7 @@ public class StartView implements Observer {
 		vbox.getChildren().add(button);
 		vbox.getChildren().add(button2);
 		vbox.getChildren().add(button3);
+		vbox.getChildren().add(button4);
 		gridPane.getChildren().add(vbox);
 		gridPane.setAlignment(Pos.CENTER);
 		borderPane.setMinSize(screenWidth, screenHeight);
@@ -100,7 +107,7 @@ public class StartView implements Observer {
 		Background bgImg = new Background(new BackgroundImage(img, null, null, BackgroundPosition.CENTER, null));
 		borderPane.setBackground(bgImg);
 		scene = new Scene(borderPane);
-		stage.setTitle("TOOTOTOTO");
+		stage.setTitle("Bataille Navale");
 		stage.setScene(scene);
 		stage.setHeight(screenHeight);
 		stage.setWidth(screenWidth);

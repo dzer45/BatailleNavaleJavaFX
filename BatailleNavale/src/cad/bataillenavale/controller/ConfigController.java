@@ -1,7 +1,5 @@
 package cad.bataillenavale.controller;
 
-import java.util.Random;
-
 import javafx.stage.Stage;
 import cad.bataillenavale.model.BatailleNavale;
 import cad.bataillenavale.model.epoque.EpoqueManager;
@@ -19,25 +17,13 @@ public class ConfigController {
 		this.model = model;
 	}
 
-	public void notifyAdd(int x, int y, Maritime m) throws MapException {
-		model.addMaritime(model.getPlayer(), x, y, m);
+	public void notifyAdd(int x, int y, String maritimeSelected) throws MapException {
+		model.addMaritime(x, y, maritimeSelected);
 	}
 
 	public void notifyFinish(Stage stage) {
 		model.addEmptyCases(model.getPlayer());
 		model.addEmptyCases(model.getIA());
-		PlayView gameView = new PlayView(model,stage);
+		new PlayView(model,stage);
 	}
-
-	public void configIA() throws MapException {
-		// TODO Auto-generated method stub
-		Random random = new Random();
-        int x = random.nextInt(model.getLength());
-        int y = random.nextInt(model.getWidth());
-        model.addMaritime(model.getIA(), x, y, (Maritime) EpoqueManager
-				.getInstance()
-				.getEpoque(model.getCurrentEpoque().getName())
-				.getMaritime("Galion"));
-	}
-
 }

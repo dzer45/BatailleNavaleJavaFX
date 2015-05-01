@@ -15,14 +15,12 @@ public class EpoqueManager {
 	
 	private EpoqueManager(){
 		Epoque e = new Epoque("XX");
-		Maritime m = new Boat(2, 2, 2);
-		m.setName("Croiseur");
+		Maritime m = new Boat("Croiseur", 2, 2, 2);
 		e.addMaritime(m);
 		addEpoque(e);
 		
 		e = new Epoque("XVI");
-		m = new Boat(2, 2, 1);
-		m.setName("Galion");
+		m = new Boat("Galion", 2, 2, 1);
 		e.addMaritime(m);
 		addEpoque(e);
 	}
@@ -41,5 +39,9 @@ public class EpoqueManager {
 	
 	public void addEpoque(Epoque e){
 		this.epoques.put(e.getName(), e);
+	}
+	
+	public void removeEpoque(String epoqueName){
+		this.epoques.remove(epoqueName);
 	}
 }

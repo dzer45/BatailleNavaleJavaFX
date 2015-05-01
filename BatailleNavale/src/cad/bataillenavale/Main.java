@@ -24,15 +24,17 @@ public class Main extends Application {
 		modelBataille.setStage(primaryStage);
 
 		StartView startView = new StartView(modelBataille, primaryStage);
+		
 		// startView.show(this.primaryStage);
 		// initRootLayout();
 		// showStart();
 
 		// TESTER LA CONFIGVIEW
-
-		// modelBataille.start(10, 10, "XVI");
-		// ConfigView cView = new ConfigView(modelBataille, primaryStage);
-		// cView.show(this.primaryStage);
+/**
+		 modelBataille.start(10, 10, "XVI");
+		 ConfigView cView = new ConfigView(modelBataille, primaryStage);
+		 cView.show(this.primaryStage);
+		 **/
 		// TESTER LA PLAYVIEW
 		/**
 		 * modelBataille.start(10, 10, "XVI");

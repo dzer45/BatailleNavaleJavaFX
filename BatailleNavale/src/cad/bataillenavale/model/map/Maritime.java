@@ -10,8 +10,8 @@ public abstract class Maritime implements Prototype {
 	protected int length, width, power, remainingCase;
 	protected Point point; // top left point of the maritime in the map 
 	
-	protected Maritime(int length, int width, int power){
-		
+	protected Maritime(String name, int length, int width, int power){
+		this.name = name;
 		this.length = length;
 		this.width = width;
 		this.power = power;

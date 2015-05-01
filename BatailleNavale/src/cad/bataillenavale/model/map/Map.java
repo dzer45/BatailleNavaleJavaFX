@@ -26,7 +26,7 @@ public class Map {
 		
 		// tests if the Maritime can be added -----------------------------------------------
 		
-		// the Maritime is bigger than the array ?
+		// the Maritime is bigger than the array or it comes out of the array ?
 		if(x + maritime.getLength() > getLength() || y + maritime.getWidth() > getWidth()){
 			throw new MapException("Le Maritime sort de la grille !");
 		}
