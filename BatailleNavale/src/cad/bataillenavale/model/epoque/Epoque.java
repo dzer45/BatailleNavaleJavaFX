@@ -30,8 +30,12 @@ public class Epoque {
 		this.maritimes.remove(m);
 	}
 	
-	public Prototype getMaritime(String name){
+	public Prototype cloneMaritime(String name){
 		return maritimes.get(name).doClone();
+	}
+	
+	public Maritime getMaritime(String name){
+		return maritimes.get(name);
 	}
 	
 	public Set<String> getMaritimesNames(){

@@ -3,6 +3,8 @@ package cad.bataillenavale.view;
 import java.util.Observable;
 import java.util.Observer;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventTarget;
@@ -11,6 +13,7 @@ import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -25,6 +28,7 @@ import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.ConfigController;
@@ -35,6 +39,7 @@ import cad.bataillenavale.model.map.Case;
 import cad.bataillenavale.model.map.EmptyCase;
 import cad.bataillenavale.model.map.Maritime;
 import cad.bataillenavale.model.map.MaritimeCase;
+import cad.bataillenavale.view.EditView.MaritimeListener;
 
 public class ConfigView implements Observer {
 
@@ -45,13 +50,15 @@ public class ConfigView implements Observer {
 	
 	private ConfigController configController;
 	
-	private ListView<String> list = new ListView<String>(); // list of maritimes names
+	private ListView<String> lvMaritimes = new ListView<String>(); // list of maritimes names
 	private MaritimeList ml;
 	
-	private Button finish;
+	private Button finishButton;
 	private Stage stage;
 	
 	private GridPane gpPlayer; // drag n drop
+	
+	private BorderPane borderPane = new BorderPane();
 	
 	public ConfigView(BatailleNavale modelBataille,Stage stage){
 		this.model = modelBataille;
@@ -65,7 +72,6 @@ public class ConfigView implements Observer {
 		Rectangle2D bounds = screen.getVisualBounds();
 		double screenWidth = bounds.getWidth();
 		double screenHeight = bounds.getHeight();
-		BorderPane borderPane = new BorderPane();
 		final Menu menu1 = new Menu("File");
 		final Menu menu2 = new Menu("Options");
 		final Menu menu3 = new Menu("Help");
@@ -93,21 +99,22 @@ public class ConfigView implements Observer {
 		gpRoot.add(gpPlayer, 0, 0);
 		
 		ml = new MaritimeList(modelBataille.getCurrentEpoque());
-		list.setItems(ml);
+		lvMaritimes.setItems(ml);
+		lvMaritimes.getSelectionModel().selectedItemProperty().addListener(new MaritimeListener());
 		
 		// drag n drop 
-		list.setOnDragDetected(new OnDragDetected()); 
-		list.setOnDragDone(new OnDragDone()); 
+		lvMaritimes.setOnDragDetected(new OnDragDetected()); 
+		lvMaritimes.setOnDragDone(new OnDragDone()); 
 		gpPlayer.setOnDragDropped(new OnDragDropped()); 
 		gpPlayer.setOnDragOver(new OnDragOver());
 		
-		gpRoot.add(list, 1, 0);
+		gpRoot.add(lvMaritimes, 1, 0);
 		
-		finish = new Button();
-		finish.setOnAction(new BtnFinishEventHandler());
-		finish.setText("Terminer");
+		finishButton = new Button("Terminer");
+		finishButton.setOnAction(new BtnFinishEventHandler());
+		finishButton.setDisable(true);
 		
-		gpRoot.add(finish, 1, 1);
+		gpRoot.add(finishButton, 1, 1);
 		gpRoot.setAlignment(Pos.CENTER);
 		borderPane.setCenter(gpRoot);
 		Image img = new Image("file:resources/images/menu.jpg", screenWidth+30, screenHeight+30, false, true);
@@ -139,6 +146,8 @@ public class ConfigView implements Observer {
 				}
 			}
 		}
+		
+		finishButton.setDisable(!model.canFinishGame());	
 	}
 	
 	public void show(Stage stage){
@@ -161,9 +170,9 @@ public class ConfigView implements Observer {
 		public void handle(ActionEvent event) {
 			try {
 				
-				String maritimeSelected = list.getSelectionModel().getSelectedItem();
+				String maritimeSelected = lvMaritimes.getSelectionModel().getSelectedItem();
 				configController.notifyAdd(x, y, maritimeSelected);
-			
+				
 			} catch (MapException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -190,11 +199,11 @@ public class ConfigView implements Observer {
 			System.out.println("Bateau sélectionné");
 			
 			 /* allow any transfer mode */
-			Dragboard db = list.startDragAndDrop(TransferMode.ANY);
+			Dragboard db = lvMaritimes.startDragAndDrop(TransferMode.ANY);
 			
 			/* put a string on dragboard */
             ClipboardContent content = new ClipboardContent();
-            content.putString(list.getSelectionModel().getSelectedItem());
+            content.putString(lvMaritimes.getSelectionModel().getSelectedItem());
             db.setContent(content);
             
             event.consume();
@@ -233,7 +242,7 @@ public class ConfigView implements Observer {
 	}
 
 	private void drawBoat(int x, int y, String maritime){
-		Maritime m = (Maritime)EpoqueManager.getInstance().getEpoque(model.getCurrentEpoque().getName()).getMaritime(maritime);
+		Maritime m = (Maritime)EpoqueManager.getInstance().getEpoque(model.getCurrentEpoque().getName()).cloneMaritime(maritime);
 		
 		for (int i = x; i < m.getLength(); i++) {
 			for (int j = y; j < m.getWidth(); j++) {
@@ -309,5 +318,28 @@ public class ConfigView implements Observer {
 		
 	}
 	
-	
+	// draw properties of a maritime
+	class MaritimeListener implements ChangeListener<String>{
+
+		@Override
+		public void changed(ObservableValue<? extends String> observable,
+				String oldValue, String newValue) {
+
+			EpoqueManager em = EpoqueManager.getInstance();
+			String epoqueName =  model.getCurrentEpoque().getName();
+			String maritimeName =  lvMaritimes.getSelectionModel().getSelectedItem();
+			Maritime m = em.getEpoque(epoqueName).getMaritime(maritimeName);
+			
+			VBox vBox = new VBox();
+			Label longueurLabel = new Label("Longueur : "+m.getLength());
+			Label hauteurLabel = new Label("Hauteur : "+m.getWidth());
+			Label puissanceLabel = new Label("Puissance : "+m.getPower());
+			vBox.getChildren().add(longueurLabel);
+			vBox.getChildren().add(hauteurLabel);
+			vBox.getChildren().add(puissanceLabel);
+			
+			borderPane.setRight(vBox);
+		}
+		
+	}
 }

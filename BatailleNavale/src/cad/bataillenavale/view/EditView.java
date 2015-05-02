@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import cad.bataillenavale.controller.EditController;
 import cad.bataillenavale.model.epoque.Epoque;
 import cad.bataillenavale.model.epoque.EpoqueManager;
+import cad.bataillenavale.model.map.Maritime;
 
 public class EditView {
 
@@ -25,7 +26,7 @@ public class EditView {
 
 	private BorderPane borderPane;
 	
-	private ListView<String> lvEpoques;
+	private ListView<String> lvEpoques, lvMaritimes ;
 	
 	public EditView(Stage stage){
 		this.stage = stage ;
@@ -76,9 +77,12 @@ public class EditView {
 	
 	class EpoqueListener implements ChangeListener<String>{
 
+		// when an epoque is selected, it shows all the maritimes of that epoque on a listView 
 		@Override
 		public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-			ListView<String> lvMaritimes = new ListView<>();
+			lvMaritimes = new ListView<>();
+			lvMaritimes.getSelectionModel().selectedItemProperty().addListener(new MaritimeListener());
+			
 			EpoqueManager em = EpoqueManager.getInstance();
 			Epoque e = em.getEpoque(newValue);
 			lvMaritimes.setItems(new MaritimeList(e));
@@ -109,6 +113,31 @@ public class EditView {
 			vbMaritimes.getChildren().add(hbBtnMaritime);
 			
 			borderPane.setCenter(vbMaritimes);
+		}
+		
+	}
+	
+	// draw properties of a maritime
+	class MaritimeListener implements ChangeListener<String>{
+
+		@Override
+		public void changed(ObservableValue<? extends String> observable,
+				String oldValue, String newValue) {
+
+			EpoqueManager em = EpoqueManager.getInstance();
+			String epoqueName =  lvEpoques.getSelectionModel().getSelectedItem();
+			String maritimeName =  lvMaritimes.getSelectionModel().getSelectedItem();
+			Maritime m = em.getEpoque(epoqueName).getMaritime(maritimeName);
+			
+			VBox vBox = new VBox();
+			Label longueurLabel = new Label("Longueur : "+m.getLength());
+			Label hauteurLabel = new Label("Hauteur : "+m.getWidth());
+			Label puissanceLabel = new Label("Puissance : "+m.getPower());
+			vBox.getChildren().add(longueurLabel);
+			vBox.getChildren().add(hauteurLabel);
+			vBox.getChildren().add(puissanceLabel);
+			
+			borderPane.setRight(vBox);
 		}
 		
 	}

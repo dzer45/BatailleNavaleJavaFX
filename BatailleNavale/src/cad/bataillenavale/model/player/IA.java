@@ -21,7 +21,7 @@ public class IA extends Player {
 		Map myMap = model.getMapIA();
 		
 		EpoqueManager em = EpoqueManager.getInstance();
-		Maritime m = (Maritime)em.getEpoque(model.getCurrentEpoque().getName()).getMaritime(maritimeName); // clone
+		Maritime m = (Maritime)em.getEpoque(model.getCurrentEpoque().getName()).cloneMaritime(maritimeName); // clone
 		
 		Random random = new Random();
 		
@@ -36,6 +36,7 @@ public class IA extends Player {
 				
 				myMap.addMaritime(x, y, m);
 				added = true; 
+				System.out.println("IA added a maritime : "+x+" "+y);
 				
 			} catch (MapException e) {
 				// TODO Auto-generated catch block
@@ -45,6 +46,8 @@ public class IA extends Player {
 	}
 	
 	public void shoot(){
+		
+		if(model.isGameFinished()) return;
 		
 		Map myMap = model.getMapIA();
 		Map playerMap = model.getMapPlayer();
@@ -60,12 +63,26 @@ public class IA extends Player {
         	x = random.nextInt(model.getLength());
             y = random.nextInt(model.getWidth());
             
-            reacheable = myMap.reacheableShoot(x, y);
-           	alreadyPlayed = playerMap.isPlayed(x, y);
+            try {
+            	
+				reacheable = myMap.reacheableShoot(x, y);
+				alreadyPlayed = playerMap.isPlayed(x, y);
+				
+			} catch (MapException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             
         } while((!reacheable) || (alreadyPlayed)); // we search for a place wich we can reach it and which is not already played
         // we can have infinite loop ! 
         
-        model.shoot(this, x, y);
+        try {
+        	
+			model.shoot(this, x, y);
+			
+		} catch (MapException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
