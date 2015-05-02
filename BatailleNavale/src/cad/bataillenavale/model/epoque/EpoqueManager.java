@@ -15,12 +15,12 @@ public class EpoqueManager {
 	
 	private EpoqueManager(){
 		Epoque e = new Epoque("XX");
-		Maritime m = new Boat("Croiseur", 2, 2, 2);
+		Maritime m = new Boat("Croiseur", 2, 2, 0);
 		e.addMaritime(m);
 		addEpoque(e);
 		
 		e = new Epoque("XVI");
-		m = new Boat("Galion", 2, 2, 1);
+		m = new Boat("Galion", 2, 2, 5);
 		e.addMaritime(m);
 		addEpoque(e);
 	}

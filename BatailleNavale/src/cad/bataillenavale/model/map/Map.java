@@ -1,6 +1,8 @@
 package cad.bataillenavale.model.map;
 
 import java.awt.Point;
+import java.util.ArrayList;
+import java.util.List;
 
 import cad.bataillenavale.model.exception.MapException;
 import cad.bataillenavale.model.map.Case.State;
@@ -9,6 +11,7 @@ public class Map {
 	
 	int missed = 0, touched = 0, maritimesRemaining = 0;
 	Case[][] cases; 
+	List<Maritime> maritimes = new ArrayList<>();
 	
 	public Map(int length, int width){
 		this.cases = new Case[length][width];
@@ -20,6 +23,10 @@ public class Map {
 	
 	private int getWidth(){
 		return this.cases[0].length;
+	}
+	
+	public List<Maritime> getMaritimes(){
+		return maritimes;
 	}
 	
 	public void addMaritime(int x, int y,  Maritime maritime) throws MapException {
@@ -45,6 +52,7 @@ public class Map {
 		// ----------------------------------------------------------------------------------
 		
 		maritime.setPoint(new Point(x, y));
+		maritimes.add(maritime);
 		this.maritimesRemaining++;
 		
 		try {
@@ -93,17 +101,27 @@ public class Map {
 	 * @param x
 	 * @param y
 	 * @return
+	 * @throws MapException 
 	 */
-	public boolean reacheableShoot(int x, int y){
-		return this.cases[x][y].isReachable();
+	public boolean reacheableShoot(int x, int y) throws MapException{
+		if(x < 0 || y < 0 || x >= getLength() || y >= getWidth()) 
+			throw new MapException("Case hors de la map"+x+" "+y);
+		
+		Case c = this.cases[x][y];
+		
+		return c != null && this.cases[x][y].isReachable();
 	}
 	
 
-	public boolean isPlayed(int x, int y){
+	public boolean isPlayed(int x, int y) throws MapException{
+		if(x < 0 || y < 0 || x >= getLength() || y >= getWidth()) 
+			throw new MapException("Case hors de la map"+x+" "+y);
 		return !this.cases[x][y].getState().equals(State.NOTPLAYED);
 	}
 	
-	public void shoot(int x, int y) {
+	public void shoot(int x, int y) throws MapException {
+		if(x < 0 || y < 0 || x >= getLength() || y >= getWidth()) 
+			throw new MapException("Case hors de la map"+x+" "+y);
 		this.cases[x][y].shoot();
 	}
 	
@@ -126,7 +144,8 @@ public class Map {
 		{
 			for(int j = 0; j < m.getWidth()+m.getPower()+2; j++)
 			{
-				this.cases[x + i][y + j].descReacheable();	
+				if((x+i) > 0 && (y+j) > 0 && (x+i) < getLength() && (y+j) < getWidth())
+					this.cases[x + i][y + j].descReacheable();	
 			}
 		}
 		
