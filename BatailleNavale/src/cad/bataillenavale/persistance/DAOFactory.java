@@ -1,23 +1,27 @@
 package cad.bataillenavale.persistance;
 
 
-public class DAOFactory {
+public abstract class DAOFactory {
+	// List of DAO types supported by the factory
+	public static final int XML = 1;
+	public static final int ORACLE = 2;
+	
+	public abstract PlayerDAO getPlayerDAO();
+	
+	public abstract EpoqueDAO getEpoqueDAO();
+	
+	public static DAOFactory getDAOFactory(
+		      int whichFactory) {
+		  
+		    switch (whichFactory) {
+		      case XML: 
+		          return new XMLDAOFactory();
+		      case ORACLE    : 
+		          return new OracleDAOFactory();      
+		      default           : 
+		          return null;
+		    }
+		  }
 
-	private static DAOFactory daof = new DAOFactory();
-	
-	private DAOFactory(){
-		
-	}
-	
-	public static DAOFactory getInstance(){
-		return daof;
-	}
-	
-	public DAOPlayer getDAOPlayer(){
-		return null;
-	}
-	
-	public DAOEpoque getDAOEpoque(){
-		return null;
-	}
+
 }

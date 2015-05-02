@@ -12,19 +12,21 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.EditController;
+import cad.bataillenavale.model.BatailleNavale;
 
 public class AddMaritimeView {
 
 	private Stage stage;
 	private Scene scene;
 	private EditController editController;
+	private BatailleNavale model;
 	
 	private String epoque;
 	
-	public AddMaritimeView(Stage stage, String epoque){
+	public AddMaritimeView(BatailleNavale model,Stage stage, String epoque ){
 		this.stage = stage ;
 		this.epoque = epoque;
-		editController = new EditController();
+		editController = new EditController(model);
 		
 		buildFrame();
 	}

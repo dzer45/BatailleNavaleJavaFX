@@ -5,8 +5,12 @@ import java.util.Set;
 
 import cad.bataillenavale.model.map.Maritime;
 
-public class Epoque {
+public class Epoque implements java.io.Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6201229032979142491L;
 	private String name;
 	private Map<String, Maritime> maritimes = new HashMap<String, Maritime>();
 	
@@ -22,6 +26,15 @@ public class Epoque {
 		this.name = name;
 	}
 
+	
+	public Map<String, Maritime> getMaritimes() {
+		return maritimes;
+	}
+
+	public void setMaritimes(Map<String, Maritime> maritimes) {
+		this.maritimes = maritimes;
+	}
+
 	public void addMaritime(Maritime m) {
 		this.maritimes.put(m.getName(), m);
 	}
@@ -30,8 +43,12 @@ public class Epoque {
 		this.maritimes.remove(m);
 	}
 	
-	public Prototype getMaritime(String name){
+	public Prototype cloneMaritime(String name){
 		return maritimes.get(name).doClone();
+	}
+	
+	public Maritime getMaritime(String name){
+		return maritimes.get(name);
 	}
 	
 	public Set<String> getMaritimesNames(){

@@ -19,6 +19,6 @@ public class StartController {
 	}
 	
 	public void showEdition(Stage stage){
-		new EditView(stage);
+		new EditView(model,stage);
 	}
 }
