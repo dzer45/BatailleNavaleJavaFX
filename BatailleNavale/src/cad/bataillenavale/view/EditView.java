@@ -14,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.EditController;
+import cad.bataillenavale.model.BatailleNavale;
 import cad.bataillenavale.model.epoque.Epoque;
 import cad.bataillenavale.model.epoque.EpoqueManager;
 import cad.bataillenavale.model.map.Maritime;
@@ -23,14 +24,15 @@ public class EditView {
 	private Stage stage;
 	private Scene scene;
 	private EditController editController;
-
+	private BatailleNavale model;
 	private BorderPane borderPane;
 	
 	private ListView<String> lvEpoques, lvMaritimes ;
 	
-	public EditView(Stage stage){
+	public EditView(BatailleNavale model,Stage stage){
 		this.stage = stage ;
-		editController = new EditController();
+		this.model = model;
+		editController = new EditController(model);
 		
 		buildFrame();
 	}

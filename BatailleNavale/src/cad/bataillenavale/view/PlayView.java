@@ -8,8 +8,6 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -152,12 +150,12 @@ public class PlayView implements Observer {
 			
 			if(model.isGameFinished())
 			{
-				Alert alert = new Alert(AlertType.INFORMATION);
+				/*Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Bataille Navale");
 				alert.setHeaderText("La partie est terminnée !");
 				alert.setContentText("Bien joué !");
 
-				alert.showAndWait();
+				alert.showAndWait();*/
 			}
 		}
 		
