@@ -18,22 +18,14 @@ import cad.bataillenavale.model.map.Case.State;
 import cad.bataillenavale.model.map.EmptyCase;
 import cad.bataillenavale.model.map.MaritimeCase;
 
-public class PlayView implements Observer {
-
-	private BatailleNavale model;
-	private Scene scene;
-	
-	private PlayController gameController;
-	private Stage stage;
+public class PlayView extends BatailleNavaleView implements Observer {
 	
 	private Button[][] btnsPlayer; // my Map (where i see my maritimes and IA's shoots)
 	private Button[][] btnsIA;  // IA's map (Where i see my reachable map and my shoots)
 	
-	public PlayView(BatailleNavale modelBataille, Stage stage) {
-		this.model = modelBataille;
-		this.stage = stage ;
+	public PlayView(BatailleNavale model, Stage stage) {
+		super(stage, model, new PlayController(model));
 		model.addObserver(this);
-		gameController = new PlayController(model);
 		
 		btnsPlayer = new Button[model.getLength()][model.getWidth()];
 		btnsIA = new Button[model.getLength()][model.getWidth()];
@@ -146,7 +138,8 @@ public class PlayView implements Observer {
 		
 		@Override
 		public void handle(ActionEvent event) {
-			gameController.notifyShoot(x, y);
+			PlayController playController = (PlayController)controller;
+			playController.notifyShoot(x, y);
 			
 			if(model.isGameFinished())
 			{

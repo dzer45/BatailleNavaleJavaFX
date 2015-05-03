@@ -5,7 +5,6 @@ import java.util.Observer;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
@@ -27,17 +26,10 @@ import javafx.stage.Stage;
 import cad.bataillenavale.controller.NewGameStartController;
 import cad.bataillenavale.model.BatailleNavale;
 
-public class NewGameStartView implements Observer{
+public class NewGameStartView extends BatailleNavaleView implements Observer{
 
-	private BatailleNavale model;
-	private NewGameStartController sc;
-	private Stage stage;
-	private Scene scene;
-	
 	public NewGameStartView(BatailleNavale model, Stage stage) {
-		// TODO Auto-generated constructor stub
-		this.model = model;
-		this.stage = stage;
+		super(stage, model, new NewGameStartController(model));
 		buildFrame();
 		model.addObserver(this);
 	}
@@ -89,10 +81,7 @@ public class NewGameStartView implements Observer{
 	    grid.add(taille, 0, 2);
 	    
 	    ComboBox epoqueComboBox = new ComboBox();
-        epoqueComboBox.getItems().addAll(
-            "XX",
-            "XVI"
-        );   
+        epoqueComboBox.getItems().addAll(model.getEpoques());   
 
         epoqueComboBox.setValue("XVI");
         grid.add(epoqueComboBox, 1, 1);
@@ -114,9 +103,8 @@ public class NewGameStartView implements Observer{
 			@Override
 			public void handle(ActionEvent event) {
 				// TODO Auto-generated method stub
-				sc = new NewGameStartController(model);
-				System.out.println(epoqueComboBox.getValue().toString());
-				sc.notifyStart(sizeComboBox.getValue().toString(),epoqueComboBox.getValue().toString());
+				NewGameStartController newGameStartController = (NewGameStartController) controller;
+				newGameStartController.notifyStart(sizeComboBox.getValue().toString(),epoqueComboBox.getValue().toString());
 				ConfigView cView = new ConfigView(model, stage);
 			}
 		});

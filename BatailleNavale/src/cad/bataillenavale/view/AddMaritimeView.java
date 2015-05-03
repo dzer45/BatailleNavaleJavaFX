@@ -14,19 +14,14 @@ import javafx.stage.Stage;
 import cad.bataillenavale.controller.EditController;
 import cad.bataillenavale.model.BatailleNavale;
 
-public class AddMaritimeView {
-
-	private Stage stage;
-	private Scene scene;
-	private EditController editController;
-	private BatailleNavale model;
+public class AddMaritimeView extends BatailleNavaleView {
 	
 	private String epoque;
 	
 	public AddMaritimeView(BatailleNavale model,Stage stage, String epoque ){
-		this.stage = stage ;
+		super(stage, model, new EditController(model));
+		
 		this.epoque = epoque;
-		editController = new EditController(model);
 		
 		buildFrame();
 	}
@@ -71,6 +66,7 @@ public class AddMaritimeView {
 				String longueur = longueurComboBox.getValue().toString();
 				String hauteur = hauteurComboBox.getValue().toString();
 				String puissance = puissanceComboBox.getValue().toString();
+				EditController editController = (EditController)controller;
 				editController.addMaritime(epoque, name, longueur, hauteur, puissance);
 				editController.returnToEditView(stage);
 			}
@@ -83,6 +79,7 @@ public class AddMaritimeView {
 			
 			@Override
 			public void handle(ActionEvent event) {
+				EditController editController = (EditController)controller;
 				editController.returnToEditView(stage);
 			}
 		});

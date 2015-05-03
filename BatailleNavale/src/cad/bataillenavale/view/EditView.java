@@ -8,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -16,23 +15,16 @@ import javafx.stage.Stage;
 import cad.bataillenavale.controller.EditController;
 import cad.bataillenavale.model.BatailleNavale;
 import cad.bataillenavale.model.epoque.Epoque;
-import cad.bataillenavale.model.epoque.EpoqueManager;
 import cad.bataillenavale.model.map.Maritime;
 
-public class EditView {
+public class EditView extends BatailleNavaleView {
 
-	private Stage stage;
-	private Scene scene;
-	private EditController editController;
-	private BatailleNavale model;
 	private BorderPane borderPane;
 	
 	private ListView<String> lvEpoques, lvMaritimes ;
 	
 	public EditView(BatailleNavale model,Stage stage){
-		this.stage = stage ;
-		this.model = model;
-		editController = new EditController(model);
+		super(stage, model, new EditController(model));
 		
 		buildFrame();
 	}
@@ -41,7 +33,7 @@ public class EditView {
 		borderPane = new BorderPane();
 		
 		lvEpoques = new ListView<>();
-		lvEpoques.setItems(new EpoqueList());
+		lvEpoques.setItems(new EpoqueItemList(model));
 		
 		lvEpoques.getSelectionModel().selectedItemProperty().addListener(new EpoqueListener());
 		
@@ -50,6 +42,7 @@ public class EditView {
 		addEpoqueBtn.setOnAction(new EventHandler<ActionEvent>() {	
 			@Override
 			public void handle(ActionEvent event) {
+				EditController editController = (EditController) controller;
 				editController.showAddEpoquePopUp(stage);
 			}
 		});
@@ -59,8 +52,9 @@ public class EditView {
 			@Override
 			public void handle(ActionEvent event) {
 				String epoqueName =  lvEpoques.getSelectionModel().getSelectedItem();
+				EditController editController = (EditController) controller;
 				editController.removeEpoque(epoqueName);
-				lvEpoques.setItems(new EpoqueList()); // refresh list TODO
+				lvEpoques.setItems(new EpoqueItemList(model)); // refresh list TODO
 			}
 		});
 		hbBtnEpoque.getChildren().add(removeEpoqueBtn);
@@ -85,15 +79,15 @@ public class EditView {
 			lvMaritimes = new ListView<>();
 			lvMaritimes.getSelectionModel().selectedItemProperty().addListener(new MaritimeListener());
 			
-			EpoqueManager em = EpoqueManager.getInstance();
-			Epoque e = em.getEpoque(newValue);
-			lvMaritimes.setItems(new MaritimeList(e));
+			Epoque e = model.getEpoque(newValue);
+			lvMaritimes.setItems(new MaritimeItemList(e));
 			
 			HBox hbBtnMaritime = new HBox();
 			Button addMaritimeBtn = new Button("Ajouter");
 			addMaritimeBtn.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {
+					EditController editController = (EditController) controller;
 					editController.showAddMaritimePopUp(stage, newValue);
 				}
 			});
@@ -104,8 +98,9 @@ public class EditView {
 				public void handle(ActionEvent event) {
 					String epoqueName =  lvEpoques.getSelectionModel().getSelectedItem();
 					String maritimeName =  lvMaritimes.getSelectionModel().getSelectedItem();
+					EditController editController = (EditController) controller;
 					editController.removeMaritime(epoqueName, maritimeName);
-					lvMaritimes.setItems(new MaritimeList(e));  // refresh list TODO
+					lvMaritimes.setItems(new MaritimeItemList(e));  // refresh list TODO
 				}
 			});
 			hbBtnMaritime.getChildren().add(removeMaritimeBtn);
@@ -126,10 +121,9 @@ public class EditView {
 		public void changed(ObservableValue<? extends String> observable,
 				String oldValue, String newValue) {
 
-			EpoqueManager em = EpoqueManager.getInstance();
 			String epoqueName =  lvEpoques.getSelectionModel().getSelectedItem();
 			String maritimeName =  lvMaritimes.getSelectionModel().getSelectedItem();
-			Maritime m = em.getEpoque(epoqueName).getMaritime(maritimeName);
+			Maritime m = model.getEpoque(epoqueName).getMaritime(maritimeName);
 			
 			VBox vBox = new VBox();
 			Label longueurLabel = new Label("Longueur : "+m.getLength());

@@ -2,19 +2,13 @@ package cad.bataillenavale.controller;
 
 import javafx.stage.Stage;
 import cad.bataillenavale.model.BatailleNavale;
-import cad.bataillenavale.model.epoque.EpoqueManager;
 import cad.bataillenavale.model.exception.MapException;
-import cad.bataillenavale.model.map.Maritime;
 import cad.bataillenavale.view.PlayView;
 
-public class ConfigController {
-
-
-	private BatailleNavale model;
+public class ConfigController extends BatailleNavaleController {
 	
 	public ConfigController(BatailleNavale model) {
-		// TODO Auto-generated constructor stub
-		this.model = model;
+		super(model);
 	}
 
 	public void notifyAdd(int x, int y, String maritimeSelected) throws MapException {

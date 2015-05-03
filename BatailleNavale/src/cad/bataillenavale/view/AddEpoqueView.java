@@ -13,17 +13,10 @@ import javafx.stage.Stage;
 import cad.bataillenavale.controller.EditController;
 import cad.bataillenavale.model.BatailleNavale;
 
-public class AddEpoqueView {
-
-	private Stage stage;
-	private Scene scene;
-	private EditController editController;
-	private BatailleNavale model;
+public class AddEpoqueView extends BatailleNavaleView {
 	
 	public AddEpoqueView(BatailleNavale model,Stage stage){
-		this.model=model;
-		this.stage = stage ;
-		editController = new EditController(model);
+		super(stage, model, new EditController(model));
 		
 		buildFrame();
 	}
@@ -42,6 +35,7 @@ public class AddEpoqueView {
 			
 			@Override
 			public void handle(ActionEvent event) {
+				EditController editController = (EditController)controller;
 				editController.addEpoque(ta.getText());
 				editController.returnToEditView(stage);
 			}
@@ -54,6 +48,7 @@ public class AddEpoqueView {
 			
 			@Override
 			public void handle(ActionEvent event) {
+				EditController editController = (EditController)controller;
 				editController.returnToEditView(stage);
 			}
 		});

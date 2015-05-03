@@ -3,6 +3,7 @@ package cad.bataillenavale.model;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Observable;
+import java.util.Set;
 
 import javafx.stage.Stage;
 import cad.bataillenavale.model.epoque.Epoque;
@@ -20,15 +21,20 @@ public class BatailleNavale extends Observable {
 
 	// create the required DAO Factory
 	private DAOFactory xmlFactory =   DAOFactory.getDAOFactory(DAOFactory.XML);
+	
 	private Player currentPlayer = null;
 	private Human player = new Human();
 	private IA iA = new IA(this);
+	
 	private java.util.Map<Player, Map> maps = new HashMap<Player, Map>();
 	private java.util.Map<Player, Player> opponents = new HashMap<Player, Player>();
+	
 	private Epoque currentEpoque;
 	private Stage primaryStage;
 
 	private int length, width;
+	
+	private EpoqueManager epoqueManager = EpoqueManager.getInstance();
 
 	public void start(int length, int width, String epoque) {
 		this.length = length;
@@ -43,13 +49,12 @@ public class BatailleNavale extends Observable {
 		Map grilleIA = new Map(length, width);
 		maps.put(iA, grilleIA);
 
-		this.currentEpoque = EpoqueManager.getInstance().getEpoque(epoque);
+		this.currentEpoque = epoqueManager.getEpoque(epoque);
 	}
 
 	public void addMaritime(int x, int y, String maritimeName) throws MapException {
 		
-		EpoqueManager em = EpoqueManager.getInstance();
-		Maritime m = (Maritime)em.getEpoque(currentEpoque.getName()).cloneMaritime(maritimeName); // clone
+		Maritime m = (Maritime)epoqueManager.getEpoque(currentEpoque.getName()).cloneMaritime(maritimeName); // clone
 		
 		// player adds the maritime
 		maps.get(player).addMaritime(x, y, m); 
@@ -66,8 +71,15 @@ public class BatailleNavale extends Observable {
 		EpoqueDAO epoqueDAO = xmlFactory.getEpoqueDAO();
 		// create a new epoque
 	    epoqueDAO.insertEpoque(e);
-		EpoqueManager.getInstance().addEpoque(e);
+		epoqueManager.addEpoque(e);
 	}
+	
+	public void removeEpoque(String epoqueName) {
+		// TODO DAO
+		epoqueManager.removeEpoque(epoqueName);
+	}
+	
+	
 
 	public void shoot(Player whoShooted, int x, int y) throws MapException {
 		if (isMyTurn(whoShooted)) {
@@ -216,5 +228,13 @@ public class BatailleNavale extends Observable {
 		Map mapPlayer = maps.get(player);
 		Map mapIA = maps.get(iA);
 		return mapPlayer.getMaritimeRemaining() == 0 || mapIA.getMaritimeRemaining() == 0;
+	}
+	
+	public Epoque getEpoque(String epoqueName){
+		return epoqueManager.getEpoque(epoqueName);
+	}
+	
+	public Set<String> getEpoques(){
+		return epoqueManager.getEpoques();
 	}
 }

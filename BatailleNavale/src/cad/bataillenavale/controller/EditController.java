@@ -3,30 +3,24 @@ package cad.bataillenavale.controller;
 import javafx.stage.Stage;
 import cad.bataillenavale.model.BatailleNavale;
 import cad.bataillenavale.model.epoque.Epoque;
-import cad.bataillenavale.model.epoque.EpoqueManager;
 import cad.bataillenavale.model.map.Boat;
 import cad.bataillenavale.model.map.Maritime;
 import cad.bataillenavale.view.AddEpoqueView;
 import cad.bataillenavale.view.AddMaritimeView;
 import cad.bataillenavale.view.EditView;
 
-public class EditController {
-
-	private EpoqueManager em = EpoqueManager.getInstance();
-	private BatailleNavale model;
+public class EditController extends BatailleNavaleController {
 	
 	public EditController(BatailleNavale model) {
-		// TODO Auto-generated constructor stub
-		this.model = model;
+		super(model);
 	}
 
 	public void addEpoque(String epoqueName) {
-		//em.addEpoque(new Epoque(epoqueName));
 		model.addEpoque(new Epoque(epoqueName));
 	}
 
 	public void removeEpoque(String epoqueName) {
-		em.removeEpoque(epoqueName);
+		model.removeEpoque(epoqueName); 
 	}
 
 	public void showAddEpoquePopUp(Stage stage) {
@@ -34,13 +28,13 @@ public class EditController {
 	}
 
 	public void addMaritime(String epoqueName, String maritimeName, String length, String width, String power) {
-		Epoque e = em.getEpoque(epoqueName);
+		Epoque e = model.getEpoque(epoqueName);
 		Maritime m = new Boat(maritimeName, Integer.parseInt(length), Integer.parseInt(width), Integer.parseInt(power));
 		e.addMaritime(m);
 	}
 
 	public void removeMaritime(String epoqueName, String maritimeName) {
-		Epoque e = em.getEpoque(epoqueName);
+		Epoque e = model.getEpoque(epoqueName);
 		e.removeMaritime(maritimeName);
 	}
 

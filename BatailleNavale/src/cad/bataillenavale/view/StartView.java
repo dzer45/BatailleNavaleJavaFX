@@ -1,11 +1,7 @@
 package cad.bataillenavale.view;
 
-import java.util.Observable;
-import java.util.Observer;
-
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
@@ -13,12 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BackgroundRepeat;
-import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -27,21 +20,12 @@ import javafx.stage.Stage;
 import cad.bataillenavale.controller.StartController;
 import cad.bataillenavale.model.BatailleNavale;
 
-public class StartView implements Observer {
+public class StartView extends BatailleNavaleView {
 
-	private BatailleNavale model;
-	private Stage stage;
-	private Scene scene;
-
-	private StartController startController;
-
-	public StartView(BatailleNavale modelBataille, Stage stage) {
-		// TODO Auto-generated constructor stub
-		this.model = modelBataille;
-		this.stage = stage;
-		startController = new StartController(model);
+	public StartView(BatailleNavale model, Stage stage) {
+		super(stage, model, new StartController(model));
+		
 		buildFrame();
-		model.addObserver(this);
 	}
 
 	private void buildFrame() {
@@ -61,6 +45,7 @@ public class StartView implements Observer {
 
 			@Override
 			public void handle(ActionEvent event) {
+				StartController startController = (StartController) controller;
 				startController.showPopUpGetParams(stage);
 			}
 		});
@@ -79,6 +64,7 @@ public class StartView implements Observer {
 
 			@Override
 			public void handle(ActionEvent event) {
+				StartController startController = (StartController) controller;
 				startController.showEdition(stage);
 			}
 		});
@@ -112,11 +98,5 @@ public class StartView implements Observer {
 		stage.setHeight(screenHeight);
 		stage.setWidth(screenWidth);
 		stage.show();
-	}
-
-	@Override
-	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
-
 	}
 }

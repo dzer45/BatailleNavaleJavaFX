@@ -3,18 +3,15 @@ package cad.bataillenavale.view;
 import java.util.ArrayList;
 
 import javafx.collections.ObservableListBase;
-import cad.bataillenavale.model.epoque.EpoqueManager;
+import cad.bataillenavale.model.epoque.Epoque;
 
-public class EpoqueList extends ObservableListBase<String> {
+public class MaritimeItemList extends ObservableListBase<String> {
 	
 	private ArrayList<String> alm = new ArrayList<>();
 	
-	public EpoqueList() {
-		EpoqueManager em = EpoqueManager.getInstance();
-		for(String maritime : em.getEpoques())
-		{
+	public MaritimeItemList(Epoque e) {
+		for(String maritime : e.getMaritimesNames())
 			alm.add(maritime);
-		}
 	}
 	
 	@Override

@@ -20,8 +20,7 @@ public class IA extends Player {
 		
 		Map myMap = model.getMapIA();
 		
-		EpoqueManager em = EpoqueManager.getInstance();
-		Maritime m = (Maritime)em.getEpoque(model.getCurrentEpoque().getName()).cloneMaritime(maritimeName); // clone
+		Maritime m = (Maritime)model.getEpoque(model.getCurrentEpoque().getName()).cloneMaritime(maritimeName); // clone
 		
 		Random random = new Random();
 		

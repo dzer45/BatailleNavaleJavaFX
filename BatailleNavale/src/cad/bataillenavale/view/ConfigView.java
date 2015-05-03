@@ -33,38 +33,27 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.ConfigController;
 import cad.bataillenavale.model.BatailleNavale;
-import cad.bataillenavale.model.epoque.EpoqueManager;
 import cad.bataillenavale.model.exception.MapException;
 import cad.bataillenavale.model.map.Case;
 import cad.bataillenavale.model.map.EmptyCase;
 import cad.bataillenavale.model.map.Maritime;
 import cad.bataillenavale.model.map.MaritimeCase;
-import cad.bataillenavale.view.EditView.MaritimeListener;
 
-public class ConfigView implements Observer {
+public class ConfigView extends BatailleNavaleView implements Observer {
 
-	private BatailleNavale model;
-	private Scene scene;
-	
 	private Button[][] btnsPlayer; // Player's map (where we place maritimes and see IA's shoots)
 	
-	private ConfigController configController;
-	
 	private ListView<String> lvMaritimes = new ListView<String>(); // list of maritimes names
-	private MaritimeList ml;
 	
 	private Button finishButton;
-	private Stage stage;
 	
 	private GridPane gpPlayer; // drag n drop
 	
-	private BorderPane borderPane = new BorderPane();
+	private BorderPane root = new BorderPane();
 	
-	public ConfigView(BatailleNavale modelBataille,Stage stage){
-		this.model = modelBataille;
-		this.stage = stage;
+	public ConfigView(BatailleNavale model,Stage stage){
+		super(stage, model, new ConfigController(model));
 		model.addObserver(this);
-		configController = new ConfigController(model);
 		
 		btnsPlayer = new Button[model.getLength()][model.getWidth()];
 		
@@ -77,8 +66,8 @@ public class ConfigView implements Observer {
 		final Menu menu3 = new Menu("Help");
 		MenuBar menuBar = new MenuBar();
 		menuBar.getMenus().addAll(menu1, menu2, menu3);
-		borderPane.setMinSize(screenWidth, screenHeight);
-		borderPane.setTop(menuBar);
+		root.setMinSize(screenWidth, screenHeight);
+		root.setTop(menuBar);
 		
 		GridPane gpRoot = new GridPane(); 
 		gpRoot.setHgap(10);
@@ -98,8 +87,8 @@ public class ConfigView implements Observer {
 		
 		gpRoot.add(gpPlayer, 0, 0);
 		
-		ml = new MaritimeList(modelBataille.getCurrentEpoque());
-		lvMaritimes.setItems(ml);
+		MaritimeItemList maritimeItemList = new MaritimeItemList(model.getCurrentEpoque());
+		lvMaritimes.setItems(maritimeItemList);
 		lvMaritimes.getSelectionModel().selectedItemProperty().addListener(new MaritimeListener());
 		
 		// drag n drop 
@@ -116,12 +105,12 @@ public class ConfigView implements Observer {
 		
 		gpRoot.add(finishButton, 1, 1);
 		gpRoot.setAlignment(Pos.CENTER);
-		borderPane.setCenter(gpRoot);
+		root.setCenter(gpRoot);
 		Image img = new Image("file:resources/images/menu.jpg", screenWidth+30, screenHeight+30, false, true);
 		Background bgImg = new Background(new BackgroundImage(img, null, null,BackgroundPosition.CENTER, null));
-		borderPane.setBackground(bgImg);
+		root.setBackground(bgImg);
 		
-		scene = new Scene(borderPane);
+		scene = new Scene(root);
 		stage.setTitle("Bataille Navale");
 		stage.setScene(scene);
 		stage.show();
@@ -171,6 +160,7 @@ public class ConfigView implements Observer {
 			try {
 				
 				String maritimeSelected = lvMaritimes.getSelectionModel().getSelectedItem();
+				ConfigController configController = (ConfigController) controller;
 				configController.notifyAdd(x, y, maritimeSelected);
 				
 			} catch (MapException e) {
@@ -185,6 +175,7 @@ public class ConfigView implements Observer {
 		
 		@Override
 		public void handle(ActionEvent event) {
+			ConfigController configController = (ConfigController) controller;
 			configController.notifyFinish(stage);
 		}
 		
@@ -242,7 +233,7 @@ public class ConfigView implements Observer {
 	}
 
 	private void drawBoat(int x, int y, String maritime){
-		Maritime m = (Maritime)EpoqueManager.getInstance().getEpoque(model.getCurrentEpoque().getName()).cloneMaritime(maritime);
+		Maritime m = (Maritime)model.getEpoque(model.getCurrentEpoque().getName()).cloneMaritime(maritime);
 		
 		for (int i = x; i < m.getLength(); i++) {
 			for (int j = y; j < m.getWidth(); j++) {
@@ -284,6 +275,7 @@ public class ConfigView implements Observer {
                     { 	
                     	int x = GridPane.getColumnIndex((Button)et);
                     	int y = GridPane.getRowIndex((Button)et);
+                    	ConfigController configController = (ConfigController) controller;
                     	configController.notifyAdd(x, y, db.getString());
                     }
 				} catch (MapException e) {
@@ -325,10 +317,9 @@ public class ConfigView implements Observer {
 		public void changed(ObservableValue<? extends String> observable,
 				String oldValue, String newValue) {
 
-			EpoqueManager em = EpoqueManager.getInstance();
 			String epoqueName =  model.getCurrentEpoque().getName();
 			String maritimeName =  lvMaritimes.getSelectionModel().getSelectedItem();
-			Maritime m = em.getEpoque(epoqueName).getMaritime(maritimeName);
+			Maritime m = model.getEpoque(epoqueName).getMaritime(maritimeName);
 			
 			VBox vBox = new VBox();
 			Label longueurLabel = new Label("Longueur : "+m.getLength());
@@ -338,7 +329,7 @@ public class ConfigView implements Observer {
 			vBox.getChildren().add(hauteurLabel);
 			vBox.getChildren().add(puissanceLabel);
 			
-			borderPane.setRight(vBox);
+			root.setRight(vBox);
 		}
 		
 	}

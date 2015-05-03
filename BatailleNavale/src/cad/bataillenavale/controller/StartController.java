@@ -5,13 +5,10 @@ import cad.bataillenavale.model.BatailleNavale;
 import cad.bataillenavale.view.EditView;
 import cad.bataillenavale.view.NewGameStartView;
 
-public class StartController {
+public class StartController extends BatailleNavaleController {
 
-	private BatailleNavale model;
-	
 	public StartController(BatailleNavale model) {
-		// TODO Auto-generated constructor stu
-		this.model = model;
+		super(model);
 	}
 
 	public void showPopUpGetParams(Stage stage){
