@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Observable;
 import java.util.Set;
-
 import javafx.stage.Stage;
 import cad.bataillenavale.model.epoque.Epoque;
 import cad.bataillenavale.model.epoque.EpoqueManager;
@@ -15,7 +14,6 @@ import cad.bataillenavale.model.player.Human;
 import cad.bataillenavale.model.player.IA;
 import cad.bataillenavale.model.player.Player;
 import cad.bataillenavale.persistance.DAOFactory;
-import cad.bataillenavale.persistance.EpoqueDAO;
 
 public class BatailleNavale extends Observable {
 
@@ -30,8 +28,8 @@ public class BatailleNavale extends Observable {
 	private java.util.Map<Player, Player> opponents = new HashMap<Player, Player>();
 	
 	private Epoque currentEpoque;
+	
 	private Stage primaryStage;
-
 	private int length, width;
 	
 	private EpoqueManager epoqueManager = EpoqueManager.getInstance();
@@ -67,11 +65,7 @@ public class BatailleNavale extends Observable {
 	}
 
 	public void addEpoque(Epoque e) {
-		// Create a DAO
-		EpoqueDAO epoqueDAO = xmlFactory.getEpoqueDAO();
-		// create a new epoque
-	    epoqueDAO.insertEpoque(e);
-		epoqueManager.addEpoque(e);
+		EpoqueManager.getInstance().addEpoque(e);
 	}
 	
 	public void removeEpoque(String epoqueName) {

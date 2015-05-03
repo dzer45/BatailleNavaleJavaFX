@@ -6,7 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
+import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -55,7 +59,9 @@ public class XMLDAOEpoque implements EpoqueDAO {
 	private void ecrireFichConfig() {
 		// TODO Auto-generated method stub
 		String s = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-				+ "<!-- Fichier des epoques -->\n" + "<epoques>\n"
+				+ "<!-- Fichier des epoques -->\n"
+				+ "<epoques>\n"
+				
 				+ "</epoques>";
 
 		try {
@@ -74,7 +80,6 @@ public class XMLDAOEpoque implements EpoqueDAO {
 	@Override
 	public void insertEpoque(Epoque p) {
 		// TODO Auto-generated method stub
-		racine = document.getRootElement();
 		Element epoque = new Element("epoque");
 		epoque.addContent(new Element("name").setText(p.getName()));
 		racine.addContent(epoque);
@@ -99,6 +104,25 @@ public class XMLDAOEpoque implements EpoqueDAO {
 	public Epoque findEpoque(Epoque p) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public List<Epoque> getAllEpoque() {
+		// TODO Auto-generated method stub
+		List<Element> epoques = racine.getChildren("epoque");
+		List listEpoques = new ArrayList<Epoque>();
+		Epoque epoque = null;
+		for(Element e : epoques){
+			epoque = new Epoque(e.getText());
+			List attributs = e.getAttributes();
+			ListIterator iterator = attributs.listIterator();
+			System.out.println("Liste des attributs");
+			while (iterator.hasNext()) {
+			Attribute attribut = (Attribute) iterator.next();
+			System.out.println("attribut "+attribut.getName()+" : "+attribut.getValue());
+			}
+		}
+		return listEpoques;
 	}
 
 }

@@ -22,6 +22,4 @@ public class XMLPlayerDAO implements PlayerDAO{
 		return null;
 	}
 
-
-
 }
