@@ -8,6 +8,8 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -30,11 +32,11 @@ public class PlayView extends BatailleNavaleView implements Observer {
 		btnsPlayer = new Button[model.getLength()][model.getWidth()];
 		btnsIA = new Button[model.getLength()][model.getWidth()];
 		
-		GridPane gpRoot = new GridPane(); 
-		gpRoot.setHgap(10);
-		gpRoot.setVgap(10);
-		gpRoot.setPadding(new Insets(30, 30, 30, 30));
-		
+		GridPane gp = new GridPane(); 
+		gp.setHgap(10);
+		gp.setVgap(10);
+		gp.setPadding(new Insets(30, 30, 30, 30));
+				
 		GridPane gpIA = new GridPane(); 
 		GridPane gpPlayer = new GridPane(); 
 		
@@ -50,10 +52,12 @@ public class PlayView extends BatailleNavaleView implements Observer {
 				btnsIA[i][j] = b;
 			}
 		}
-		gpRoot.add(gpPlayer, 0, 0);
-		gpRoot.add(gpIA, 1, 0);
-		gpRoot.setAlignment(Pos.CENTER);
-		scene = new Scene(gpRoot);	
+		gp.add(gpPlayer, 0, 0);
+		gp.add(gpIA, 1, 0);
+		gp.setAlignment(Pos.CENTER);
+		
+		root.setCenter(gp);
+		scene = new Scene(root);	
 		stage.setTitle("Bataille Navale");
 		stage.setScene(scene);
 		stage.show();
@@ -143,12 +147,12 @@ public class PlayView extends BatailleNavaleView implements Observer {
 			
 			if(model.isGameFinished())
 			{
-				/*Alert alert = new Alert(AlertType.INFORMATION);
+				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Bataille Navale");
 				alert.setHeaderText("La partie est terminnée !");
 				alert.setContentText("Bien joué !");
 
-				alert.showAndWait();*/
+				alert.showAndWait();
 			}
 		}
 		

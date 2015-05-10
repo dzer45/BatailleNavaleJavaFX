@@ -6,22 +6,13 @@ import java.util.Observer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.NewGameStartController;
 import cad.bataillenavale.model.BatailleNavale;
@@ -35,20 +26,9 @@ public class NewGameStartView extends BatailleNavaleView implements Observer{
 	}
 
 	private void buildFrame() {
-		// TODO Auto-generated method stub
-		Screen screen = Screen.getPrimary();
-		Rectangle2D bounds = screen.getVisualBounds();
-		double screenWidth = bounds.getWidth();
-		double screenHeight = bounds.getHeight();
-		BorderPane borderPane = new BorderPane();
-		borderPane.setMinSize(screenWidth, screenHeight);
 		GridPane gridPane = addGridPane();
-		borderPane.setCenter(gridPane);
-		Image img = new Image("file:resources/images/menu.jpg", screenWidth+30, screenHeight+30, false, true);
-		Background bgImg = new Background(new BackgroundImage(img, null, null,BackgroundPosition.CENTER, null));
-		borderPane.setBackground(bgImg);
-		scene = new Scene(borderPane);
-		stage.setTitle("Bataille Navale");
+		root.setCenter(gridPane);
+		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 	}
