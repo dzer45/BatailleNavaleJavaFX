@@ -41,13 +41,7 @@ public class NewGameStartView extends BatailleNavaleView implements Observer{
 		double screenWidth = bounds.getWidth();
 		double screenHeight = bounds.getHeight();
 		BorderPane borderPane = new BorderPane();
-		final Menu menu1 = new Menu("File");
-		final Menu menu2 = new Menu("Options");
-		final Menu menu3 = new Menu("Help");
-		MenuBar menuBar = new MenuBar();
-		menuBar.getMenus().addAll(menu1, menu2, menu3);
 		borderPane.setMinSize(screenWidth, screenHeight);
-		borderPane.setTop(menuBar);
 		GridPane gridPane = addGridPane();
 		borderPane.setCenter(gridPane);
 		Image img = new Image("file:resources/images/menu.jpg", screenWidth+30, screenHeight+30, false, true);
@@ -80,13 +74,13 @@ public class NewGameStartView extends BatailleNavaleView implements Observer{
 	    taille.setFont(Font.font("Arial", FontWeight.BOLD, 20));
 	    grid.add(taille, 0, 2);
 	    
-	    ComboBox epoqueComboBox = new ComboBox();
+	    ComboBox<String> epoqueComboBox = new ComboBox<String>();
         epoqueComboBox.getItems().addAll(model.getEpoques());   
 
-        epoqueComboBox.setValue("XVI");
+       // epoqueComboBox.setValue("XVI");
         grid.add(epoqueComboBox, 1, 1);
         
-	    ComboBox sizeComboBox = new ComboBox();
+	    ComboBox<String> sizeComboBox = new ComboBox<String>();
         sizeComboBox.getItems().addAll(
             "10",
             "20",
@@ -105,7 +99,7 @@ public class NewGameStartView extends BatailleNavaleView implements Observer{
 				// TODO Auto-generated method stub
 				NewGameStartController newGameStartController = (NewGameStartController) controller;
 				newGameStartController.notifyStart(sizeComboBox.getValue().toString(),epoqueComboBox.getValue().toString());
-				ConfigView cView = new ConfigView(model, stage);
+				new ConfigView(model, stage);
 			}
 		});
 	    grid.add(buttonOk, 1, 3, 2, 1);

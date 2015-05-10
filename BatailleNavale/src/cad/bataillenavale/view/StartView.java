@@ -34,11 +34,6 @@ public class StartView extends BatailleNavaleView {
 		double screenWidth = bounds.getWidth() ;
 		double screenHeight = bounds.getHeight() ;
 		BorderPane borderPane = new BorderPane();
-		final Menu menu1 = new Menu("Fichier");
-		final Menu menu2 = new Menu("Options");
-		final Menu menu3 = new Menu("Aide");
-		MenuBar menuBar = new MenuBar();
-		menuBar.getMenus().addAll(menu1, menu2, menu3);
 		Button button = new Button();
 		button.setText("Nouvelle partie");
 		button.setOnAction(new EventHandler<ActionEvent>() {
@@ -87,7 +82,6 @@ public class StartView extends BatailleNavaleView {
 		gridPane.getChildren().add(vbox);
 		gridPane.setAlignment(Pos.CENTER);
 		borderPane.setMinSize(screenWidth, screenHeight);
-		borderPane.setTop(menuBar);
 		borderPane.setCenter(gridPane);
 		Image img = new Image("file:resources/images/menu.jpg",screenWidth+20, screenHeight+20, false, true);
 		Background bgImg = new Background(new BackgroundImage(img, null, null, BackgroundPosition.CENTER, null));

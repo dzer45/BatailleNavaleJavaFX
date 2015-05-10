@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Set;
 
 import cad.bataillenavale.model.map.Maritime;
+import cad.bataillenavale.model.map.Prototype;
 
 public class Epoque implements java.io.Serializable {
 	

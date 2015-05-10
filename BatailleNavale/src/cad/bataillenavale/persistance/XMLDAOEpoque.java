@@ -9,8 +9,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
-
-import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -19,6 +17,8 @@ import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 
 import cad.bataillenavale.model.epoque.Epoque;
+import cad.bataillenavale.model.map.Boat;
+import cad.bataillenavale.model.map.Maritime;
 
 public class XMLDAOEpoque implements EpoqueDAO {
 
@@ -27,6 +27,9 @@ public class XMLDAOEpoque implements EpoqueDAO {
 	private Document document;
 	private Element racine;
 
+	/**
+	 * 
+	 */
 	private XMLDAOEpoque() {
 
 		SAXBuilder sxb = new SAXBuilder();
@@ -49,6 +52,10 @@ public class XMLDAOEpoque implements EpoqueDAO {
 
 	} // XMLDAOEpoque
 
+	/**
+	 * 
+	 * @return
+	 */
 	public static EpoqueDAO getInstance() {
 		if (instance == null) {
 			instance = new XMLDAOEpoque();
@@ -56,12 +63,14 @@ public class XMLDAOEpoque implements EpoqueDAO {
 		return instance;
 	}
 
+	/**
+	 * 
+	 */
 	private void ecrireFichConfig() {
 		// TODO Auto-generated method stub
 		String s = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-				+ "<!-- Fichier des epoques -->\n"
-				+ "<epoques>\n"
-				
+				+ "<!-- Fichier des epoques -->\n" + "<epoques>\n"
+
 				+ "</epoques>";
 
 		try {
@@ -110,16 +119,24 @@ public class XMLDAOEpoque implements EpoqueDAO {
 	public List<Epoque> getAllEpoque() {
 		// TODO Auto-generated method stub
 		List<Element> epoques = racine.getChildren("epoque");
-		List listEpoques = new ArrayList<Epoque>();
+		ListIterator<?> iterator = epoques.listIterator();
+		List<Epoque> listEpoques = new ArrayList<Epoque>();
 		Epoque epoque = null;
-		for(Element e : epoques){
-			epoque = new Epoque(e.getText());
-			List attributs = e.getAttributes();
-			ListIterator iterator = attributs.listIterator();
-			System.out.println("Liste des attributs");
-			while (iterator.hasNext()) {
-			Attribute attribut = (Attribute) iterator.next();
-			System.out.println("attribut "+attribut.getName()+" : "+attribut.getValue());
+		int length = 0, width = 0, power = 0;
+		Maritime maritime;
+		while (iterator.hasNext()) {
+			Element e = (Element) iterator.next();
+			epoque = new Epoque(e.getChildText("name"));
+			listEpoques.add(epoque);
+			List<?> maritimes = e.getChildren("maritime");
+			ListIterator<?> iterator2 = maritimes.listIterator();
+			while (iterator2.hasNext()) {
+				Element el = (Element) iterator2.next();
+				length = Integer.parseInt(el.getChildText("length"));
+				width = Integer.parseInt(el.getChildText("width"));
+				power = Integer.parseInt(el.getChildText("power"));
+				maritime = new Boat(el.getChildText("name"), length, width, power);
+				epoque.addMaritime(maritime);
 			}
 		}
 		return listEpoques;

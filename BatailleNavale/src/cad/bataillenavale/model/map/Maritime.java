@@ -2,8 +2,6 @@ package cad.bataillenavale.model.map;
 
 import java.awt.Point;
 
-import cad.bataillenavale.model.epoque.Prototype;
-
 public abstract class Maritime implements Prototype {
 
 	protected String name;

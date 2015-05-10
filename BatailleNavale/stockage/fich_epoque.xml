@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Fichier des epoques -->
 <epoques>
-	<epoque>
-		<name>toto</name>
-		<maritime>
-			<name>Croiseur</name>
-			<length>4</length>
-			<width>4</width>
-			<power>2</power>
-		</maritime>
-	</epoque>
-	<epoque>
-		<name>tata</name>
-	</epoque>
+  <epoque>
+    <name>XVI</name>
+    <maritime>
+      <name>Croiseur</name>
+      <length>4</length>
+      <width>4</width>
+      <power>2</power>
+    </maritime>
+  </epoque>
+  <epoque>
+    <name>tata</name>
+  </epoque>
+  <epoque>
+    <name>Future</name>
+  </epoque>
+  <epoque>
+    <name>Tamere</name>
+  </epoque>
 </epoques>

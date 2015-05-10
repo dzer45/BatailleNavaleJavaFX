@@ -1,4 +1,4 @@
-package cad.bataillenavale.model.epoque;
+package cad.bataillenavale.model.map;
 
 public interface Prototype {
 	

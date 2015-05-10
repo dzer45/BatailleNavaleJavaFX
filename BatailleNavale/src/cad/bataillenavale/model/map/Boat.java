@@ -1,6 +1,5 @@
 package cad.bataillenavale.model.map;
 
-import cad.bataillenavale.model.epoque.Prototype;
 
 public class Boat extends Maritime {
 
