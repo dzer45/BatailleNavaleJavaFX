@@ -13,8 +13,8 @@ public class Map {
 	Case[][] cases; 
 	List<Maritime> maritimes = new ArrayList<>();
 	
-	public Map(int length, int width){
-		this.cases = new Case[length][width];
+	public Map(int length){
+		this.cases = new Case[length][length];
 	}
 	
 	private int getLength(){

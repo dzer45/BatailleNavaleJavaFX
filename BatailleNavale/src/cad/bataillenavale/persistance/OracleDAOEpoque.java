@@ -3,6 +3,7 @@ package cad.bataillenavale.persistance;
 import java.util.List;
 
 import cad.bataillenavale.model.epoque.Epoque;
+import cad.bataillenavale.model.map.Maritime;
 
 public class OracleDAOEpoque implements EpoqueDAO {
 
@@ -28,5 +29,14 @@ public class OracleDAOEpoque implements EpoqueDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void insertMaritime(String epoqueName,Maritime m) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
 
 }

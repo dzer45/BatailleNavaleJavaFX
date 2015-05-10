@@ -4,14 +4,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Observable;
 import java.util.Set;
+
 import javafx.stage.Stage;
 import cad.bataillenavale.model.epoque.Epoque;
 import cad.bataillenavale.model.epoque.EpoqueManager;
 import cad.bataillenavale.model.exception.MapException;
+import cad.bataillenavale.model.map.Boat;
 import cad.bataillenavale.model.map.Map;
 import cad.bataillenavale.model.map.Maritime;
+import cad.bataillenavale.model.player.Difficult;
+import cad.bataillenavale.model.player.Easy;
+import cad.bataillenavale.model.player.Hard;
 import cad.bataillenavale.model.player.Human;
 import cad.bataillenavale.model.player.IA;
+import cad.bataillenavale.model.player.Medium;
 import cad.bataillenavale.model.player.Player;
 import cad.bataillenavale.persistance.DAOFactory;
 
@@ -22,7 +28,7 @@ public class BatailleNavale extends Observable {
 	
 	private Player currentPlayer = null;
 	private Human player = new Human();
-	private IA iA = new IA(this);
+	private IA iA = new IA();
 	
 	private java.util.Map<Player, Map> maps = new HashMap<Player, Map>();
 	private java.util.Map<Player, Player> opponents = new HashMap<Player, Player>();
@@ -30,25 +36,37 @@ public class BatailleNavale extends Observable {
 	private Epoque currentEpoque;
 	
 	private Stage primaryStage;
-	private int length, width;
+	private int length;
 	
 	private EpoqueManager epoqueManager = EpoqueManager.getInstance();
 
-	public void start(int length, int width, String epoque) {
+	public void start(int length, String epoque, String difficult) {
 		this.length = length;
-		this.width = width;
 
 		opponents.put(player, iA);
 		opponents.put(iA, player);
 		currentPlayer = player;
 
-		Map grillePlayer = new Map(length, width);
+		Map grillePlayer = new Map(length);
 		maps.put(player, grillePlayer);
-		Map grilleIA = new Map(length, width);
+		Map grilleIA = new Map(length);
 		maps.put(iA, grilleIA);
-
+		Difficult dif = null;
+		switch (difficult) {
+		case "Easy":
+			dif = new Easy(this);
+			break;
+		case "Medium":
+			dif = new Medium(this);
+			break;
+		case "Hard":
+			dif = new Hard(this);
+			break;
+		}
+		iA.setDifficult(dif);
 		this.currentEpoque = epoqueManager.getEpoque(epoque);
 	}
+	
 
 	public void addMaritime(int x, int y, String maritimeName) throws MapException {
 		
@@ -157,10 +175,6 @@ public class BatailleNavale extends Observable {
 		return length;
 	}
 
-	public int getWidth() {
-		return width;
-	}
-	
 	/**
 	 * S'il est possible de terminer la partie compte tenu des positions des bateaux
 	 * @return false si il existe une case bateau non reachable dans la map du joueur ou dans la map de l'ia
@@ -230,5 +244,17 @@ public class BatailleNavale extends Observable {
 	
 	public Set<String> getEpoques(){
 		return epoqueManager.getEpoques();
+	}
+
+
+	public void saveMaritime(String epoqueName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void addMaritime(String epoqueName, String maritimeName,
+			String length, String width, String power) {
+		// TODO Auto-generated method stub
+		EpoqueManager.getInstance().addMaritime(epoqueName ,maritimeName, length,  width, power);
 	}
 }

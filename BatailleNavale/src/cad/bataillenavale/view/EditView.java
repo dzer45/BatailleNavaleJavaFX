@@ -4,11 +4,12 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -18,10 +19,9 @@ import cad.bataillenavale.model.epoque.Epoque;
 import cad.bataillenavale.model.map.Maritime;
 
 public class EditView extends BatailleNavaleView {
-
-	private BorderPane borderPane;
 	
 	private ListView<String> lvEpoques, lvMaritimes ;
+	GridPane gp = new GridPane();
 	
 	public EditView(BatailleNavale model,Stage stage){
 		super(stage, model, new EditController(model));
@@ -30,7 +30,6 @@ public class EditView extends BatailleNavaleView {
 	}
 	
 	private void buildFrame() {
-		borderPane = new BorderPane();
 		
 		lvEpoques = new ListView<>();
 		lvEpoques.setItems(new EpoqueItemList(model));
@@ -63,10 +62,13 @@ public class EditView extends BatailleNavaleView {
 		vbEpoques.getChildren().add(lvEpoques);
 		vbEpoques.getChildren().add(hbBtnEpoque);
 		
-		borderPane.setLeft(vbEpoques);
+		gp.add(vbEpoques, 1, 1);
+		gp.setAlignment(Pos.CENTER);
 		
-		scene = new Scene(borderPane);
-		stage.setTitle("Bataille Navale");
+
+		root.setCenter(gp);
+		
+		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 	}
@@ -109,7 +111,7 @@ public class EditView extends BatailleNavaleView {
 			vbMaritimes.getChildren().add(lvMaritimes);
 			vbMaritimes.getChildren().add(hbBtnMaritime);
 			
-			borderPane.setCenter(vbMaritimes);
+			gp.add(vbMaritimes, 2, 1);
 		}
 		
 	}
@@ -133,7 +135,7 @@ public class EditView extends BatailleNavaleView {
 			vBox.getChildren().add(hauteurLabel);
 			vBox.getChildren().add(puissanceLabel);
 			
-			borderPane.setRight(vBox);
+			gp.add(vBox, 3, 1);
 		}
 		
 	}

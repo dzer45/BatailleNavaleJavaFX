@@ -3,19 +3,10 @@ package cad.bataillenavale.view;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.StartController;
 import cad.bataillenavale.model.BatailleNavale;
@@ -29,11 +20,7 @@ public class StartView extends BatailleNavaleView {
 	}
 
 	private void buildFrame() {
-		Screen screen = Screen.getPrimary();
-		Rectangle2D bounds = screen.getVisualBounds();
-		double screenWidth = bounds.getWidth() ;
-		double screenHeight = bounds.getHeight() ;
-		BorderPane borderPane = new BorderPane();
+		
 		Button button = new Button();
 		button.setText("Nouvelle partie");
 		button.setOnAction(new EventHandler<ActionEvent>() {
@@ -81,16 +68,9 @@ public class StartView extends BatailleNavaleView {
 		vbox.getChildren().add(button4);
 		gridPane.getChildren().add(vbox);
 		gridPane.setAlignment(Pos.CENTER);
-		borderPane.setMinSize(screenWidth, screenHeight);
-		borderPane.setCenter(gridPane);
-		Image img = new Image("file:resources/images/menu.jpg",screenWidth+20, screenHeight+20, false, true);
-		Background bgImg = new Background(new BackgroundImage(img, null, null, BackgroundPosition.CENTER, null));
-		borderPane.setBackground(bgImg);
-		scene = new Scene(borderPane);
-		stage.setTitle("Bataille Navale");
+		root.setCenter(gridPane);
+		scene = new Scene(root);
 		stage.setScene(scene);
-		stage.setHeight(screenHeight);
-		stage.setWidth(screenWidth);
 		stage.show();
 	}
 }

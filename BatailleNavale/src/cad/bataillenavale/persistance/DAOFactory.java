@@ -6,7 +6,7 @@ public abstract class DAOFactory {
 	public static final int XML = 1;
 	public static final int ORACLE = 2;
 	
-	public abstract PlayerDAO getPlayerDAO();
+	public abstract GameDAO getGameDAO();
 	
 	public abstract EpoqueDAO getEpoqueDAO();
 	

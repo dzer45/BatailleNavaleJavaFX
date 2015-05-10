@@ -9,6 +9,12 @@
       <width>4</width>
       <power>2</power>
     </maritime>
+    <maritime>
+      <name>zvdz</name>
+      <length>2</length>
+      <width>2</width>
+      <power>2</power>
+    </maritime>
   </epoque>
   <epoque>
     <name>tata</name>
@@ -18,5 +24,14 @@
   </epoque>
   <epoque>
     <name>Tamere</name>
+  </epoque>
+  <epoque>
+    <name>XXT</name>
+    <maritime>
+      <name>oijoi</name>
+      <length>2</length>
+      <width>2</width>
+      <power>4</power>
+    </maritime>
   </epoque>
 </epoques>

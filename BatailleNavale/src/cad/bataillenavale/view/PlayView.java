@@ -27,19 +27,19 @@ public class PlayView extends BatailleNavaleView implements Observer {
 		super(stage, model, new PlayController(model));
 		model.addObserver(this);
 		
-		btnsPlayer = new Button[model.getLength()][model.getWidth()];
-		btnsIA = new Button[model.getLength()][model.getWidth()];
+		btnsPlayer = new Button[model.getLength()][model.getLength()];
+		btnsIA = new Button[model.getLength()][model.getLength()];
 		
-		GridPane gpRoot = new GridPane(); 
-		gpRoot.setHgap(10);
-		gpRoot.setVgap(10);
-		gpRoot.setPadding(new Insets(30, 30, 30, 30));
-		
+		GridPane gp = new GridPane(); 
+		gp.setHgap(10);
+		gp.setVgap(10);
+		gp.setPadding(new Insets(30, 30, 30, 30));
+				
 		GridPane gpIA = new GridPane(); 
 		GridPane gpPlayer = new GridPane(); 
 		
 		for(int i = 0; i < model.getLength(); i++){
-			for(int j = 0; j < model.getWidth(); j++){
+			for(int j = 0; j < model.getLength(); j++){
 				Button b = new Button();
 				gpPlayer.add(b, i, j);
 				btnsPlayer[i][j] = b;
@@ -50,10 +50,12 @@ public class PlayView extends BatailleNavaleView implements Observer {
 				btnsIA[i][j] = b;
 			}
 		}
-		gpRoot.add(gpPlayer, 0, 0);
-		gpRoot.add(gpIA, 1, 0);
-		gpRoot.setAlignment(Pos.CENTER);
-		scene = new Scene(gpRoot);	
+		gp.add(gpPlayer, 0, 0);
+		gp.add(gpIA, 1, 0);
+		gp.setAlignment(Pos.CENTER);
+		
+		root.setCenter(gp);
+		scene = new Scene(root);	
 		stage.setTitle("Bataille Navale");
 		stage.setScene(scene);
 		stage.show();
@@ -68,7 +70,7 @@ public class PlayView extends BatailleNavaleView implements Observer {
 	private void drawMaps(){
 		
 		for (int i = 0; i < model.getLength(); i++) {
-			for (int j = 0; j < model.getWidth(); j++) {
+			for (int j = 0; j < model.getLength(); j++) {
 				Case c = model.getMapPlayer().getCase(i, j);
 				if(c != null)
 				{
@@ -106,7 +108,7 @@ public class PlayView extends BatailleNavaleView implements Observer {
 		
 		
 		for (int i = 0; i < model.getLength(); i++) {
-			for (int j = 0; j < model.getWidth(); j++) {
+			for (int j = 0; j < model.getLength(); j++) {
 				Case c = model.getMapIA().getCase(i, j);
 				if(c != null)
 				{
@@ -143,7 +145,7 @@ public class PlayView extends BatailleNavaleView implements Observer {
 			
 			if(model.isGameFinished())
 			{
-				/*Alert alert = new Alert(AlertType.INFORMATION);
+			/*	Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Bataille Navale");
 				alert.setHeaderText("La partie est terminnée !");
 				alert.setContentText("Bien joué !");

@@ -10,26 +10,17 @@ import javafx.event.EventHandler;
 import javafx.event.EventTarget;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.image.Image;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.ConfigController;
 import cad.bataillenavale.model.BatailleNavale;
@@ -47,29 +38,15 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 	
 	private Button finishButton;
 	
-	private GridPane gpPlayer; // drag n drop
-	
-	private BorderPane root = new BorderPane();
+	private GridPane gpPlayer; // référence pour drag n drop
+	private GridPane gpRoot = new GridPane(); 
 	
 	public ConfigView(BatailleNavale model,Stage stage){
 		super(stage, model, new ConfigController(model));
 		model.addObserver(this);
 		
-		btnsPlayer = new Button[model.getLength()][model.getWidth()];
+		btnsPlayer = new Button[model.getLength()][model.getLength()];
 		
-		Screen screen = Screen.getPrimary();
-		Rectangle2D bounds = screen.getVisualBounds();
-		double screenWidth = bounds.getWidth();
-		double screenHeight = bounds.getHeight();
-		final Menu menu1 = new Menu("File");
-		final Menu menu2 = new Menu("Options");
-		final Menu menu3 = new Menu("Help");
-		MenuBar menuBar = new MenuBar();
-		menuBar.getMenus().addAll(menu1, menu2, menu3);
-		root.setMinSize(screenWidth, screenHeight);
-		root.setTop(menuBar);
-		
-		GridPane gpRoot = new GridPane(); 
 		gpRoot.setHgap(10);
 		gpRoot.setVgap(10);
 		gpRoot.setPadding(new Insets(25, 25, 25, 25));
@@ -77,7 +54,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		gpPlayer = new GridPane(); 
 		
 		for(int i = 0; i < model.getLength(); i++){
-			for(int j = 0; j < model.getWidth(); j++){
+			for(int j = 0; j < model.getLength(); j++){
 				Button b = new Button();
 				b.setOnAction(new BtnAddEventHandler(i, j));
 				gpPlayer.add(b, i, j);
@@ -106,12 +83,8 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		gpRoot.add(finishButton, 1, 1);
 		gpRoot.setAlignment(Pos.CENTER);
 		root.setCenter(gpRoot);
-		Image img = new Image("file:resources/images/menu.jpg", screenWidth+30, screenHeight+30, false, true);
-		Background bgImg = new Background(new BackgroundImage(img, null, null,BackgroundPosition.CENTER, null));
-		root.setBackground(bgImg);
 		
 		scene = new Scene(root);
-		stage.setTitle("Bataille Navale");
 		stage.setScene(scene);
 		stage.show();
 	}
@@ -119,7 +92,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 	@Override
 	public void update(Observable o, Object arg) {
 		for (int i = 0; i < model.getLength(); i++) {
-			for (int j = 0; j < model.getWidth(); j++) {
+			for (int j = 0; j < model.getLength(); j++) {
 				Case c = model.getMapPlayer().getCase(i, j);
 				if(c != null)
 				{
@@ -329,7 +302,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 			vBox.getChildren().add(hauteurLabel);
 			vBox.getChildren().add(puissanceLabel);
 			
-			root.setRight(vBox);
+			gpRoot.add(vBox, 2, 0);
 		}
 		
 	}

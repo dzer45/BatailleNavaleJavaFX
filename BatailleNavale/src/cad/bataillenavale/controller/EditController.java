@@ -26,11 +26,9 @@ public class EditController extends BatailleNavaleController {
 	public void showAddEpoquePopUp(Stage stage) {
 		new AddEpoqueView(model,stage);
 	}
-
+	
 	public void addMaritime(String epoqueName, String maritimeName, String length, String width, String power) {
-		Epoque e = model.getEpoque(epoqueName);
-		Maritime m = new Boat(maritimeName, Integer.parseInt(length), Integer.parseInt(width), Integer.parseInt(power));
-		e.addMaritime(m);
+		model.addMaritime(epoqueName,maritimeName,length, width, power);
 	}
 
 	public void removeMaritime(String epoqueName, String maritimeName) {
@@ -45,4 +43,6 @@ public class EditController extends BatailleNavaleController {
 	public void returnToEditView(Stage stage){
 		new EditView(model,stage);
 	}
+
+
 }

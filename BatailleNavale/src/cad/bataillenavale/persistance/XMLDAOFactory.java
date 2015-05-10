@@ -3,9 +3,9 @@ package cad.bataillenavale.persistance;
 public class XMLDAOFactory extends DAOFactory {
 
 	@Override
-	public PlayerDAO getPlayerDAO() {
+	public GameDAO getGameDAO() {
 		// TODO Auto-generated method stub
-		 return new XMLPlayerDAO();
+		 return XMLDAOGame.getInstance();
 	}
 
 	@Override

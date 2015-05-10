@@ -2,12 +2,13 @@ package cad.bataillenavale.view;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -28,7 +29,6 @@ public class AddMaritimeView extends BatailleNavaleView {
 
 
 	private void buildFrame() {
-		BorderPane borderPane = new BorderPane();
 		
 		VBox vb = new VBox();
 		
@@ -103,12 +103,14 @@ public class AddMaritimeView extends BatailleNavaleView {
 		vb.getChildren().add(longueurHBox);
 		vb.getChildren().add(hauteurHBox);
 		vb.getChildren().add(puissanceHBox);
-		vb.getChildren().add(hbBtns);
+		vb.getChildren().add(hbBtns);	
 		
-		borderPane.setCenter(vb);
+		GridPane gp = new GridPane();
+		gp.add(vb, 1, 1);
+		gp.setAlignment(Pos.CENTER);
+		root.setCenter(gp);
 		
-		scene = new Scene(borderPane);
-		stage.setTitle("Bataille Navale");
+		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 	}

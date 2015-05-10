@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
+
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -57,9 +58,10 @@ public class XMLDAOEpoque implements EpoqueDAO {
 	 * @return
 	 */
 	public static EpoqueDAO getInstance() {
-		if (instance == null) {
-			instance = new XMLDAOEpoque();
-		}
+		if (instance == null)
+			synchronized (GameDAO.class) {
+				instance = new XMLDAOEpoque();
+			}
 		return instance;
 	}
 
@@ -135,11 +137,45 @@ public class XMLDAOEpoque implements EpoqueDAO {
 				length = Integer.parseInt(el.getChildText("length"));
 				width = Integer.parseInt(el.getChildText("width"));
 				power = Integer.parseInt(el.getChildText("power"));
-				maritime = new Boat(el.getChildText("name"), length, width, power);
+				maritime = new Boat(el.getChildText("name"), length, width,
+						power);
 				epoque.addMaritime(maritime);
 			}
 		}
 		return listEpoques;
+	}
+
+	@Override
+	public void insertMaritime(String epoqueName, Maritime m) {
+		// TODO Auto-generated method stub
+		List<Element> epoques = racine.getChildren("epoque");
+		ListIterator<?> iterator = epoques.listIterator();
+		boolean stop = true;
+		while (iterator.hasNext() && stop) {
+			Element e = (Element) iterator.next();
+			if (e.getChildText("name") ==  epoqueName) {
+				Element maritime = new Element("maritime");
+				maritime.addContent(new Element("name").setText(m.getName()));
+				maritime.addContent(new Element("length").setText(""
+						+ m.getLength()));
+				maritime.addContent(new Element("width").setText(""
+						+ m.getWidth()));
+				maritime.addContent(new Element("power").setText(""
+						+ m.getPower()));
+				e.addContent(maritime);
+				/* Création du document */
+				XMLOutputter sortie = new XMLOutputter(Format.getPrettyFormat());
+	
+					try {
+						sortie.output(document, new FileOutputStream(path));
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+		
+				stop = false;
+			}
+		}
 	}
 
 }

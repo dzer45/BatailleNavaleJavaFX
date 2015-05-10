@@ -52,4 +52,16 @@ public class EpoqueManager {
 	public void removeEpoque(String epoqueName){
 		this.epoques.remove(epoqueName);
 	}
+
+
+	public void addMaritime(String epoqueName, String maritimeName,
+			String length, String width, String power) {
+		// TODO Auto-generated method stub
+		Epoque e = this.epoques.get( epoqueName);
+		Maritime m = new Boat(maritimeName, Integer.parseInt(length), Integer.parseInt(width), Integer.parseInt(power));
+		epoqueDAO.insertMaritime(epoqueName,m);
+		e.addMaritime(m);
+	}
+
+
 }
