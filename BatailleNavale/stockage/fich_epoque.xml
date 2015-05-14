@@ -16,6 +16,7 @@
       <power>2</power>
     </maritime>
     <maritime>
+<<<<<<< HEAD
       <name>Croiseur</name>
       <length>3</length>
       <width>2</width>
@@ -26,6 +27,18 @@
       <length>3</length>
       <width>3</width>
       <power>5</power>
+=======
+      <name>Petit</name>
+      <length>1</length>
+      <width>1</width>
+      <power>1</power>
+    </maritime>
+    <maritime>
+      <name>Grand</name>
+      <length>3</length>
+      <width>1</width>
+      <power>2</power>
+>>>>>>> refs/remotes/origin/master
     </maritime>
   </epoque>
   <epoque>

@@ -156,9 +156,10 @@ public class BatailleNavale extends Observable {
 	 * Récupérer l'IA
 	 * @return l'IA
 	 */
-	public IA getIA() {
+	public IA getIA(){
 		return iA;
 	}
+
 
 	/**
 	 * Récupérer la grille du joueur
@@ -422,5 +423,5 @@ public class BatailleNavale extends Observable {
 	public void setDif(Difficult dif) {
 		this.dif = dif;
 	}
-	
+
 }
