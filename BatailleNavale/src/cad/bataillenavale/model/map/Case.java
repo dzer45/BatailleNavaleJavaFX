@@ -1,6 +1,5 @@
 package cad.bataillenavale.model.map;
 
-
 public abstract class Case {
 	
 	// mis a jour sur la grille de l'adversaire  (si on peut tirer sur la case)
