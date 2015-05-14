@@ -35,7 +35,7 @@ public class PlayView extends BatailleNavaleView implements Observer {
 		GridPane gp = new GridPane(); 
 		gp.setHgap(10);
 		gp.setVgap(10);
-		gp.setPadding(new Insets(50, 30, 30, 30));
+		gp.setPadding(new Insets(30, 30, 30, 30));
 				
 		GridPane gpIA = new GridPane(); 
 		GridPane gpPlayer = new GridPane(); 

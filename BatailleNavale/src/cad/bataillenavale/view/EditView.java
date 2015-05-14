@@ -67,6 +67,9 @@ public class EditView extends BatailleNavaleView {
 		
 
 		root.setCenter(gp);
+		gp.add(vbEpoques, 1, 1);
+		gp.setAlignment(Pos.CENTER);
+		root.setCenter(gp);
 		
 		scene = new Scene(root);
 		stage.setScene(scene);
