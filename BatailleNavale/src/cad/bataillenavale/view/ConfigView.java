@@ -78,7 +78,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		
 		finishButton = new Button("Terminer");
 		finishButton.setOnAction(new BtnFinishEventHandler());
-		finishButton.setDisable(true);
+		//finishButton.setDisable(true);
 		
 		gpRoot.add(finishButton, 1, 1);
 		gpRoot.setAlignment(Pos.CENTER);
@@ -109,7 +109,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 			}
 		}
 		
-		finishButton.setDisable(!model.canFinishGame());	
+		//finishButton.setDisable(!model.canFinishGame());	
 	}
 	
 	public void show(Stage stage){

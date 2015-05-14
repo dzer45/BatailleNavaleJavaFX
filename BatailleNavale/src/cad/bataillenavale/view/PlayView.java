@@ -2,7 +2,6 @@ package cad.bataillenavale.view;
 
 import java.util.Observable;
 import java.util.Observer;
-
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -33,7 +32,7 @@ public class PlayView extends BatailleNavaleView implements Observer {
 		GridPane gp = new GridPane(); 
 		gp.setHgap(10);
 		gp.setVgap(10);
-		gp.setPadding(new Insets(30, 30, 30, 30));
+		gp.setPadding(new Insets(50, 30, 30, 30));
 				
 		GridPane gpIA = new GridPane(); 
 		GridPane gpPlayer = new GridPane(); 
@@ -145,12 +144,12 @@ public class PlayView extends BatailleNavaleView implements Observer {
 			
 			if(model.isGameFinished())
 			{
-			/*	Alert alert = new Alert(AlertType.INFORMATION);
+				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Bataille Navale");
 				alert.setHeaderText("La partie est terminnée !");
 				alert.setContentText("Bien joué !");
 
-				alert.showAndWait();*/
+				alert.showAndWait();
 			}
 		}
 		

@@ -82,7 +82,8 @@ public class Easy implements Difficult {
 
 		try {
 
-			model.shoot(p, x, y);
+			p.shoot(x, y);
+			model.setCurrentPlayer(model.getIA().getOpponent());
 
 		} catch (MapException e) {
 			// TODO Auto-generated catch block

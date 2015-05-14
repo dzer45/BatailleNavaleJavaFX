@@ -1,8 +1,13 @@
 package cad.bataillenavale.model.player;
 
+import cad.bataillenavale.model.exception.MapException;
+import cad.bataillenavale.model.map.Map;
+
 public abstract class Player {
 
 	protected String name;
+	private Player opponent;
+	private Map map;
 
 	public String getName() {
 		return name;
@@ -11,7 +16,39 @@ public abstract class Player {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public Player getOpponent() {
+		return opponent;
+	}
 
+	public void setOpponent(Player opponent) {
+		this.opponent = opponent;
+	}
+	
+	public  void shoot( int x, int y) throws MapException {
+		if (getMap().reacheableShoot(x, y)) {
+			if (!this.getOpponent().getMap().isPlayed(x, y)) {
+				this.getOpponent().getMap().shoot(x, y);
+			} else {
+				return;
+			}
+		} else {
+			return;
+		}
+	}
+	
+	public Map getMap() {
+		return map;
+	}
+
+	public Map setMap(Map map) {
+		this.map = map;
+		return map;
+	}
+	
+	public Map initMap(int length){
+		return setMap(new Map(length));
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -36,4 +73,5 @@ public abstract class Player {
 			return false;
 		return true;
 	}
+
 }

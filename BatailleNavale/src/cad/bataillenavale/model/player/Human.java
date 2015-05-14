@@ -1,9 +1,9 @@
 package cad.bataillenavale.model.player;
 
 public class Human extends Player {
-	
+
 	private int gamesWon = 0, gamesLost = 0, score = 0;
-	
+
 	public int getGamesWon() {
 		return gamesWon;
 	}
@@ -27,5 +27,4 @@ public class Human extends Player {
 	public void setScore(int score) {
 		this.score = score;
 	}
-
 }

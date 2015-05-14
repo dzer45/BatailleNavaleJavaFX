@@ -12,7 +12,7 @@ public class PlayController extends BatailleNavaleController {
 	public void notifyShoot(int x, int y){
 		try {
 			
-			model.shoot(model.getPlayer(), x, y);
+			model.shoot(x, y);
 			
 		} catch (MapException e) {
 			// TODO Auto-generated catch block
