@@ -244,4 +244,14 @@ public class Map {
 		// TODO Auto-generated method stub
 		this.maritimes = maritime;
 	}
+
+	public Case[][] getCases() {
+		return cases;
+	}
+
+	public void setCases(Case[][] cases) {
+		this.cases = cases;
+	}
+	
+	
 }

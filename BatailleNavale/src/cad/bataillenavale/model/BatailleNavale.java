@@ -17,6 +17,7 @@ import cad.bataillenavale.model.player.Human;
 import cad.bataillenavale.model.player.IA;
 import cad.bataillenavale.model.player.Medium;
 import cad.bataillenavale.model.player.Player;
+import cad.bataillenavale.persistance.DAOFactory;
 
 public class BatailleNavale extends Observable {
 	
@@ -25,6 +26,7 @@ public class BatailleNavale extends Observable {
 	private Human player = new Human();
 	private IA iA = new IA();
 	private int length;
+	private Difficult dif; 
 
 	/**
 	 * Commencer une nouvelle partie
@@ -42,7 +44,6 @@ public class BatailleNavale extends Observable {
 		player.initMap(length);
 		iA.initMap(length);
 		
-		Difficult dif = null;
 		switch (difficult) {
 		case Difficult.EASY:
 			dif = new Easy(this);
@@ -155,7 +156,7 @@ public class BatailleNavale extends Observable {
 	 * Récupérer l'IA
 	 * @return l'IA
 	 */
-	public Player getIA() {
+	public IA getIA() {
 		return iA;
 	}
 
@@ -383,4 +384,43 @@ public class BatailleNavale extends Observable {
 			}
 		}
 	}
+
+	public BatailleNavale restore() {
+		// TODO Auto-generated method stub
+		return DAOFactory.getDAOFactory(DAOFactory.XML).getGameDAO().restore();
+	}
+
+	public void saveGame() {
+		// TODO Auto-generated method stub
+		 DAOFactory.getDAOFactory(DAOFactory.XML).getGameDAO().save(this);
+	}
+
+	public IA getiA() {
+		return iA;
+	}
+
+	public void setiA(IA iA) {
+		this.iA = iA;
+	}
+
+	public void setCurrentEpoque(Epoque currentEpoque) {
+		this.currentEpoque = currentEpoque;
+	}
+
+	public void setPlayer(Human player) {
+		this.player = player;
+	}
+
+	public void setLength(int length) {
+		this.length = length;
+	}
+
+	public Difficult getDif() {
+		return dif;
+	}
+
+	public void setDif(Difficult dif) {
+		this.dif = dif;
+	}
+	
 }
