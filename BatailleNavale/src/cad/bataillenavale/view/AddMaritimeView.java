@@ -43,7 +43,7 @@ public class AddMaritimeView extends BatailleNavaleView {
 		
 		HBox  longueurHBox = new HBox();
 		Label longueurLabel = new Label("Longueur : ");
-	    ComboBox longueurComboBox = new ComboBox();
+	    ComboBox<String> longueurComboBox = new ComboBox<String>();
 	    longueurComboBox.getItems().addAll(values);   
 		
 	    HBox  hauteurHBox = new HBox();

@@ -17,6 +17,7 @@ import cad.bataillenavale.model.player.Medium;
 import cad.bataillenavale.model.player.Player;
 
 public class BatailleNavale extends Observable {
+	
 	private Player currentPlayer = null;
 	private Epoque currentEpoque;
 	private Human player = new Human();
@@ -24,6 +25,12 @@ public class BatailleNavale extends Observable {
 	private java.util.Map<Player, Map> maps = new HashMap<Player, Map>();
 	private int length;
 
+	/**
+	 * Commencer une nouvelle partie
+	 * @param length taille de la grille
+	 * @param epoque epoque à laquelle se déroule la partie
+	 * @param difficult niveau de difficulté de la partie
+	 */
 	public void start(int length, String epoque, String difficult) {
 		this.length = length;
 
@@ -54,6 +61,13 @@ public class BatailleNavale extends Observable {
 		this.currentEpoque = EpoqueManager.getInstance().getEpoque(epoque);
 	}
 
+	/**
+	 * Ajouter un maritime a la grille
+	 * @param x
+	 * @param y
+	 * @param maritimeName nom du maritime à ajouter
+	 * @throws MapException si le maritime empiete sur un autre ou s'il sort de la grille 
+	 */
 	public void addMaritime(int x, int y, String maritimeName)
 			throws MapException {
 
@@ -70,29 +84,55 @@ public class BatailleNavale extends Observable {
 		notifyObservers(m);
 	}
 
+	/**
+	 * Ajouter une époque
+	 * @param e l'epoque à ajoutée
+	 */
 	public void addEpoque(Epoque e) {
 		EpoqueManager.getInstance().addEpoque(e);
 	}
 
+	/**
+	 * Supprimer une époque
+	 * @param e l'epoque à supprimée
+	 */
 	public void removeEpoque(String epoqueName) {
 		// TODO DAO
 		EpoqueManager.getInstance().removeEpoque(epoqueName);
 	}
 
+	/**
+	 * Tirer sur la grille de l'adversaire (l'IA)
+	 * @param x
+	 * @param y
+	 * @throws MapException si le tir sort de la grille
+	 */
 	public void shoot(int x, int y) throws MapException {
-		currentPlayer.shoot(x, y);
-		currentPlayer = currentPlayer.getOpponent();
+		boolean touched = currentPlayer.shoot(x, y);
+
+		if(!touched)// if we don't touch a CaseMaritime we give the hand
+			currentPlayer = currentPlayer.getOpponent();
+		
 		if(currentPlayer == iA)
 			iA.shoot();
+		
 		setChanged();
 		notifyObservers();
 	}
 
+	/**
+	 * Si c'est mon tour de jouer
+	 * @param p le joueur qui veut tirer
+	 * @return vrai si c'est le cas
+	 */
 	public boolean isMyTurn(Player p) {
 		return currentPlayer.equals(p);
 	}
 
-	
+	/**
+	 *
+	 * @return le joueur courant
+	 */
 	public Player getCurrentPlayer() {
 		return currentPlayer;
 	}
@@ -117,20 +157,36 @@ public class BatailleNavale extends Observable {
 		return maps.get(iA);
 	}
 
+	/**
+	 * 
+	 * @return l'epoque courante
+	 */
 	public Epoque getCurrentEpoque() {
 		return currentEpoque;
 	}
 
+	/**
+	 * Ajouter les EmptyCases une fois la configuration des maritimes effectuée
+	 * @param player
+	 */
 	public void addEmptyCases(Player player) {
 		maps.get(player).addEmptyCases();
 		setChanged();
 		notifyObservers();
 	}
 	
+	/**
+	 * 
+	 * @return la taille de la grille
+	 */
 	public int getLength() {
 		return length;
 	}
 
+	/**
+	 * Si le jeux est fini
+	 * @return vrai si c'est le cas
+	 */
 	public boolean isGameFinished() {
 		Map mapPlayer = maps.get(player);
 		Map mapIA = maps.get(iA);
@@ -138,14 +194,31 @@ public class BatailleNavale extends Observable {
 				|| mapIA.getMaritimeRemaining() == 0;
 	}
 
+	/**
+	 * Récupéré une epoque par son nom
+	 * @param epoqueName le nom de l'epoque
+	 * @return l'epoque en question
+	 */
 	public Epoque getEpoque(String epoqueName) {
 		return EpoqueManager.getInstance().getEpoque(epoqueName);
 	}
 
+	/**
+	 * 
+	 * @return la liste des noms des époques
+	 */
 	public Set<String> getEpoques() {
 		return EpoqueManager.getInstance().getEpoques();
 	}
 
+	/**
+	 * Ajouter un maritime à l'époque
+	 * @param epoqueName le nom de l'époque
+	 * @param maritimeName du bateau
+	 * @param length longeur du bateau
+	 * @param width hauteur du bateau
+	 * @param power puissance du bateau
+	 */
 	public void addMaritime(String epoqueName, String maritimeName,
 			String length, String width, String power) {
 		// TODO Auto-generated method stub

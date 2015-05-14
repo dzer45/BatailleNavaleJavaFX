@@ -10,7 +10,8 @@ import cad.bataillenavale.model.map.Case.State;
 public class Map {
 	
 	int missed = 0, touched = 0, maritimesRemaining = 0;
-	public Case[][] cases; 
+	public Case[][] cases;
+	private List<Maritime> maritimes = new ArrayList<Maritime>(); 
 	
 	/**
 	 * Constructeur
@@ -66,6 +67,7 @@ public class Map {
 		// ----------------------------------------------------------------------------------
 		
 		maritime.setPoint(new Point(x, y));
+		maritimes.add(maritime);
 		this.maritimesRemaining++;
 		
 		try {
@@ -232,5 +234,14 @@ public class Map {
 	public Case getCase(int x, int y){
 		return this.cases[x][y];
 	}
+
+	public List<Maritime> getMaritimes() {
+		// TODO Auto-generated method stub
+		return maritimes;
+	}
 	
+	public void setMaritimes(List<Maritime> maritime) {
+		// TODO Auto-generated method stub
+		this.maritimes = maritime;
+	}
 }
