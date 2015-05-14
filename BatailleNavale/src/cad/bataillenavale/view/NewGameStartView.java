@@ -62,7 +62,7 @@ public class NewGameStartView extends BatailleNavaleView implements Observer{
 	    ComboBox<String> epoqueComboBox = new ComboBox<String>();
         epoqueComboBox.getItems().addAll(model.getEpoques());   
 
-       // epoqueComboBox.setValue("XVI");
+        epoqueComboBox.setValue((String)model.getEpoques().toArray()[0]);
         grid.add(epoqueComboBox, 1, 1);
         
 	    ComboBox<String> sizeComboBox = new ComboBox<String>();

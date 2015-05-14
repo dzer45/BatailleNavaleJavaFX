@@ -81,7 +81,7 @@ public class BatailleNavale extends Observable {
 		iA.addMaritime(maritimeName);
 
 		setChanged();
-		notifyObservers();
+		notifyObservers(m);
 	}
 
 	/**

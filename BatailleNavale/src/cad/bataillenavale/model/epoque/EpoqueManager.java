@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 import cad.bataillenavale.model.map.Boat;
 import cad.bataillenavale.model.map.Maritime;
 import cad.bataillenavale.persistance.DAOFactory;
