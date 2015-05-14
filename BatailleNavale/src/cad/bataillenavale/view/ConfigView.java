@@ -32,6 +32,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 
 	private ListView<String> lvMaritimes = new ListView<String>(); // list of maritimes names
 	private Button finishButton;
+	private Button randomButton;
 	private GridPane gpPlayer;
 	private Rectangle[][] btnsPlayer;
 	private GridPane gpRoot = new GridPane(); 
@@ -70,8 +71,13 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		
 		finishButton = new Button("Terminer");
 		finishButton.setOnAction(new BtnFinishEventHandler());
+		finishButton.setDisable(true);
+		
+		randomButton = new Button("Placement aléatoire");
+		randomButton.setOnAction(new BtnRandomEventHandler());
 		
 		gpRoot.add(finishButton, 1, 1);
+		gpRoot.add(randomButton, 1, 2);
 		gpRoot.setAlignment(Pos.CENTER);
 		root.setCenter(gpRoot);
 		
@@ -93,6 +99,9 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 				}
 			}
 		}
+		
+		finishButton.setDisable(!model.canFinishGame()); 
+		randomButton.setDisable(!model.getMapPlayer().getMaritimes().isEmpty());
 	}
 	
 	public void show(Stage stage){
@@ -100,7 +109,6 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		stage.setScene(scene);
 		stage.show();
 	}
-	
 
 	class BtnAddEventHandler implements  EventHandler<MouseEvent>{
 
@@ -149,6 +157,15 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		public void handle(ActionEvent event) {
 			ConfigController configController = (ConfigController) controller;
 			configController.notifyFinish(stage);
+		}
+		
+	}
+	
+	class BtnRandomEventHandler implements EventHandler<ActionEvent>{
+		@Override
+		public void handle(ActionEvent event) {
+			ConfigController configController = (ConfigController) controller;
+			configController.notifyRandomConfig();
 		}
 		
 	}

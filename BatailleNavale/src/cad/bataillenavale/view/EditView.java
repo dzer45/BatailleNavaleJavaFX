@@ -69,7 +69,7 @@ public class EditView extends BatailleNavaleView {
 		vbEpoques.getChildren().add(hbBtnEpoque);
 		
 		root.setCenter(gp);
-		gp.add(vbEpoques, 1, 1);
+		gp.add(vbEpoques, 0, 0);
 		gp.setAlignment(Pos.CENTER);
 		root.setCenter(gp);
 		
@@ -116,7 +116,7 @@ public class EditView extends BatailleNavaleView {
 			vbMaritimes.getChildren().add(lvMaritimes);
 			vbMaritimes.getChildren().add(hbBtnMaritime);
 			
-			gp.add(vbMaritimes, 2, 1);
+			gp.add(vbMaritimes, 1, 0);
 		}
 		
 	}
@@ -137,7 +137,7 @@ public class EditView extends BatailleNavaleView {
 					"Longueur : "+m.getLength(), "Hauteur : "+m.getWidth(), "Puissance : "+m.getPower());
 			lv.setItems(items);
 			
-			gp.add(lv, 3, 1);
+			gp.add(lv, 2, 0);
 		}
 		
 	}

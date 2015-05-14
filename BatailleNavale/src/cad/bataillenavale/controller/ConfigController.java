@@ -19,4 +19,8 @@ public class ConfigController extends BatailleNavaleController {
 		model.addEmptyCases();
 		new PlayView(model,stage);
 	}
+	
+	public void notifyRandomConfig() {
+		model.randomConfig();
+	}
 }

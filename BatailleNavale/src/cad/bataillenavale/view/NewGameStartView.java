@@ -16,6 +16,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.NewGameStartController;
 import cad.bataillenavale.model.BatailleNavale;
+import cad.bataillenavale.model.player.Difficult;
 
 public class NewGameStartView extends BatailleNavaleView implements Observer{
 
@@ -55,7 +56,7 @@ public class NewGameStartView extends BatailleNavaleView implements Observer{
 	    grid.add(taille, 0, 2);
 	    
 	    // Taille in column 1-2, row 1
-	    Text difficult = new Text("Difficult : ");
+	    Text difficult = new Text("Difficulté : ");
 	    difficult.setFont(Font.font("Arial", FontWeight.BOLD, 20));
 	    grid.add(difficult, 0, 3);
 	    
@@ -77,12 +78,12 @@ public class NewGameStartView extends BatailleNavaleView implements Observer{
         
 	    ComboBox<String> difficultComboBox = new ComboBox<String>();
         difficultComboBox.getItems().addAll(
-            "Easy",
-            "Medium",
-            "Hard"
+            Difficult.EASY,
+            Difficult.MEDIUM,
+            Difficult.HARD
         );   
         
-        difficultComboBox.setValue("Easy");
+        difficultComboBox.setValue(Difficult.EASY);
         grid.add(difficultComboBox, 1, 3);
 
 	    // ButtonOK  in column 1-2, row 3
