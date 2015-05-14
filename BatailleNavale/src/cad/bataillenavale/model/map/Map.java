@@ -1,8 +1,6 @@
 package cad.bataillenavale.model.map;
 
 import java.awt.Point;
-import java.util.ArrayList;
-import java.util.List;
 
 import cad.bataillenavale.model.exception.MapException;
 import cad.bataillenavale.model.map.Case.State;
@@ -21,16 +19,16 @@ public class Map {
 	}
 	
 	/**
-	 * 
-	 * @return taille de la grille
+	 * Récupérer la taille de la grille
+	 * @return taille en longueur de la grille
 	 */
 	private int getLength(){
 		return this.cases.length;
 	}
 	
 	/**
-	 * 
-	 * @return taille de la grille
+	 * Récupérer la taille de la grille
+	 * @return taille en hauteur de la grille
 	 */
 	private int getWidth(){
 		return this.cases[0].length;
@@ -200,7 +198,7 @@ public class Map {
 	}
 	
 	/**
-	 * 
+	 * Récupérer le nombre de tirs tombés dans l'eau
 	 * @return nombre de EmptyCase touchées
 	 */
 	public int getMissed() {
@@ -208,7 +206,7 @@ public class Map {
 	}
 
 	/**
-	 * 
+	 * Récupérer le nombre de tir dans le mille
 	 * @return nombre de MaritimeCase touchées
 	 */
 	public int getTouched() {
@@ -216,7 +214,7 @@ public class Map {
 	}
 
 	/**
-	 *
+	 * Récupérer le nombre de maritimes restant
 	 * @return nombre de maritime pas encore détruit
 	 */
 	public int getMaritimeRemaining() {

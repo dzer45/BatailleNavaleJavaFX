@@ -86,7 +86,7 @@ public class BatailleNavale extends Observable {
 
 	/**
 	 * Ajouter une époque
-	 * @param e l'epoque à ajoutée
+	 * @param e l'epoque à ajouter
 	 */
 	public void addEpoque(Epoque e) {
 		EpoqueManager.getInstance().addEpoque(e);
@@ -94,7 +94,7 @@ public class BatailleNavale extends Observable {
 
 	/**
 	 * Supprimer une époque
-	 * @param e l'epoque à supprimée
+	 * @param e l'epoque à supprimer
 	 */
 	public void removeEpoque(String epoqueName) {
 		// TODO DAO
@@ -130,35 +130,55 @@ public class BatailleNavale extends Observable {
 	}
 
 	/**
-	 *
+	 * Récupérer le joueur courant
 	 * @return le joueur courant
 	 */
 	public Player getCurrentPlayer() {
 		return currentPlayer;
 	}
 
+	/**
+	 * Modifier le joueur courant
+	 * @param currentPlayer le nouveau joueur courant
+	 */
 	public void setCurrentPlayer(Player currentPlayer) {
 		this.currentPlayer = currentPlayer;
 	}
 
+	/**
+	 * Récupérer le joueur
+	 * @return le joueur
+	 */
 	public Player getPlayer() {
 		return player;
 	}
 
+	/**
+	 * Récupérer l'IA
+	 * @return l'IA
+	 */
 	public Player getIA() {
 		return iA;
 	}
 
+	/**
+	 * Récupérer la grille du joueur
+	 * @return la grille du joueur
+	 */
 	public Map getMapPlayer() {
 		return maps.get(player);
 	}
 
+	/**
+	 * Récupérer la grille de l'IA
+	 * @return la grille de l'IA
+	 */
 	public Map getMapIA() {
 		return maps.get(iA);
 	}
 
 	/**
-	 * 
+	 * Récupérer l'époque courante
 	 * @return l'epoque courante
 	 */
 	public Epoque getCurrentEpoque() {
@@ -167,7 +187,7 @@ public class BatailleNavale extends Observable {
 
 	/**
 	 * Ajouter les EmptyCases une fois la configuration des maritimes effectuée
-	 * @param player
+	 * @param player le joueur auquel on ajoute les EmptyCase à sa grille
 	 */
 	public void addEmptyCases(Player player) {
 		maps.get(player).addEmptyCases();
@@ -176,7 +196,7 @@ public class BatailleNavale extends Observable {
 	}
 	
 	/**
-	 * 
+	 * Récupérer la taille de la grille
 	 * @return la taille de la grille
 	 */
 	public int getLength() {
@@ -184,7 +204,7 @@ public class BatailleNavale extends Observable {
 	}
 
 	/**
-	 * Si le jeux est fini
+	 * Si le partie est finie
 	 * @return vrai si c'est le cas
 	 */
 	public boolean isGameFinished() {
@@ -204,7 +224,7 @@ public class BatailleNavale extends Observable {
 	}
 
 	/**
-	 * 
+	 * Récupérer la liste des noms des époques
 	 * @return la liste des noms des époques
 	 */
 	public Set<String> getEpoques() {

@@ -60,7 +60,7 @@ public abstract class Case {
 	}
 	
 	/**
-	 * Tirer sur la case
+	 * Lorsqu'un tir atteint la case
 	 */
 	protected abstract void shoot();
 }
