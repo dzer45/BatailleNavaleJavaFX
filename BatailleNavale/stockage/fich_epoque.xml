@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Fichier des epoques -->
 <epoques>
-<epoque>
-<name>XXI</name>
-<maritime>
-<name>Sous_Marin</name>
-<length>2</length>
-<width>2</width>
-<power>3</power>
-</maritime>
-<maritime>
-<name>Bombardier</name>
-<length>2</length>
-<width>2</width>
-<power>2</power>
-</maritime>
-</epoque>
-<epoque>
-<name>XVI</name>
-<maritime>
-<name>Croiseur</name>
-<length>2</length>
-<width>2</width>
-<power>1</power>
-</maritime>
-</epoque>
+  <epoque>
+    <name>XXI</name>
+    <maritime>
+      <name>Sous_Marin</name>
+      <length>2</length>
+      <width>2</width>
+      <power>3</power>
+    </maritime>
+    <maritime>
+      <name>Bombardier</name>
+      <length>2</length>
+      <width>2</width>
+      <power>2</power>
+    </maritime>
+    <maritime>
+      <name>Croiseur</name>
+      <length>3</length>
+      <width>2</width>
+      <power>4</power>
+    </maritime>
+    <maritime>
+      <name>Aziz</name>
+      <length>3</length>
+      <width>3</width>
+      <power>5</power>
+    </maritime>
+  </epoque>
+  <epoque>
+    <name>XVI</name>
+    <maritime>
+      <name>Croiseur</name>
+      <length>2</length>
+      <width>2</width>
+      <power>1</power>
+    </maritime>
+  </epoque>
 </epoques>

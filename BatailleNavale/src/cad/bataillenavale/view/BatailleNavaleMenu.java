@@ -19,21 +19,16 @@ public class BatailleNavaleMenu extends MenuBar {
 		       new StartView(model, stage);
 		    }
 		});
-		MenuItem mi2 = new MenuItem("Sauvegarder");
+		MenuItem mi2 = new MenuItem("Quitter");
 		mi2.setOnAction(new EventHandler<ActionEvent>() {
-		    public void handle(ActionEvent t) {
-		        
-		    }
-		});
-		MenuItem mi3 = new MenuItem("Quitter");
-		mi3.setOnAction(new EventHandler<ActionEvent>() {
 		    public void handle(ActionEvent t) {
 		        System.exit(0);
 		    }
 		});
-		menu1.getItems().addAll(mi1, mi2, mi3);
+		menu1.getItems().addAll(mi1, mi2);
 		final Menu menu2 = new Menu("Aide");
 		
 		getMenus().addAll(menu1, menu2);
+		
 	}
 }

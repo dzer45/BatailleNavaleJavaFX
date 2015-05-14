@@ -16,7 +16,7 @@ public class Easy implements Difficult {
 
 	@Override
 	public void addMaritime(String maritimeName) {
-		// TODO Auto-generated method stub
+		
 		Map myMap = model.getMapIA();
 
 		Maritime m = (Maritime) model.getEpoque(
@@ -35,7 +35,7 @@ public class Easy implements Difficult {
 
 				myMap.addMaritime(x, y, m);
 				added = true;
-				System.out.println("IA added a maritime : " + x + " " + y);
+				//System.out.println("IA added a maritime : " + x + " " + y);
 
 			} catch (MapException e) {
 				// TODO Auto-generated catch block
@@ -46,7 +46,7 @@ public class Easy implements Difficult {
 
 	@Override
 	public void shoot(Player p) {
-		// TODO Auto-generated method stub
+		
 		if (model.isGameFinished())
 			return;
 

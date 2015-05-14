@@ -2,21 +2,24 @@ package cad.bataillenavale.view;
 
 import java.util.Observable;
 import java.util.Observer;
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -29,6 +32,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 
 	private ListView<String> lvMaritimes = new ListView<String>(); // list of maritimes names
 	private Button finishButton;
+	private Button randomButton;
 	private GridPane gpPlayer;
 	private Rectangle[][] btnsPlayer;
 	private GridPane gpRoot = new GridPane(); 
@@ -67,8 +71,13 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		
 		finishButton = new Button("Terminer");
 		finishButton.setOnAction(new BtnFinishEventHandler());
+		finishButton.setDisable(true);
+		
+		randomButton = new Button("Placement aléatoire");
+		randomButton.setOnAction(new BtnRandomEventHandler());
 		
 		gpRoot.add(finishButton, 1, 1);
+		gpRoot.add(randomButton, 1, 2);
 		gpRoot.setAlignment(Pos.CENTER);
 		root.setCenter(gpRoot);
 		
@@ -90,6 +99,9 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 				}
 			}
 		}
+		
+		finishButton.setDisable(!model.canFinishGame()); 
+		randomButton.setDisable(!model.getMapPlayer().getMaritimes().isEmpty());
 	}
 	
 	public void show(Stage stage){
@@ -97,7 +109,6 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		stage.setScene(scene);
 		stage.show();
 	}
-	
 
 	class BtnAddEventHandler implements  EventHandler<MouseEvent>{
 
@@ -110,15 +121,32 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 	
 		@Override
 		public void handle(MouseEvent event) {
-			// TODO Auto-generated method stub
-			try{
+			
+		try {
+			
 			String maritimeSelected = lvMaritimes.getSelectionModel().getSelectedItem();
-			ConfigController configController = (ConfigController) controller;	
-			configController.notifyAdd(x, y, maritimeSelected);
+			if(maritimeSelected != null)
+			{
+				ConfigController configController = (ConfigController) controller;	
+				configController.notifyAdd(x, y, maritimeSelected);
+			}
+			else
+			{
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("Bataille Navale");
+				alert.setHeaderText("Selectionnez un maritime !");
+				alert.setContentText("Veuillez selectionnez un maritime dans la liste");
+				alert.showAndWait();
+			}
 			
 		} catch (MapException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Bataille Navale");
+			alert.setHeaderText(e.getMessage());
+			//alert.setContentText(e.getMessage());
+			alert.showAndWait();
 		} 
 		}
 		
@@ -129,6 +157,15 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		public void handle(ActionEvent event) {
 			ConfigController configController = (ConfigController) controller;
 			configController.notifyFinish(stage);
+		}
+		
+	}
+	
+	class BtnRandomEventHandler implements EventHandler<ActionEvent>{
+		@Override
+		public void handle(ActionEvent event) {
+			ConfigController configController = (ConfigController) controller;
+			configController.notifyRandomConfig();
 		}
 		
 	}
@@ -144,15 +181,15 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 			String maritimeName =  lvMaritimes.getSelectionModel().getSelectedItem();
 			Maritime m = model.getEpoque(epoqueName).getMaritime(maritimeName);
 			
-			VBox vBox = new VBox();
-			Label longueurLabel = new Label("Longueur : "+m.getLength());
-			Label hauteurLabel = new Label("Hauteur : "+m.getWidth());
-			Label puissanceLabel = new Label("Puissance : "+m.getPower());
-			vBox.getChildren().add(longueurLabel);
-			vBox.getChildren().add(hauteurLabel);
-			vBox.getChildren().add(puissanceLabel);
+			ListView<String> list = new ListView<String>();
+			ObservableList<String> items =FXCollections.observableArrayList (
+					"Longueur : "+m.getLength(),
+					"Hauteur : "+m.getWidth(),
+					"Puissance : "+m.getPower());
+			list.setItems(items);
+
 			
-			gpRoot.add(vBox, 2, 0);
+			gpRoot.add(list, 2, 0);
 		}
 		
 	}

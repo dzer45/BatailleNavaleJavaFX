@@ -11,7 +11,7 @@ public class OracleGameDAO implements GameDAO {
 	}
 
 	@Override
-	public BatailleNavale restore(BatailleNavale p) {
+	public BatailleNavale restore() {
 		// TODO Auto-generated method stub
 		return null;
 	}

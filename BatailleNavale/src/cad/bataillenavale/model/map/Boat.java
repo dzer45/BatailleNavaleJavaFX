@@ -9,7 +9,7 @@ public class Boat extends Maritime {
 	}
 	
 	/**
-	 * Clone le bateau : retourne une nouvelle instance avec les mêmes propriétés
+	 * Cloner le bateau : retourne une nouvelle instance avec les mêmes propriétés
 	 */
 	@Override
 	public Prototype doClone() {

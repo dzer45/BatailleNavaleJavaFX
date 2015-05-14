@@ -9,18 +9,34 @@ public abstract class Player {
 	private Player opponent;
 	private Map map;
 
+	/**
+	 * 
+	 * @return le nom du joueur
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * Modifier le nom du joueur
+	 * @param name le nom du joueur
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 	
+	/**
+	 * 
+	 * @return l'adveraire du joueur
+	 */
 	public Player getOpponent() {
 		return opponent;
 	}
 
+	/**
+	 * Modifier l'adveraire du joueur
+	 * @param opponent l'adveraire du joueur
+	 */
 	public void setOpponent(Player opponent) {
 		this.opponent = opponent;
 	}
@@ -44,18 +60,33 @@ public abstract class Player {
 		}
 	}
 	
+	/**
+	 * 
+	 * @return la grille du joueur
+	 */
 	public Map getMap() {
 		return map;
 	}
 
-	public Map setMap(Map map) {
+	
+	/**
+	 * Modifier la grille du joueur
+	 * @param map la grille du joueur
+	 */
+	public void setMap(Map map) {
 		this.map = map;
+	}
+	
+	/**
+	 * Initialiser la map du joueur
+	 * @param length taille de la grille
+	 * @return la grille
+	 */
+	public Map initMap(int length){
+		setMap(new Map(length));
 		return map;
 	}
 	
-	public Map initMap(int length){
-		return setMap(new Map(length));
-	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -80,5 +111,6 @@ public abstract class Player {
 			return false;
 		return true;
 	}
+
 
 }

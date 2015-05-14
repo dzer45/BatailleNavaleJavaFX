@@ -20,7 +20,6 @@ public class StartView extends BatailleNavaleView {
 	}
 
 	private void buildFrame() {
-		
 		Button button = new Button();
 		button.setText("Nouvelle partie");
 		button.setOnAction(new EventHandler<ActionEvent>() {
@@ -37,7 +36,8 @@ public class StartView extends BatailleNavaleView {
 
 			@Override
 			public void handle(ActionEvent event) {
-				
+				model = model.restore();
+				new PlayView(model,stage);
 			}
 		});
 		Button button3 = new Button();
