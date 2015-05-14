@@ -71,9 +71,34 @@ public class XMLDAOEpoque implements EpoqueDAO {
 	private void ecrireFichConfig() {
 		// TODO Auto-generated method stub
 		String s = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-				+ "<!-- Fichier des epoques -->\n" + "<epoques>\n"
-
-				+ "</epoques>";
+				+ "<!-- Fichier des epoques -->\n" 
+				+ "<epoques>\n"
+					+"<epoque>\n"
+					+"<name>XXI</name>\n"
+						+"<maritime>\n"
+							+"<name>Sous_Marin</name>\n"
+							+"<length>2</length>\n"
+							+"<width>2</width>\n"
+							+"<power>3</power>\n"
+						+"</maritime>\n"
+						+"<maritime>\n"
+							+"<name>Bombardier</name>\n"
+							+"<length>2</length>\n"
+							+"<width>2</width>\n"
+							+"<power>2</power>\n"
+						+"</maritime>\n"
+					+"</epoque>\n"
+				
+					+"<epoque>\n"
+					+"<name>XVI</name>\n"
+						+"<maritime>\n"
+							+"<name>Croiseur</name>\n"
+							+"<length>2</length>\n"
+							+"<width>2</width>\n"
+							+"<power>1</power>\n"
+						+"</maritime>\n"
+				+"</epoque>\n"
+				+"</epoques>";
 
 		try {
 			File f = new File("stockage/fich_epoque.xml");
