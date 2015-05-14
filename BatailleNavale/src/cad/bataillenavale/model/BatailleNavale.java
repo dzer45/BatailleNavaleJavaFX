@@ -45,6 +45,8 @@ public class BatailleNavale extends Observable {
 		player.initMap(length);
 		iA.initMap(length);
 		
+
+		Difficult dif = null;
 		switch (difficult) {
 		case Difficult.EASY:
 			dif = new Easy(this);
@@ -144,20 +146,6 @@ public class BatailleNavale extends Observable {
 	public void setCurrentPlayer(Player currentPlayer) {
 		this.currentPlayer = currentPlayer;
 	}
-	
-	/**
-	 * 
-	 * @return la difficulté de l'IA
-	 */
-	public Difficult getDif() {
-		return dif;
-	}
-	
-	public void setDif(Difficult dif) {
-		this.dif = dif;
-	}
-	
-
 
 	/**
 	 * Récupérer le joueur
@@ -175,6 +163,10 @@ public class BatailleNavale extends Observable {
 	 * Récupérer l'IA
 	 * @return l'IA
 	 */
+	/**
+	 * Récupérer l'IA
+	 * @return l'IA
+	 */
 	public IA getIA() {
 		return iA;
 	}
@@ -183,6 +175,10 @@ public class BatailleNavale extends Observable {
 		this.iA = iA;
 	}
 	
+	/**
+	 * Récupérer la grille du joueur
+	 * @return la grille du joueur
+	 */
 	/**
 	 * Récupérer la grille du joueur
 	 * @return la grille du joueur
@@ -207,10 +203,6 @@ public class BatailleNavale extends Observable {
 		return currentEpoque;
 	}
 
-	public void setCurrentEpoque(Epoque currentEpoque) {
-		this.currentEpoque = currentEpoque;
-	}
-	
 	/**
 	 * Ajouter les EmptyCases une fois la configuration des maritimes effectuée
 	 * 
@@ -431,4 +423,146 @@ public class BatailleNavale extends Observable {
 		this.length = length;
 	}
 	
+	
+	/**
+	 * Si les coordonnées sont à la portée des matitimes
+	 * @param x coordonnée en x 
+	 * @param y coordonnée en y
+	 * @return vrai si c'est le cas
+	 */
+	public boolean isReachableShoot(int x, int y){
+		boolean b = false;
+		try {
+			b = player.getMap().isReacheable(x, y);
+		} catch (MapException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return b;
+	}
+	
+	/**
+	 * Si les coordonnées sont déjà jouées
+	 * @param x coordonnée en x 
+	 * @param y coordonnée en y
+	 * @return vrai si c'est le cas
+	 */
+	public boolean isPlayedShoot(int x, int y){
+		boolean b = false;
+		try {
+			b = iA.getMap().isPlayed(x, y);
+		} catch (MapException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return b;
+	}
+	
+	/**
+	 * S'il est possible de terminer la partie compte tenu des positions des bateaux
+	 * et si il y a au moins 5 bateaux sur la grille dont au moins 3 ont des tailles différentes
+	 * @return false si il existe une case bateau non reachable dans la map du joueur ou dans la map de l'ia
+	 */
+	public boolean canFinishGame(){
+	
+		// il y a au moins 5 bateaux sur la grille ? -----------------------------------------------
+		if(player.getMap().getMaritimes().size() < 5) return false;
+		
+		// il y a au moins 3 bateaux de tailles différentes ? -----------------------------------------------
+		int nbBoatSizeDiff = 0;
+		Maritime first = player.getMap().getMaritimes().get(0);
+		for(Maritime maritime : player.getMap().getMaritimes()){
+			if(first.equals(maritime)) continue;
+			if((first.getLength() != maritime.getLength()) || (first.getWidth() != maritime.getWidth()))
+				nbBoatSizeDiff++;
+		}
+		if(nbBoatSizeDiff < 3) return false;
+		
+		// il est possible de terminer la partie compte tenu des positions des bateaux ? -----------------------------------------------
+		
+		int nbCasesNotReachByPlayer = 0;
+		int nbCasesNotReachByIA = 0;
+		
+		// pour tout les maritimes de player je verifie s'ils sont atteignables par l'IA
+		List<Maritime> maritimesPlayer = player.getMap().getMaritimes();
+		for(Maritime m : maritimesPlayer)
+		{
+			for (int i = m.getPoint().x; i < m.getPoint().x + m.getLength(); i++) {
+				for (int j = m.getPoint().y; j < m.getPoint().y + m.getWidth(); j++) {
+					try {
+						
+						if(!iA.getMap().isReacheable(i, j)){
+							nbCasesNotReachByIA++;
+						}
+						
+					} catch (MapException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+		
+		// pour tout les maritimes de l'IA je verifie s'ils sont atteignables par player
+		List<Maritime> maritimesIA = iA.getMap().getMaritimes();
+		for(Maritime m : maritimesIA)
+		{
+			for (int i = m.getPoint().x; i < m.getPoint().x + m.getLength(); i++) {
+				for (int j = m.getPoint().y; j < m.getPoint().y + m.getWidth(); j++) {
+					try {
+						
+						if(!player.getMap().isReacheable(i, j)){
+							nbCasesNotReachByPlayer++;
+						}
+						
+					} catch (MapException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+		
+		if(nbCasesNotReachByPlayer != 0 && nbCasesNotReachByIA != 0) return false;
+		
+		return true;
+			
+	}
+	
+	/**
+	 * Remplir la map de façon aléatoire
+	 */
+	public void randomConfig(){
+		
+		Random random = new Random();
+		
+		while(!canFinishGame()){
+
+			int index = random.nextInt(currentEpoque.getMaritimes().size()-1);
+			
+			String maritimeName = (String)currentEpoque.getMaritimesNames().toArray()[index];
+			
+			Maritime m = (Maritime) currentEpoque.getMaritime(maritimeName); 
+	
+			boolean added = false;
+	
+			while (!added) {
+	
+				int x = random.nextInt(getLength() - m.getLength());
+				int y = random.nextInt(getLength()- m.getLength());
+	
+				try {
+	
+					addMaritime(x, y, m.getName());
+					added = true;
+	
+				} catch (MapException e) {
+					// TODO Auto-generated catch block
+					// e.printStackTrace();
+				}
+			}
+		}
+	}
 }
