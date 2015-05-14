@@ -26,6 +26,7 @@ public class BatailleNavale extends Observable {
 	private Human player = new Human();
 	private IA iA = new IA();
 	private int length;
+	
 	private Difficult dif = null;
 
 	/**
@@ -429,4 +430,5 @@ public class BatailleNavale extends Observable {
 		// TODO Auto-generated method stub
 		this.length = length;
 	}
+	
 }
