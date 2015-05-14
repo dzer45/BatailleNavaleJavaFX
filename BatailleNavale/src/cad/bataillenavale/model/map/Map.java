@@ -10,7 +10,7 @@ import cad.bataillenavale.model.map.Case.State;
 public class Map {
 	
 	int missed = 0, touched = 0, maritimesRemaining = 0;
-	Case[][] cases; 
+	public Case[][] cases; 
 	List<Maritime> maritimes = new ArrayList<>();
 	
 	public Map(int length){
@@ -130,7 +130,7 @@ public class Map {
 	 * @param m the maritime destroyed
 	 * @throws MapException the maritime is not destroyed
 	 */
-	void updateReachableMap(Maritime m) throws MapException {
+	public void updateReachableMap(Maritime m) throws MapException {
 		
 		if(!m.isDestroyed())
 		{

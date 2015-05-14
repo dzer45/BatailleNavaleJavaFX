@@ -3,11 +3,16 @@ package model.map;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import model.exception.MapException;
-import model.map.Case.State;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import cad.bataillenavale.model.exception.MapException;
+import cad.bataillenavale.model.map.Boat;
+import cad.bataillenavale.model.map.Case;
+import cad.bataillenavale.model.map.Map;
+import cad.bataillenavale.model.map.Maritime;
+import cad.bataillenavale.model.map.MaritimeCase;
 
 public class TestMap {
 
@@ -18,9 +23,9 @@ public class TestMap {
 	
 	@Before
 	public void setUp() throws Exception {
-		emptyMap = new Map(LENGTH, WIDTH);
-		map = new Map(LENGTH, WIDTH);
-		maritime = new Boat(MARLENGTH, MARWIDTH, POWER);
+		emptyMap = new Map(LENGTH);
+		map = new Map(LENGTH);
+		maritime = new Boat("boat",MARLENGTH, MARWIDTH, POWER);
 		map.addMaritime(X, Y, maritime);
 		map.addEmptyCases();
 	}
@@ -29,7 +34,7 @@ public class TestMap {
 	public void testAddMaritime() throws MapException {
 		int x = X, y = Y;
 		
-		Maritime maritime = new Boat(MARLENGTH, MARWIDTH, POWER);
+		Maritime maritime = new Boat("boat",MARLENGTH, MARWIDTH, POWER);
 		emptyMap.addMaritime(x, y, maritime);
 		
 		boolean good = true;
@@ -68,7 +73,7 @@ public class TestMap {
 	@Test(expected = MapException.class)
 	public void testAddMaritimeTooBigException() throws MapException {
 		
-		Maritime maritime = new Boat(LENGTH+1, WIDTH+1, POWER);
+		Maritime maritime = new Boat("boat",LENGTH+1, WIDTH+1, POWER);
 		emptyMap.addMaritime(X, Y, maritime);
 		
 		fail("Exception not raised");
@@ -77,7 +82,7 @@ public class TestMap {
 	@Test(expected = MapException.class)
 	public void testAddMaritimeEncroachException() throws MapException {
 		
-		Maritime maritime = new Boat(MARLENGTH, MARWIDTH, POWER);
+		Maritime maritime = new Boat("boat",MARLENGTH, MARWIDTH, POWER);
 		map.addMaritime(X, Y, maritime);
 		
 		fail("Exception not raised");
