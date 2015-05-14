@@ -21,17 +21,6 @@ public class Map {
 		this.cases = new Case[length][length];
 	}
 	
-	
-	public Case[][] getCases() {
-		return cases;
-	}
-
-
-	public void setCases(Case[][] cases) {
-		this.cases = cases;
-	}
-
-
 	/**
 	 * 
 	 * @return taille de la grille

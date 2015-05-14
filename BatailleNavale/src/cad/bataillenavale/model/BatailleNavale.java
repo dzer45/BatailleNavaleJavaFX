@@ -170,6 +170,10 @@ public class BatailleNavale extends Observable {
 	 * Récupérer l'IA
 	 * @return l'IA
 	 */
+	/**
+	 * Récupérer l'IA
+	 * @return l'IA
+	 */
 	public IA getIA() {
 		return iA;
 	}
@@ -186,6 +190,10 @@ public class BatailleNavale extends Observable {
 		return player.getMap();
 	}
 
+	/**
+	 * Récupérer la grille de l'IA
+	 * @return la grille de l'IA
+	 */
 	public Map getMapIA() {
 		return iA.getMap();
 	}
