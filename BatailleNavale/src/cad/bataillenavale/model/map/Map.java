@@ -22,25 +22,25 @@ public class Map {
 	}
 	
 	/**
-	 * 
-	 * @return taille de la grille
+	 * Récupérer la taille de la grille
+	 * @return taille en longueur de la grille
 	 */
 	private int getLength(){
 		return this.cases.length;
 	}
 	
 	/**
-	 * 
-	 * @return taille de la grille
+	 * Récupérer la taille de la grille
+	 * @return taille en hauteur de la grille
 	 */
 	private int getWidth(){
 		return this.cases[0].length;
 	}
 	
 	/**
-	 * Ajouter un maritime à la grille
-	 * @param x
-	 * @param y
+	 * Ajouter un maritime à la grille en x y
+	 * @param x coordonée en x
+	 * @param y coordonée en y
 	 * @param maritime le maritime à ajouter
 	 * @throws MapException si le maritime empiète sur un autre ou si il sort de la grille
 	 */
@@ -58,7 +58,7 @@ public class Map {
 		{
 			for(int j = 0; j < maritime.getWidth(); j++)
 			{
-				if(this.cases[x + i][y + j]  instanceof MaritimeCase){
+				if(this.cases[x + i][y + j] instanceof MaritimeCase){
 					throw new MapException("Le Maritime empiete sur un autre !");
 				}	
 			}
@@ -112,9 +112,9 @@ public class Map {
 	}
 	
 	/**
-	 * Si la coordonnées peut être jouée compte tenu de la configuration des maritimes et de leur puissances
-	 * @param x
-	 * @param y
+	 * Si les coordonnées peut être jouée compte tenu de la configuration des maritimes et de leur puissances
+	 * @param x coordonée en x
+	 * @param y coordonée en x
 	 * @return vrai si c'est le cas
 	 * @throws MapException si la case sort de la grille
 	 */
@@ -129,9 +129,9 @@ public class Map {
 	
 
 	/**
-	 * Si il est possible de tirer sur la case compte tenu de la reachable map
-	 * @param x
-	 * @param y
+	 * Si les coordonnées ont déja été jouée
+	 * @param x coordonée en x
+	 * @param y coordonée en y
 	 * @return vrai si c'est le cas
 	 * @throws MapException si la case sort de la grille
 	 */
@@ -142,9 +142,9 @@ public class Map {
 	}
 	
 	/**
-	 * Tirer sur un maritime
-	 * @param x 
-	 * @param y
+	 * Tirer aux coordonées en x y
+	 * @param x coordonée en x
+	 * @param y coordonée en y
 	 * @throws MapException si la case tirée sort de la map
 	 * @return vrai si une case à été détruite
 	 */
@@ -202,7 +202,7 @@ public class Map {
 	}
 	
 	/**
-	 * 
+	 * Récupérer le nombre de tirs tombés dans l'eau
 	 * @return nombre de EmptyCase touchées
 	 */
 	public int getMissed() {
@@ -210,7 +210,7 @@ public class Map {
 	}
 
 	/**
-	 * 
+	 * Récupérer le nombre de tir dans le mille
 	 * @return nombre de MaritimeCase touchées
 	 */
 	public int getTouched() {
@@ -218,7 +218,7 @@ public class Map {
 	}
 
 	/**
-	 *
+	 * Récupérer le nombre de maritimes restant
 	 * @return nombre de maritime pas encore détruit
 	 */
 	public int getMaritimeRemaining() {
@@ -227,14 +227,18 @@ public class Map {
 	
 	/**
 	 * Retourne la case à l'index x y
-	 * @param x
-	 * @param y
+	 * @param x coordonée en x
+	 * @param y coordonée en y
 	 * @return la case correspondante
 	 */
 	public Case getCase(int x, int y){
 		return this.cases[x][y];
 	}
 
+	/**
+	 * Liste des maritimes ajoutés sur la grille
+	 * @return la liste
+	 */
 	public List<Maritime> getMaritimes() {
 		// TODO Auto-generated method stub
 		return maritimes;

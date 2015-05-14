@@ -3,7 +3,7 @@ package cad.bataillenavale.model.map;
 public class EmptyCase extends Case {
 	
 
-	public EmptyCase(Map map) {
+	protected EmptyCase(Map map) {
 		super(map);
 		// TODO Auto-generated constructor stub
 	}
