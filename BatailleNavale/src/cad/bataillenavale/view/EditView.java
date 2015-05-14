@@ -2,8 +2,11 @@ package cad.bataillenavale.view;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -30,6 +33,10 @@ public class EditView extends BatailleNavaleView {
 	}
 	
 	private void buildFrame() {
+		
+		gp.setHgap(10);
+		gp.setVgap(10);
+		gp.setPadding(new Insets(25, 25, 25, 25));
 		
 		lvEpoques = new ListView<>();
 		lvEpoques.setItems(new EpoqueItemList(model));
@@ -62,10 +69,6 @@ public class EditView extends BatailleNavaleView {
 		vbEpoques.getChildren().add(lvEpoques);
 		vbEpoques.getChildren().add(hbBtnEpoque);
 		
-		gp.add(vbEpoques, 1, 1);
-		gp.setAlignment(Pos.CENTER);
-		
-
 		root.setCenter(gp);
 		gp.add(vbEpoques, 1, 1);
 		gp.setAlignment(Pos.CENTER);
@@ -130,15 +133,12 @@ public class EditView extends BatailleNavaleView {
 			String maritimeName =  lvMaritimes.getSelectionModel().getSelectedItem();
 			Maritime m = model.getEpoque(epoqueName).getMaritime(maritimeName);
 			
-			VBox vBox = new VBox();
-			Label longueurLabel = new Label("Longueur : "+m.getLength());
-			Label hauteurLabel = new Label("Hauteur : "+m.getWidth());
-			Label puissanceLabel = new Label("Puissance : "+m.getPower());
-			vBox.getChildren().add(longueurLabel);
-			vBox.getChildren().add(hauteurLabel);
-			vBox.getChildren().add(puissanceLabel);
+			ListView<String> lv = new ListView<String>();
+			ObservableList<String> items = FXCollections.observableArrayList (
+					"Longueur : "+m.getLength(), "Hauteur : "+m.getWidth(), "Puissance : "+m.getPower());
+			lv.setItems(items);
 			
-			gp.add(vBox, 3, 1);
+			gp.add(lv, 3, 1);
 		}
 		
 	}

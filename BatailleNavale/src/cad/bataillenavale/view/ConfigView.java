@@ -5,6 +5,8 @@ import java.util.Observer;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventTarget;
@@ -160,7 +162,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		@Override
 		public void handle(MouseEvent event) {
 			/* drag was detected, start drag-and-drop gesture*/
-			System.out.println("Bateau sélectionné");
+			//System.out.println("Bateau sélectionné");
 			
 			 /* allow any transfer mode */
 			Dragboard db = lvMaritimes.startDragAndDrop(TransferMode.ANY);
@@ -180,7 +182,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		@Override
 		public void handle(DragEvent event) {
 			/* data is dragged over the target */
-            System.out.println("onDragOver");
+           // System.out.println("onDragOver");
             
             /* accept it only if it is  not dragged from the same node 
              * and if it has a string data */
@@ -235,7 +237,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		@Override
 		public void handle(DragEvent event) {
 			 /* data dropped */
-            System.out.println("onDragDropped");
+           // System.out.println("onDragDropped");
             /* if there is a string data on dragboard, read it and use it */
             Dragboard db = event.getDragboard();
             boolean success = false;
@@ -271,7 +273,7 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 		@Override
 		public void handle(DragEvent event) {
 			 /* the drag-and-drop gesture ended */
-			System.out.println("Bateau déposé");
+			//System.out.println("Bateau déposé");
 			
             /* if the data was successfully moved, clear it */
 			if (event.getTransferMode() == TransferMode.MOVE) {
@@ -294,15 +296,12 @@ public class ConfigView extends BatailleNavaleView implements Observer {
 			String maritimeName =  lvMaritimes.getSelectionModel().getSelectedItem();
 			Maritime m = model.getEpoque(epoqueName).getMaritime(maritimeName);
 			
-			VBox vBox = new VBox();
-			Label longueurLabel = new Label("Longueur : "+m.getLength());
-			Label hauteurLabel = new Label("Hauteur : "+m.getWidth());
-			Label puissanceLabel = new Label("Puissance : "+m.getPower());
-			vBox.getChildren().add(longueurLabel);
-			vBox.getChildren().add(hauteurLabel);
-			vBox.getChildren().add(puissanceLabel);
+			ListView<String> lv = new ListView<String>();
+			ObservableList<String> items = FXCollections.observableArrayList (
+					"Longueur : "+m.getLength(), "Hauteur : "+m.getWidth(), "Puissance : "+m.getPower());
+			lv.setItems(items);
 			
-			gpRoot.add(vBox, 2, 0);
+			gpRoot.add(lv, 2, 0);
 		}
 		
 	}

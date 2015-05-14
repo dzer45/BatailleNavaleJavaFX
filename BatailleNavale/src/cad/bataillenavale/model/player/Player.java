@@ -25,15 +25,22 @@ public abstract class Player {
 		this.opponent = opponent;
 	}
 	
-	public  void shoot( int x, int y) throws MapException {
-		if (getMap().reacheableShoot(x, y)) {
+	/**
+	 * Tirer sur la grille de l'adversaire
+	 * @param x 
+	 * @param y
+	 * @throws MapException si la case tirée sort de la map
+	 * @return vrai si une case à été détruite
+	 */
+	public boolean shoot(int x, int y) throws MapException {
+		if (getMap().isReacheable(x, y)) {
 			if (!this.getOpponent().getMap().isPlayed(x, y)) {
-				this.getOpponent().getMap().shoot(x, y);
+				return this.getOpponent().getMap().shoot(x, y);
 			} else {
-				return;
+				return false;
 			}
 		} else {
-			return;
+			return false;
 		}
 	}
 	

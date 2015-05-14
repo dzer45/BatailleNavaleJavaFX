@@ -2,7 +2,6 @@ package cad.bataillenavale.model.map;
 
 public class EmptyCase extends Case {
 	
- //number of maritime which reaches it
 
 	protected EmptyCase(Map map) {
 		super(map);
@@ -14,7 +13,4 @@ public class EmptyCase extends Case {
 		this.s = State.MISSED;
 		this.map.missed++;
 	}
-	
-	
-
 }

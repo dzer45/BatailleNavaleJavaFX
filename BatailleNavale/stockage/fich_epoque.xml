@@ -34,4 +34,13 @@
       <power>4</power>
     </maritime>
   </epoque>
+  <epoque>
+    <name>Dqef</name>
+    <maritime>
+      <name>qsdz</name>
+      <length>4</length>
+      <width>4</width>
+      <power>5</power>
+    </maritime>
+  </epoque>
 </epoques>
