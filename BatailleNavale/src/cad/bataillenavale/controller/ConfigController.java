@@ -16,8 +16,7 @@ public class ConfigController extends BatailleNavaleController {
 	}
 
 	public void notifyFinish(Stage stage) {
-		model.addEmptyCases(model.getPlayer());
-		model.addEmptyCases(model.getIA());
+		model.addEmptyCases();
 		new PlayView(model,stage);
 	}
 }

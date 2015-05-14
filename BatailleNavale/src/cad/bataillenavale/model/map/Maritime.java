@@ -10,7 +10,7 @@ public abstract class Maritime implements Prototype {
 	
 	/**
 	 * Constructeur
-	 * @param name du bateau
+	 * @param name nom du bateau
 	 * @param length longeur du bateau
 	 * @param width hauteur du bateau
 	 * @param power puissance du bateau

@@ -24,8 +24,7 @@ import cad.bataillenavale.model.map.Maritime;
 
 public class PlayView extends BatailleNavaleView implements Observer {
 
-	private Rectangle[][] btnsPlayer, btnsIA; // IA's map (Where i see my
-												// reachable map and my shoots)
+	private Rectangle[][] btnsPlayer, btnsIA; // IA's map (Where i see my reachable map and my shoots)
 	private GridPane gpIA, gpPlayer;
 
 	public PlayView(BatailleNavale model, Stage stage) {
@@ -69,7 +68,8 @@ public class PlayView extends BatailleNavaleView implements Observer {
 		stage.setTitle("Bataille Navale");
 		stage.setScene(scene);
 		stage.show();
-		update(null, null);
+		
+		drawMaps();
 	}
 
 	@Override
@@ -80,19 +80,25 @@ public class PlayView extends BatailleNavaleView implements Observer {
 	private void drawMaps() {
 
 		for (Maritime m : model.getMapPlayer().getMaritimes()) {
+			
 			ImageView iv1 = new ImageView(new Image(
 					"file:resources/images/bateaux/" + m.getName() + ".png",
 					m.getLength() * 40, m.getWidth() * 40, false, false));
+			
 			gpPlayer.add(iv1, m.getPoint().x, m.getPoint().y, m.getLength(),
 					m.getWidth());
-			for(int i =m.getPoint().x; i< m.getPoint().x+m.getLength();i++) {
+			
+			for(int i = m.getPoint().x; i< m.getPoint().x+m.getLength();i++) {
 				for (int j = m.getPoint().y; j < m.getPoint().y+ m.getWidth(); j++) {
 					btnsPlayer[i][j].setFill(Paint.valueOf("gray"));
 					btnsPlayer[i][j].setDisable(true);
 					
-					for (int k = -m.getPower(); k < m.getPower(); k++) {
-						for (int l = -m.getPower(); l < m.getPower(); l++) {
-							if(i+k>0 && i+k<model.getLength() && j+l>0 && j+l < model.getLength())
+					for (int k = -m.getPower(); k < m.getPower()+1; k++) {
+						for (int l = -m.getPower(); l < m.getPower()+1; l++) {
+							
+							if(i+k >= model.getLength() || j+l >= model.getLength() || i+k < 0 || j+l < 0)
+								continue;
+							else
 								btnsIA[i+k][j+l].setFill(Paint.valueOf("gray"));
 						}
 					}
@@ -119,20 +125,16 @@ public class PlayView extends BatailleNavaleView implements Observer {
 				if (c != null) {
 					if (c.getState().equals(State.TOUCHED)) {
 						btnsIA[i][j].setFill(Paint.valueOf("red"));
-						btnsIA[i][j].setDisable(true);
 					} else if (c.getState().equals(State.MISSED)) {
 						btnsIA[i][j].setFill(Paint.valueOf("black"));
-						btnsIA[i][j].setDisable(true);
 					}
 
 				}
 				if (c1 != null) {
 					if (c1.getState().equals(State.TOUCHED)) {
 						btnsPlayer[i][j].setFill(Paint.valueOf("red"));
-						btnsPlayer[i][j].setDisable(true);
 					} else if (c1.getState().equals(State.MISSED)) {
 						btnsPlayer[i][j].setFill(Paint.valueOf("black"));
-						btnsPlayer[i][j].setDisable(true);
 					}
 
 				}
@@ -151,9 +153,31 @@ public class PlayView extends BatailleNavaleView implements Observer {
 
 		@Override
 		public void handle(MouseEvent event) {
-			// TODO Auto-generated method stub
-			PlayController playController = (PlayController) controller;
-			playController.notifyShoot(x, y);
+			
+			if(model.isReachableShoot(x, y))
+			{
+				if(!model.isPlayedShoot(x, y))
+				{
+					PlayController playController = (PlayController) controller;
+					playController.notifyShoot(x, y);
+				}
+				else
+				{
+					Alert alert = new Alert(AlertType.INFORMATION);
+					alert.setTitle("Bataille Navale");
+					alert.setHeaderText("La case à déjà été jouée !");
+					alert.setContentText("Tirez sur une autre case !");
+					alert.showAndWait();
+				}
+			}
+			else
+			{
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("Bataille Navale");
+				alert.setHeaderText("Cette case ne se trouve pas à la portée de vos maritimes !");
+				alert.setContentText("Tirez sur une case à la portée de vos maritimes !");
+				alert.showAndWait();
+			}
 
 			if (model.isGameFinished()) {
 				Alert alert = new Alert(AlertType.INFORMATION);

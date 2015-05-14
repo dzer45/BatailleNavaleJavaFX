@@ -7,8 +7,8 @@ public class NewGameStartController extends BatailleNavaleController {
 	public NewGameStartController(BatailleNavale model) {
 		super(model);
 	}
-	public void notifyStart(String length, String epoque,String difficult) {
-		model.start(Integer.parseInt(length), epoque,difficult);
+	public void notifyStart(String length, String epoque, String difficult) {
+		model.start(Integer.parseInt(length), epoque, difficult);
 	}
 
 }

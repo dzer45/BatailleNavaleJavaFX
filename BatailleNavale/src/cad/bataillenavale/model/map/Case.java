@@ -44,7 +44,7 @@ public abstract class Case {
 	}
 	
 	/**
-	 * 
+	 * Nombre de maritimes qui ont la case à leurs portée
 	 * @return le nombre de maritimes qui ont la case à leurs portée
 	 */
 	public int getReachable(){
@@ -53,7 +53,7 @@ public abstract class Case {
 	
 	/**
 	 * Si au moins un maritime à la case dans sa portée
-	 * @return
+	 * @return vrais si c'est le cas
 	 */
 	public boolean isReachable(){
 		return nbMaritimeReach > 0;

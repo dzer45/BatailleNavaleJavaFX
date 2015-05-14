@@ -38,9 +38,9 @@ public class Map {
 	}
 	
 	/**
-	 * Ajouter un maritime à la grille
-	 * @param x
-	 * @param y
+	 * Ajouter un maritime à la grille en x y
+	 * @param x coordonée en x
+	 * @param y coordonée en y
 	 * @param maritime le maritime à ajouter
 	 * @throws MapException si le maritime empiète sur un autre ou si il sort de la grille
 	 */
@@ -112,9 +112,9 @@ public class Map {
 	}
 	
 	/**
-	 * Si la coordonnées peut être jouée compte tenu de la configuration des maritimes et de leur puissances
-	 * @param x
-	 * @param y
+	 * Si les coordonnées peut être jouée compte tenu de la configuration des maritimes et de leur puissances
+	 * @param x coordonée en x
+	 * @param y coordonée en x
 	 * @return vrai si c'est le cas
 	 * @throws MapException si la case sort de la grille
 	 */
@@ -129,9 +129,9 @@ public class Map {
 	
 
 	/**
-	 * Si il est possible de tirer sur la case compte tenu de la reachable map
-	 * @param x
-	 * @param y
+	 * Si les coordonnées ont déja été jouée
+	 * @param x coordonée en x
+	 * @param y coordonée en y
 	 * @return vrai si c'est le cas
 	 * @throws MapException si la case sort de la grille
 	 */
@@ -142,9 +142,9 @@ public class Map {
 	}
 	
 	/**
-	 * Tirer sur un maritime
-	 * @param x 
-	 * @param y
+	 * Tirer aux coordonées en x y
+	 * @param x coordonée en x
+	 * @param y coordonée en y
 	 * @throws MapException si la case tirée sort de la map
 	 * @return vrai si une case à été détruite
 	 */
@@ -227,21 +227,20 @@ public class Map {
 	
 	/**
 	 * Retourne la case à l'index x y
-	 * @param x
-	 * @param y
+	 * @param x coordonée en x
+	 * @param y coordonée en y
 	 * @return la case correspondante
 	 */
 	public Case getCase(int x, int y){
 		return this.cases[x][y];
 	}
 
+	/**
+	 * Liste des maritimes ajoutés sur la grille
+	 * @return la liste
+	 */
 	public List<Maritime> getMaritimes() {
 		// TODO Auto-generated method stub
 		return maritimes;
-	}
-	
-	public void setMaritimes(List<Maritime> maritime) {
-		// TODO Auto-generated method stub
-		this.maritimes = maritime;
 	}
 }

@@ -1,8 +1,8 @@
 package cad.bataillenavale.model;
 
-import java.util.HashMap;
 import java.util.Observable;
 import java.util.Set;
+
 import cad.bataillenavale.model.epoque.Epoque;
 import cad.bataillenavale.model.epoque.EpoqueManager;
 import cad.bataillenavale.model.exception.MapException;
@@ -19,10 +19,9 @@ import cad.bataillenavale.model.player.Player;
 public class BatailleNavale extends Observable {
 	
 	private Player currentPlayer = null;
-	private Epoque currentEpoque;
+	private Epoque currentEpoque = null;
 	private Human player = new Human();
 	private IA iA = new IA();
-	private java.util.Map<Player, Map> maps = new HashMap<Player, Map>();
 	private int length;
 
 	/**
@@ -38,11 +37,8 @@ public class BatailleNavale extends Observable {
 		iA.setOpponent(player);
 		currentPlayer = player;
 
-		Map grillePlayer = player.initMap(length);
-		maps.put(player, grillePlayer);
-		
-		Map grilleIA =  iA.initMap(length);
-		maps.put(iA, grilleIA);
+		player.initMap(length);
+		iA.initMap(length);
 		
 		Difficult dif = null;
 		switch (difficult) {
@@ -63,8 +59,8 @@ public class BatailleNavale extends Observable {
 
 	/**
 	 * Ajouter un maritime a la grille
-	 * @param x
-	 * @param y
+	 * @param x coordonnée en x où il faut ajouter le maritime
+	 * @param y coordonnée en y où il faut ajouter le maritime
 	 * @param maritimeName nom du maritime à ajouter
 	 * @throws MapException si le maritime empiete sur un autre ou s'il sort de la grille 
 	 */
@@ -75,7 +71,7 @@ public class BatailleNavale extends Observable {
 				.getEpoque(currentEpoque.getName()).cloneMaritime(maritimeName); // clone
 
 		// player adds the maritime
-		maps.get(player).addMaritime(x, y, m);
+		player.getMap().addMaritime(x, y, m);
 
 		// IA adds the same maritime
 		iA.addMaritime(maritimeName);
@@ -103,8 +99,8 @@ public class BatailleNavale extends Observable {
 
 	/**
 	 * Tirer sur la grille de l'adversaire (l'IA)
-	 * @param x
-	 * @param y
+	 * @param x coordonnée en x ou il faut tirer
+	 * @param y coordonnée en y ou il faut tirer
 	 * @throws MapException si le tir sort de la grille
 	 */
 	public void shoot(int x, int y) throws MapException {
@@ -121,7 +117,7 @@ public class BatailleNavale extends Observable {
 	}
 
 	/**
-	 * Si c'est mon tour de jouer
+	 * Permet à un joueur de savoir si c'est son tour de jouer
 	 * @param p le joueur qui veut tirer
 	 * @return vrai si c'est le cas
 	 */
@@ -166,7 +162,7 @@ public class BatailleNavale extends Observable {
 	 * @return la grille du joueur
 	 */
 	public Map getMapPlayer() {
-		return maps.get(player);
+		return player.getMap();
 	}
 
 	/**
@@ -174,7 +170,7 @@ public class BatailleNavale extends Observable {
 	 * @return la grille de l'IA
 	 */
 	public Map getMapIA() {
-		return maps.get(iA);
+		return iA.getMap();
 	}
 
 	/**
@@ -187,10 +183,11 @@ public class BatailleNavale extends Observable {
 
 	/**
 	 * Ajouter les EmptyCases une fois la configuration des maritimes effectuée
-	 * @param player le joueur auquel on ajoute les EmptyCase à sa grille
+	 * 
 	 */
-	public void addEmptyCases(Player player) {
-		maps.get(player).addEmptyCases();
+	public void addEmptyCases() {
+		player.getMap().addEmptyCases();
+		iA.getMap().addEmptyCases();
 		setChanged();
 		notifyObservers();
 	}
@@ -208,10 +205,7 @@ public class BatailleNavale extends Observable {
 	 * @return vrai si c'est le cas
 	 */
 	public boolean isGameFinished() {
-		Map mapPlayer = maps.get(player);
-		Map mapIA = maps.get(iA);
-		return mapPlayer.getMaritimeRemaining() == 0
-				|| mapIA.getMaritimeRemaining() == 0;
+		return player.getMap().getMaritimeRemaining() == 0 || iA.getMap().getMaritimeRemaining() == 0;
 	}
 
 	/**
@@ -234,8 +228,8 @@ public class BatailleNavale extends Observable {
 	/**
 	 * Ajouter un maritime à l'époque
 	 * @param epoqueName le nom de l'époque
-	 * @param maritimeName du bateau
-	 * @param length longeur du bateau
+	 * @param maritimeName le nom du bateau
+	 * @param length longueur du bateau
 	 * @param width hauteur du bateau
 	 * @param power puissance du bateau
 	 */
@@ -244,5 +238,41 @@ public class BatailleNavale extends Observable {
 		// TODO Auto-generated method stub
 		EpoqueManager.getInstance().addMaritime(epoqueName, maritimeName,
 				length, width, power);
+	}
+	
+	/**
+	 * Si les coordonnées sont à la portée des matitimes
+	 * @param x coordonnée en x 
+	 * @param y coordonnée en y
+	 * @return vrai si c'est le cas
+	 */
+	public boolean isReachableShoot(int x, int y){
+		boolean b = false;
+		try {
+			b = player.getMap().isReacheable(x, y);
+		} catch (MapException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return b;
+	}
+	
+	/**
+	 * Si les coordonnées sont déjà jouées
+	 * @param x coordonnée en x 
+	 * @param y coordonnée en y
+	 * @return vrai si c'est le cas
+	 */
+	public boolean isPlayedShoot(int x, int y){
+		boolean b = false;
+		try {
+			b = iA.getMap().isPlayed(x, y);
+		} catch (MapException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return b;
 	}
 }
