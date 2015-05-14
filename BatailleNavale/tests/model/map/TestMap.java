@@ -10,6 +10,7 @@ import org.junit.Test;
 import cad.bataillenavale.model.exception.MapException;
 import cad.bataillenavale.model.map.Boat;
 import cad.bataillenavale.model.map.Case;
+import cad.bataillenavale.model.map.Case.State;
 import cad.bataillenavale.model.map.Map;
 import cad.bataillenavale.model.map.Maritime;
 import cad.bataillenavale.model.map.MaritimeCase;
@@ -89,51 +90,51 @@ public class TestMap {
 	}
 
 	@Test
-	public void testCanPlayReachableEmptyCase() {
+	public void testReachableEmptyCase() throws MapException {
 		int x = 3, y = 3;
 		//System.out.println(map.cases[x][y].getClass()+" : "+map.cases[x][y].getReachable());
-		assertTrue(map.canPlay(x, y));
+		assertTrue(map.isReacheable(x, y));
 	}
 	
 	@Test
-	public void testCanPlayNotReachableEmptyCase() {
+	public void testNotReachableEmptyCase() throws MapException {
 		int x = 0, y = 0;
 		//System.out.println(map.cases[x][y].getClass()+" : "+map.cases[x][y].getReachable());
-		assertFalse(map.canPlay(x, y));
+		assertFalse(map.isReacheable(x, y));
 	}
 	
 	@Test
-	public void testCanPlayMaritimeCase() {
+	public void testReachableMaritimeCase() throws MapException {
 		int x = 5, y = 5;
 		//System.out.println(map.cases[x][y].getClass()+" : "+map.cases[x][y].getReachable());
-		assertTrue(map.canPlay(x, y));
+		assertTrue(map.isReacheable(x, y));
 	}
 
 	@Test
-	public void testPlayTouched() { // MaritimeCase played
+	public void testShootTouched() throws MapException { // MaritimeCase played
 		int x = 5, y = 5;
-		map.play(x, y);
+		map.shoot(x, y);
 		
 		//assertEquals(State.TOUCHED, map.cases[x][y].getState());
 		assertTrue(map.cases[x][y].getState().equals(State.TOUCHED) && map.getTouched() == 1);
 	}
 	
 	@Test
-	public void testPlayMissed() { // EmptyCase played
+	public void testShootMissed() throws MapException { // EmptyCase played
 		int x = 0, y = 0;
-		map.play(x, y);
+		map.shoot(x, y);
 		
 		//assertEquals(State.MISSED, map.cases[x][y].getState());
 		assertTrue(map.cases[x][y].getState().equals(State.MISSED) && map.getMissed() == 1);
 	}
 	
 	@Test
-	public void testPlayDestroyed() { 
+	public void testMaritimeDestroyed() throws MapException { 
 		
 		// plays all the MaritimeCase 
 		for (int i = 0; i < MARLENGTH; i++) {
 			for (int j = 0; j < MARWIDTH; j++) {
-				map.play(X+i, Y+j);
+				map.shoot(X+i, Y+j);
 			}
 		}		
 		
@@ -162,7 +163,37 @@ public class TestMap {
 	}
 	
 	@Test(expected = MapException.class)
-	public void testPlayDestroyedException() throws MapException { 
-		map.updateReachableMap(maritime);
+	public void testMaritimeNotDestroyedException() throws MapException { 
+		map.updateReachableMap(maritime); // maritime is not destroyed
+		
+		fail("Exception not raised");
+	}
+	
+	@Test
+	public void testAdd2MaritimesReachable() throws MapException {		
+		Maritime maritime = new Boat("boat", 1, 1, 10);
+		emptyMap.addMaritime(0, 0, maritime);
+		
+		maritime = new Boat("boat", 1, 1, 10);
+		emptyMap.addMaritime(5, 5, maritime);
+		
+		Case c = emptyMap.cases[2][2]; 
+	
+		assertTrue(c.getReachable() == 2);
+	}
+	
+	@Test
+	public void testDestroyOneOf2MaritimesReachable() throws MapException {		
+		Maritime maritime = new Boat("boat", 1, 1, 10);
+		emptyMap.addMaritime(0, 0, maritime);
+		
+		maritime = new Boat("boat", 1, 1, 10);
+		emptyMap.addMaritime(5, 5, maritime);
+		
+		emptyMap.shoot(0, 0);
+		
+		Case c = emptyMap.cases[2][2]; 
+	
+		assertTrue(c.getReachable() == 1);
 	}
 }

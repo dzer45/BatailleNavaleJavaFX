@@ -4,12 +4,9 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import org.jdom2.Document;
-import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
-
 import cad.bataillenavale.model.BatailleNavale;
 
 public class XMLDAOGame implements GameDAO{
@@ -18,7 +15,6 @@ public class XMLDAOGame implements GameDAO{
 	private volatile static GameDAO instance = null;
 	private final String path = "stockage/save.xml";
 	private Document document;
-	private Element racine;
 	
 	/**
 	 * 
@@ -41,7 +37,6 @@ public class XMLDAOGame implements GameDAO{
 		} catch (JDOMException | IOException e) {
 			e.printStackTrace();
 		}
-		racine = document.getRootElement();
 
 	} // XMLDAOEpoque
 
