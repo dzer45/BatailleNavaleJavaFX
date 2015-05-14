@@ -7,7 +7,10 @@ public class Boat extends Maritime {
 		super(name, length, width, power);
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	/**
+	 * Clone le bateau : retourne une nouvelle instance avec les mêmes propriétés
+	 */
 	@Override
 	public Prototype doClone() {
 		return new Boat(this.name, this.length, this.width, this.power);

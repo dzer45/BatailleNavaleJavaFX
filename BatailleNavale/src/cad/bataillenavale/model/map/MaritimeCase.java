@@ -6,11 +6,20 @@ public class MaritimeCase extends Case {
 
 	private Maritime maritime;
 	
+	/**
+	 * Constructeur
+	 * @param map la grille de jeu
+	 * @param m le maritime auquel la case appartient
+	 */
 	public MaritimeCase(Map map, Maritime m){
 		super(map);
 		this.maritime = m;
 	}
 
+	/**
+	 * Le maritime auquel la case appartient
+	 * @return le maritime
+	 */
 	public Maritime getMaritime() {
 		return maritime;
 	}
@@ -19,7 +28,7 @@ public class MaritimeCase extends Case {
 	protected void shoot() {
 		this.s = State.TOUCHED;
 		this.map.touched++;
-		this.maritime.play();
+		this.maritime.descRemaningCase();
 		if(this.maritime.isDestroyed())
 		{
 			try {

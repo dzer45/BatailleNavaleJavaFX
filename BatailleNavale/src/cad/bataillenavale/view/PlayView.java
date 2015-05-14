@@ -19,7 +19,8 @@ import cad.bataillenavale.controller.PlayController;
 import cad.bataillenavale.model.BatailleNavale;
 import cad.bataillenavale.model.map.Case;
 import cad.bataillenavale.model.map.Case.State;
-import cad.bataillenavale.model.map.Maritime;
+import cad.bataillenavale.model.map.EmptyCase;
+import cad.bataillenavale.model.map.MaritimeCase;
 
 public class PlayView extends BatailleNavaleView implements Observer {
 

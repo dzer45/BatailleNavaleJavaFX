@@ -66,7 +66,7 @@ public class Easy implements Difficult {
 
 			try {
 
-				reacheable = myMap.reacheableShoot(x, y);
+				reacheable = myMap.isReacheable(x, y);
 				alreadyPlayed = playerMap.isPlayed(x, y);
 
 			} catch (MapException e) {
@@ -82,7 +82,13 @@ public class Easy implements Difficult {
 
 		try {
 
-			p.shoot(x, y);
+			boolean touched = p.shoot(x, y);
+			
+			if(touched){ // IA touched a CaseMaritime, so it shoots again 
+				shoot(p);
+				return;
+			}
+			
 			model.setCurrentPlayer(model.getIA().getOpponent());
 
 		} catch (MapException e) {

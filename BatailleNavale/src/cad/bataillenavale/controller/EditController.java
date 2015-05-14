@@ -3,6 +3,8 @@ package cad.bataillenavale.controller;
 import javafx.stage.Stage;
 import cad.bataillenavale.model.BatailleNavale;
 import cad.bataillenavale.model.epoque.Epoque;
+import cad.bataillenavale.model.map.Boat;
+import cad.bataillenavale.model.map.Maritime;
 import cad.bataillenavale.view.AddEpoqueView;
 import cad.bataillenavale.view.AddMaritimeView;
 import cad.bataillenavale.view.EditView;
