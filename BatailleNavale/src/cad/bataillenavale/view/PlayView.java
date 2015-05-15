@@ -2,12 +2,15 @@ package cad.bataillenavale.view;
 
 import java.util.Observable;
 import java.util.Observer;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -16,14 +19,19 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import cad.bataillenavale.controller.PlayController;
 import cad.bataillenavale.model.BatailleNavale;
 import cad.bataillenavale.model.map.Case;
 import cad.bataillenavale.model.map.Case.State;
 import cad.bataillenavale.model.map.Maritime;
+import cad.bataillenavale.model.player.Difficult;
 
 public class PlayView extends BatailleNavaleView implements Observer {
 
@@ -92,6 +100,30 @@ public class PlayView extends BatailleNavaleView implements Observer {
 		gp.add(gpPlayer, 0, 0);
 		gp.add(gpIA, 1, 0);
 		gp.setAlignment(Pos.CENTER);
+		
+		HBox hb = new HBox();
+		Text difficult = new Text("Difficulté : ");
+		difficult.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+		ComboBox<String> difficultComboBox = new ComboBox<String>();
+        difficultComboBox.getItems().addAll(
+            Difficult.EASY,
+            Difficult.MEDIUM,
+            Difficult.HARD
+        );   
+        difficultComboBox.setValue(Difficult.EASY);
+	    Button buttonOk = new Button();
+	    buttonOk.setText("Changer");		
+	    buttonOk.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				PlayController playController = (PlayController) controller;
+				playController.notifyDifficultChanged(difficultComboBox.getValue().toString());
+			}
+		});
+	    hb.getChildren().add(difficult);
+	    hb.getChildren().add(difficultComboBox);
+	    hb.getChildren().add(buttonOk);
+	    gp.add(hb, 0, 2);
 
 		root.setCenter(gp);
 		scene = new Scene(root);
