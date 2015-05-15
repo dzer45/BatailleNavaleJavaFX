@@ -44,18 +44,7 @@ public class BatailleNavale extends Observable {
 		player.initMap(length);
 		iA.initMap(length);
 		
-		switch (difficult) {
-		case Difficult.EASY:
-			dif = new Easy(this);
-			break;
-		case Difficult.MEDIUM:
-			dif = new Medium(this);
-			break;
-		case Difficult.HARD:
-			dif = new Hard(this);
-			break;
-		}
-		iA.setDifficult(dif);
+		setDif(difficult);
 		
 		this.currentEpoque = EpoqueManager.getInstance().getEpoque(epoque);
 	}
@@ -422,6 +411,21 @@ public class BatailleNavale extends Observable {
 
 	public void setDif(Difficult dif) {
 		this.dif = dif;
+	}
+	
+	public void setDif(String difficult) {
+		switch (difficult) {
+		case Difficult.EASY:
+			dif = new Easy(this);
+			break;
+		case Difficult.MEDIUM:
+			dif = new Medium(this);
+			break;
+		case Difficult.HARD:
+			dif = new Hard(this);
+			break;
+		}
+		iA.setDifficult(dif);
 	}
 
 }

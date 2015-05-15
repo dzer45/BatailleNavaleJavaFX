@@ -19,4 +19,8 @@ public class PlayController extends BatailleNavaleController {
 			e.printStackTrace();
 		}
 	}
+	
+	public void notifyDifficultChanged(String difficiltName){
+		model.setDif(difficiltName);
+	}
 }
