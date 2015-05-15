@@ -43,27 +43,14 @@ public class XMLDAOGame implements GameDAO {
 	private Document document;
 	private Element racine;
 	private File f = new File(path);
+	private SAXBuilder sxb = new SAXBuilder();
 
 	/**
 	 * 
 	 */
 	private XMLDAOGame() {
-
-		SAXBuilder sxb = new SAXBuilder();
-
-		try {
-			// On crée un nouveau document JDOM avec en argument le fichier XML
-
-			if (!f.exists()) {
+			if (!f.exists()) 
 				this.ecrireFichConfig();
-			}
-			document = sxb.build(f);
-
-		} catch (JDOMException | IOException e) {
-			e.printStackTrace();
-		}
-		racine = document.getRootElement();
-
 	} // XMLDAOEpoque
 
 	/**
@@ -98,6 +85,17 @@ public class XMLDAOGame implements GameDAO {
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
+		
+		try {
+			document = sxb.build(f);
+		} catch (JDOMException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		racine = document.getRootElement();
 	}
 
 	@Override

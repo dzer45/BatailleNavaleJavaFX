@@ -13,7 +13,7 @@
       <i>0</i>
       <j>0</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>0</i>
@@ -27,234 +27,236 @@
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
-    <EmptyCase>
+    <MaritimeCase>
       <i>0</i>
       <j>3</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
+      <maritime>Bombardier</maritime>
+    </MaritimeCase>
+    <MaritimeCase>
       <i>0</i>
       <j>4</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
+      <maritime>Bombardier</maritime>
     </MaritimeCase>
     <EmptyCase>
-      <i>1</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
+      <i>0</i>
       <j>5</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>3</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>1</i>
+      <i>0</i>
       <j>6</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>3</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>1</i>
+      <i>0</i>
       <j>7</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>1</i>
+      <i>0</i>
       <j>8</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>1</i>
+      <i>0</i>
       <j>9</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>0</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>1</i>
+      <j>0</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>0</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>1</i>
+      <j>1</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>2</i>
-      <j>0</j>
+      <i>1</i>
+      <j>2</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <MaritimeCase>
-      <i>2</i>
-      <j>1</j>
+      <i>1</i>
+      <j>3</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+      <maritime>Bombardier</maritime>
+    </MaritimeCase>
+    <MaritimeCase>
+      <i>1</i>
+      <j>4</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+      <maritime>Bombardier</maritime>
+    </MaritimeCase>
+    <MaritimeCase>
+      <i>1</i>
+      <j>5</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
       <maritime>Grand</maritime>
     </MaritimeCase>
     <EmptyCase>
+      <i>1</i>
+      <j>6</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>1</i>
+      <j>7</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>1</i>
+      <j>8</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>1</i>
+      <j>9</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>0</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>2</i>
+      <j>0</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>2</i>
+      <j>1</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
       <i>2</i>
       <j>2</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>3</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>2</i>
       <j>3</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>4</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>2</i>
       <j>4</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
+      <nbMaritimeReach>5</nbMaritimeReach>
     </EmptyCase>
-    <EmptyCase>
+    <MaritimeCase>
       <i>2</i>
       <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>1</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
       <maritime>Grand</maritime>
     </MaritimeCase>
+    <MaritimeCase>
+      <i>2</i>
+      <j>6</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>4</nbMaritimeReach>
+      <maritime>Grand</maritime>
+    </MaritimeCase>
+    <EmptyCase>
+      <i>2</i>
+      <j>7</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>2</i>
+      <j>8</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>2</i>
+      <j>9</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>0</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>3</i>
+      <j>0</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>3</i>
+      <j>1</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
     <EmptyCase>
       <i>3</i>
       <j>2</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>3</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>3</i>
       <j>3</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>4</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>3</i>
       <j>4</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
+      <nbMaritimeReach>5</nbMaritimeReach>
     </EmptyCase>
-    <EmptyCase>
+    <MaritimeCase>
       <i>3</i>
       <j>5</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
+      <nbMaritimeReach>2</nbMaritimeReach>
+      <maritime>Grand</maritime>
+    </MaritimeCase>
     <MaritimeCase>
       <i>3</i>
       <j>6</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
+      <nbMaritimeReach>4</nbMaritimeReach>
+      <maritime>Grand</maritime>
     </MaritimeCase>
     <EmptyCase>
       <i>3</i>
-      <j>8</j>
+      <j>7</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>3</i>
+      <j>8</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>3</i>
       <j>9</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>4</i>
@@ -278,71 +280,72 @@
       <i>4</i>
       <j>3</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>3</nbMaritimeReach>
       <maritime>Bombardier</maritime>
     </MaritimeCase>
     <MaritimeCase>
       <i>4</i>
       <j>4</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>3</nbMaritimeReach>
       <maritime>Bombardier</maritime>
     </MaritimeCase>
     <EmptyCase>
       <i>4</i>
       <j>5</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
+      <nbMaritimeReach>4</nbMaritimeReach>
     </EmptyCase>
     <MaritimeCase>
       <i>4</i>
       <j>6</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
+      <nbMaritimeReach>3</nbMaritimeReach>
+      <maritime>Grand</maritime>
     </MaritimeCase>
-    <MaritimeCase>
+    <EmptyCase>
       <i>4</i>
       <j>7</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
     <EmptyCase>
       <i>4</i>
       <j>8</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>4</i>
       <j>9</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>5</i>
       <j>0</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
-    <EmptyCase>
+    <MaritimeCase>
       <i>5</i>
       <j>1</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
+      <nbMaritimeReach>1</nbMaritimeReach>
+      <maritime>Sous_Marin</maritime>
+    </MaritimeCase>
+    <MaritimeCase>
       <i>5</i>
       <j>2</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
+      <nbMaritimeReach>1</nbMaritimeReach>
+      <maritime>Sous_Marin</maritime>
+    </MaritimeCase>
     <MaritimeCase>
       <i>5</i>
       <j>3</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>3</nbMaritimeReach>
       <maritime>Bombardier</maritime>
     </MaritimeCase>
     <MaritimeCase>
@@ -358,31 +361,29 @@
       <state>NOTPLAYED</state>
       <nbMaritimeReach>4</nbMaritimeReach>
     </EmptyCase>
-    <MaritimeCase>
+    <EmptyCase>
       <i>5</i>
       <j>6</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
     <EmptyCase>
       <i>5</i>
-      <j>8</j>
+      <j>7</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>5</i>
+      <j>8</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>5</i>
       <j>9</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>6</i>
@@ -390,18 +391,20 @@
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
-    <EmptyCase>
+    <MaritimeCase>
       <i>6</i>
       <j>1</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
+      <nbMaritimeReach>1</nbMaritimeReach>
+      <maritime>Sous_Marin</maritime>
+    </MaritimeCase>
+    <MaritimeCase>
       <i>6</i>
       <j>2</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
+      <nbMaritimeReach>1</nbMaritimeReach>
+      <maritime>Sous_Marin</maritime>
+    </MaritimeCase>
     <EmptyCase>
       <i>6</i>
       <j>3</j>
@@ -442,7 +445,7 @@
       <i>6</i>
       <j>9</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>7</i>
@@ -456,55 +459,53 @@
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
-    <MaritimeCase>
+    <EmptyCase>
       <i>7</i>
       <j>2</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
       <i>7</i>
       <j>3</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
     <EmptyCase>
       <i>7</i>
       <j>4</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>7</i>
       <j>5</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>7</i>
       <j>6</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>7</i>
       <j>7</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>7</i>
       <j>8</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>7</i>
       <j>9</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>8</i>
@@ -518,20 +519,18 @@
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
-    <MaritimeCase>
+    <EmptyCase>
       <i>8</i>
       <j>2</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
+    </EmptyCase>
+    <EmptyCase>
       <i>8</i>
       <j>3</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
+    </EmptyCase>
     <EmptyCase>
       <i>8</i>
       <j>4</j>
@@ -589,7 +588,7 @@
     <EmptyCase>
       <i>9</i>
       <j>3</j>
-      <state>MISSED</state>
+      <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
@@ -630,673 +629,41 @@
     </EmptyCase>
   </player>
   <ia>
-    <MaritimeCase>
-      <i>0</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
     <EmptyCase>
       <i>0</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>2</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>5</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>1</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
       <j>0</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>7</i>
+      <i>0</i>
       <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>3</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>4</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>7</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
+      <i>0</i>
       <j>2</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>8</i>
+      <i>0</i>
       <j>3</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>8</i>
+      <i>0</i>
       <j>4</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
-      <i>8</i>
+      <i>0</i>
       <j>5</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-  </ia>
-  <currentplayer>
-    Human
-    <name />
-  </currentplayer>
-  <currentepoque>XXI</currentepoque>
-  <length>10</length>
-  <dif>Hard</dif>
-  <player>
-    <EmptyCase>
-      <i>0</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>3</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>0</i>
@@ -1314,693 +681,63 @@
       <i>0</i>
       <j>8</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>0</i>
       <j>9</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>1</i>
       <j>0</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>1</i>
+      <j>1</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>1</i>
+      <j>2</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>1</i>
+      <j>3</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <MaritimeCase>
       <i>1</i>
-      <j>1</j>
+      <j>4</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
       <maritime>Sous_Marin</maritime>
     </MaritimeCase>
     <MaritimeCase>
       <i>1</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>8</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>1</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>2</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>8</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>6</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>0</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>5</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>5</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>0</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>4</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>7</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>7</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>5</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>6</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>1</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>8</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-  </player>
-  <ia>
-    <MaritimeCase>
-      <i>0</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>0</i>
       <j>5</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
       <maritime>Sous_Marin</maritime>
     </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
+    <EmptyCase>
+      <i>1</i>
       <j>6</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>1</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>4</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>6</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
     <EmptyCase>
       <i>1</i>
       <j>7</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>1</i>
@@ -2012,7 +749,7 @@
       <i>1</i>
       <j>9</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>2</i>
@@ -2026,2653 +763,141 @@
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
-    <EmptyCase>
+    <MaritimeCase>
       <i>2</i>
       <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>2</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>1</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>4</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>5</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>5</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>7</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>6</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
       <maritime>Grand</maritime>
     </MaritimeCase>
     <EmptyCase>
-      <i>5</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>2</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>7</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>1</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>4</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>6</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>4</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>8</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>2</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-  </ia>
-</bataillenavale>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Sauvegarde -->
-<bataillenavale>
-  <currentplayer>
-    Human
-    <name />
-  </currentplayer>
-  <currentepoque>XXI</currentepoque>
-  <length>10</length>
-  <dif>Easy</dif>
-  <player>
-    <EmptyCase>
-      <i>0</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
       <i>2</i>
       <j>3</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
     <MaritimeCase>
       <i>2</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
       <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>9</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>6</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>3</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-  </player>
-  <ia>
-    <MaritimeCase>
-      <i>0</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>2</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>5</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>1</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>3</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-  </ia>
-  <currentplayer>
-    Human
-    <name />
-  </currentplayer>
-  <currentepoque>XXI</currentepoque>
-  <length>10</length>
-  <dif>Hard</dif>
-  <player>
-    <EmptyCase>
-      <i>0</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>3</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>1</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
       <maritime>Sous_Marin</maritime>
     </MaritimeCase>
     <MaritimeCase>
-      <i>1</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>8</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
       <i>2</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>1</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>2</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>8</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>3</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>6</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>0</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>5</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>5</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>4</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>0</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>6</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>4</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>7</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>7</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>7</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>5</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>6</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>8</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>8</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>0</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>1</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>8</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>9</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-  </player>
-  <ia>
-    <MaritimeCase>
-      <i>0</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Bombardier</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>0</i>
       <j>5</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
       <maritime>Sous_Marin</maritime>
     </MaritimeCase>
-    <MaritimeCase>
-      <i>0</i>
+    <EmptyCase>
+      <i>2</i>
       <j>6</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>0</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <MaritimeCase>
-      <i>1</i>
-      <j>0</j>
+      <i>2</i>
+      <j>7</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
       <maritime>Bombardier</maritime>
     </MaritimeCase>
     <MaritimeCase>
-      <i>1</i>
-      <j>1</j>
-      <state>TOUCHED</state>
+      <i>2</i>
+      <j>8</j>
+      <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
       <maritime>Bombardier</maritime>
     </MaritimeCase>
     <EmptyCase>
-      <i>1</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>4</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
-      <i>1</i>
-      <j>6</j>
-      <state>TOUCHED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>1</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>2</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>2</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
       <i>2</i>
       <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>3</i>
-      <j>0</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>3</i>
-      <j>1</j>
+      <j>0</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>3</i>
-      <j>2</j>
-      <state>MISSED</state>
+      <j>1</j>
+      <state>NOTPLAYED</state>
       <nbMaritimeReach>3</nbMaritimeReach>
     </EmptyCase>
     <MaritimeCase>
       <i>3</i>
-      <j>3</j>
+      <j>2</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
       <maritime>Grand</maritime>
     </MaritimeCase>
+    <EmptyCase>
+      <i>3</i>
+      <j>3</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
     <EmptyCase>
       <i>3</i>
       <j>4</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
-    <MaritimeCase>
+    <EmptyCase>
       <i>3</i>
       <j>5</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
     <EmptyCase>
       <i>3</i>
       <j>6</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <MaritimeCase>
       <i>3</i>
       <j>7</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
       <maritime>Bombardier</maritime>
     </MaritimeCase>
     <MaritimeCase>
       <i>3</i>
       <j>8</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
       <maritime>Bombardier</maritime>
     </MaritimeCase>
     <EmptyCase>
       <i>3</i>
       <j>9</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>4</i>
       <j>0</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>4</i>
-      <j>1</j>
-      <state>MISSED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>4</i>
-      <j>2</j>
+      <j>1</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>3</nbMaritimeReach>
     </EmptyCase>
+    <MaritimeCase>
+      <i>4</i>
+      <j>2</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+      <maritime>Grand</maritime>
+    </MaritimeCase>
     <EmptyCase>
       <i>4</i>
       <j>3</j>
@@ -4682,209 +907,208 @@
     <EmptyCase>
       <i>4</i>
       <j>4</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>5</nbMaritimeReach>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
     </EmptyCase>
-    <MaritimeCase>
+    <EmptyCase>
       <i>4</i>
       <j>5</j>
-      <state>TOUCHED</state>
+      <state>NOTPLAYED</state>
       <nbMaritimeReach>3</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
+    </EmptyCase>
     <EmptyCase>
       <i>4</i>
       <j>6</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
+      <nbMaritimeReach>3</nbMaritimeReach>
     </EmptyCase>
-    <MaritimeCase>
+    <EmptyCase>
       <i>4</i>
       <j>7</j>
-      <state>TOUCHED</state>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>4</i>
+      <j>8</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>4</i>
+      <j>9</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>5</i>
+      <j>0</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
+    <MaritimeCase>
+      <i>5</i>
+      <j>1</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+      <maritime>Grand</maritime>
+    </MaritimeCase>
+    <EmptyCase>
+      <i>5</i>
+      <j>2</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>4</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>5</i>
+      <j>3</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>4</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>5</i>
+      <j>4</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>5</i>
+      <j>5</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>5</i>
+      <j>6</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>5</i>
+      <j>7</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>5</i>
+      <j>8</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>5</i>
+      <j>9</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>6</i>
+      <j>0</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
+    </EmptyCase>
+    <MaritimeCase>
+      <i>6</i>
+      <j>1</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
+      <maritime>Grand</maritime>
+    </MaritimeCase>
+    <EmptyCase>
+      <i>6</i>
+      <j>2</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
+    <EmptyCase>
+      <i>6</i>
+      <j>3</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>3</nbMaritimeReach>
+    </EmptyCase>
+    <MaritimeCase>
+      <i>6</i>
+      <j>4</j>
+      <state>NOTPLAYED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
       <maritime>Bombardier</maritime>
     </MaritimeCase>
     <MaritimeCase>
-      <i>4</i>
-      <j>8</j>
+      <i>6</i>
+      <j>5</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
       <maritime>Bombardier</maritime>
     </MaritimeCase>
     <EmptyCase>
-      <i>4</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>2</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>4</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
-      <i>5</i>
-      <j>6</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>7</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>8</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>5</i>
-      <j>9</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>0</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>1</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>2</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>3</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>4</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>6</i>
-      <j>5</j>
-      <state>NOTPLAYED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
       <i>6</i>
       <j>6</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
+    </EmptyCase>
     <EmptyCase>
       <i>6</i>
       <j>7</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>3</nbMaritimeReach>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>6</i>
       <j>8</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>6</i>
       <j>9</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
-    <MaritimeCase>
+    <EmptyCase>
       <i>7</i>
       <j>0</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
+    </EmptyCase>
     <MaritimeCase>
       <i>7</i>
       <j>1</j>
-      <state>TOUCHED</state>
+      <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
+      <maritime>Grand</maritime>
     </MaritimeCase>
     <EmptyCase>
       <i>7</i>
       <j>2</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>7</i>
       <j>3</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <EmptyCase>
-      <i>7</i>
-      <j>4</j>
-      <state>MISSED</state>
       <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
-    <EmptyCase>
+    <MaritimeCase>
+      <i>7</i>
+      <j>4</j>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
+      <maritime>Bombardier</maritime>
+    </MaritimeCase>
+    <MaritimeCase>
       <i>7</i>
       <j>5</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-    </EmptyCase>
-    <MaritimeCase>
+      <maritime>Bombardier</maritime>
+    </MaritimeCase>
+    <EmptyCase>
       <i>7</i>
       <j>6</j>
-      <state>TOUCHED</state>
+      <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Grand</maritime>
-    </MaritimeCase>
+    </EmptyCase>
     <EmptyCase>
       <i>7</i>
       <j>7</j>
@@ -4895,7 +1119,7 @@
       <i>7</i>
       <j>8</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>7</i>
@@ -4903,37 +1127,35 @@
       <state>NOTPLAYED</state>
       <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
-    <MaritimeCase>
+    <EmptyCase>
       <i>8</i>
       <j>0</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
-    <MaritimeCase>
+    </EmptyCase>
+    <EmptyCase>
       <i>8</i>
       <j>1</j>
       <state>NOTPLAYED</state>
       <nbMaritimeReach>1</nbMaritimeReach>
-      <maritime>Sous_Marin</maritime>
-    </MaritimeCase>
+    </EmptyCase>
     <EmptyCase>
       <i>8</i>
       <j>2</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>8</i>
       <j>3</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>8</i>
       <j>4</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>8</i>
@@ -4956,8 +1178,8 @@
     <EmptyCase>
       <i>8</i>
       <j>8</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>8</i>
@@ -4980,20 +1202,20 @@
     <EmptyCase>
       <i>9</i>
       <j>2</j>
-      <state>MISSED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <state>NOTPLAYED</state>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>9</i>
       <j>3</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>2</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>9</i>
       <j>4</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>2</nbMaritimeReach>
+      <nbMaritimeReach>1</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>9</i>
@@ -5017,7 +1239,7 @@
       <i>9</i>
       <j>8</j>
       <state>NOTPLAYED</state>
-      <nbMaritimeReach>1</nbMaritimeReach>
+      <nbMaritimeReach>0</nbMaritimeReach>
     </EmptyCase>
     <EmptyCase>
       <i>9</i>
